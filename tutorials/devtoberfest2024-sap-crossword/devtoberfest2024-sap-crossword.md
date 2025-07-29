@@ -19,6 +19,12 @@ parser: v2
 
 
 ## Intro
+
+```
+**IMPORTANT:** This is last year's (2024) puzzle. We thought you might still be curious about, and you can complete, but it does not give you any points any longer.
+```
+
+
 ![Puzzle grid](puzzlegrip-withclues.png)
 <div>&nbsp;</div>
 We recommend printing out the grid and completing the puzzle, and then entering the individual answers in the step answers below.
