@@ -29,7 +29,7 @@ To solve each word challenge, remove one letter from the given word and rearrang
 
 For example, in the first word of Family One in the image above, you are given the word:
 
-```Word
+```ABAP
 CRAW
 ```
  
@@ -39,8 +39,11 @@ If you did the same to the rest, you would find that all the hidden words were c
 
 👉 For our puzzle, you do not have to figure out the family -- all the words in this puzzle are **programming languages or frameworks**.
 
+&nbsp;
+
 ![Rule](rule.png) 
 
+&nbsp;
 
 **DEVTOBERFEST**
 
