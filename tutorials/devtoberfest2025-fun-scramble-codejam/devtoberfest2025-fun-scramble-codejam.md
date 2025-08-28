@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# 🟣 Devtoberfest 2025 - Scramble Challenge - Programming Languages
+# 🟣 Devtoberfest 2025 - Scramble Challenge - Event-Based Processes CodeJam
 <!-- description --> You don't have to code all day. Let's have some fun with a little puzzle.  
  
 ## You will learn
@@ -21,7 +21,7 @@ You have to unjumble the words in the list and then figure out what is common am
 
 ![Family Reunion](puzzleGames.png)
 
-&nbsp; 
+&nbsp;
 
 **INSTRUCTIONS**
 
@@ -32,12 +32,18 @@ For example, in the first word of Family One in the image above, you are given t
 <div style="width:100%;padding:1em;background:#ccc;color:#000;box-shadow:0 2px 5px rgba(0,0,0,0.1);margin-bottom:1em;">
   CRAW
 </div>
- 
+
 You could remove the letter `C`, and then rearrange the remaining words to get `WAR`.
 
 If you did the same to the rest, you would find that all the hidden words were card games.
 
-👉 For our puzzle, you do not have to figure out the family -- all the words in this puzzle are **programming languages or frameworks**.
+👉 For our puzzle, you do not have to figure out the family -- all the words in this puzzle are related to our [SAP Build: Event-Based Processes CodeJam](https://developers.sap.com/tutorials/codejam-events-process-introduction.html).
+
+>If you are interested in attending a CodeJam, see the [list of planned SAP CodeJams](https://community.sap.com/t5/sap-codejam/eb-p/codejam-events).
+>
+>![Codejam](codejam.JPG)
+>
+>If you are interested in hosting this or any CodeJam, add a post in the [SAP CodeJam group](https://community.sap.com/t5/sap-codejam/gh-p/code-jam)
 
 &nbsp;
 
@@ -53,76 +59,79 @@ This tutorial is part of our yearly and wonderful **Devtoberfest**, a month-long
 
 &nbsp;
 
-For more info on Devtoberfest, see our [Devtoberfest group page](https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest).
+For more info on Devtoberfest, see our [Devtoberfest group page](https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest).  
+
+
+
+
   
- 
-
- 
 
 
-
-
-### Dog
+### Maze
 
 <details>
     <summary>⇟ Hint 🔦</summary>
-    <i>Created in 2007, it is syntactically similar to C, but also has garbage collection, structural typing, and CSP-style concurrency.</i>
+    <i>Initials for a key component that makes the CodeJam exercises run.</i>
 </details>
 
 
-### Pace
+### Shame
 <details>
     <summary>⇟ Hint 🔦</summary>
-    <i>According to its documentation, this enables a primary focus on the domain, with close collaboration of developers and domain experts, and rapid development at minimized costs.</i>
+    <i>A way to put event brokers together.</i>
 </details>
 
 
-### Reply
+### Tissue
 <details>
     <summary>⇟ Hint 🔦</summary>
-    <i>A high-level, general-purpose, interpreted, dynamic programming language. The following is a valid line of code:</i>
-    <div>&nbsp;</div>
-    print "Hello, World!\n";
+    <i>Put ERP, CRM, SRM, SCM, and PLM together and what do you have?</i>
 </details>
 
 
 
-### Buyer
+### Poetic
 <details>
     <summary>⇟ Hint 🔦</summary>
-    <i>Designed in the mid-1990s, a general-purpose programming language with an emphasis on programming productivity and simplicity.</i>
+    <i>Each event you publish has this.</i>
 </details>
 
 
 
-### Blahs
+### Seventh
 <details>
     <summary>⇟ Hint 🔦</summary>
-    <i>Created in 1989, an interactive command interpreter and command programming language developed for Unix-like operating systems.</i>
+    <i>The basis of the entire CodeJam.</i>
 </details>
 
 
-### Cabins
+### Contain
 <details>
     <summary>⇟ Hint 🔦</summary>
-    <i>A family of general-purpose, high-level programming languages designed for ease of use, with the original version created at Dartmouth College in 1964.</i>
+    <i>An artifact of SAP Build, this lets you call an API and get data from S/4HANA into our process.</i>
 </details>
 
-### Jonesed
+### Scoopers
 <details>
     <summary>⇟ Hint 🔦</summary>
-    <i>A cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, and macOS, and runs on the V8 JavaScript engine.</i>
+    <i>A series of steps to get things done.</i>
 </details>
 
-### Typhoon
+### Vertices
 <details>
     <summary>⇟ Hint 🔦</summary>
-    <i>Created by Guido van Rossum as a successor to the ABC programming language.</i>
+    <i>Most BTP capabilities are delivered in this.</i>
 </details>
 
-### Inkblot
+### Lectures
 <details>
     <summary>⇟ Hint 🔦</summary>
-    <i>Named after a Russian island.</i>
+    <i>Where brokers might live.</i>
+</details>
+
+### Restationing
+<details>
+    <summary>⇟ Hint 🔦</summary>
+    <i>Antonio Maradiaga's specialty.</i>
 </details>
 
