@@ -42,24 +42,24 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 
 
 
-### Clue #1
+### Mission #1
 
-### Clue #2
+### Mission #2
 
-### Clue #3
+### Mission #3
 
-### Clue #4
+### Mission #4
 
-### Clue #5
+### Mission #5
 
-### Clue #6
+### Mission #6
 
-### Clue #7
+### Mission #7
 
-### Clue #8
+### Mission #8
 
-### Clue #9
+### Mission #9
 
-### Clue #10
+### Mission #10
 
 
