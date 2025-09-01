@@ -39,6 +39,8 @@ If you did the same to the rest, you would find that all the hidden words were c
 
 👉 For our puzzle, you do not have to figure out the family -- all the words in this puzzle are **programming languages or frameworks**.
 
+>**IMPORTANT:** If the language has a special character in its name, like a slash (/), ampersand (&) or period (.), this is not shown in the scrambled letters nor should you include it in the answer.
+ 
 &nbsp;
 
 ![Rule](rule.png) 
@@ -73,7 +75,7 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 ### Pace
 <details>
     <summary>⇟ Hint 🔦</summary>
-    <i>According to its documentation, this enables a primary focus on the domain, with close collaboration of developers and domain experts, and rapid development at minimized costs.</i>
+    <i>Enables a primary focus on the domain, with close collaboration of developers and domain experts, and rapid development at minimized costs.</i>
 </details>
 
 
@@ -98,7 +100,7 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 ### Blahs
 <details>
     <summary>⇟ Hint 🔦</summary>
-    <i>Created in 1989, an interactive command interpreter and command programming language developed for Unix-like operating systems.</i>
+    <i>An interactive command-line interpreter and a scripting language” instead of “an interactive command interpreter and command programming language.</i>
 </details>
 
 
@@ -117,12 +119,12 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 ### Typhoon
 <details>
     <summary>⇟ Hint 🔦</summary>
-    <i>Created by Guido van Rossum as a successor to the ABC programming language.</i>
+    <i>Designed as a successor to the ABC programming language, it was named after the British comedy group.</i>
 </details>
 
 ### Inkblot
 <details>
     <summary>⇟ Hint 🔦</summary>
-    <i>Named after a Russian island.</i>
+    <i>Like Java (named after the island in the Malay Archipelago), Kotlin is also named after an island — this time in the Baltic Sea.</i>
 </details>
 
