@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# 🟣 Devtoberfest 2025 - Scramble Challenge - Programming Languages
+# 🟡 Devtoberfest 2025 - Scramble Challenge - Programming Languages
 <!-- description --> You don't have to code all day. Let's have some fun with a little puzzle.  
  
 ## You will learn

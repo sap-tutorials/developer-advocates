@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# 🟣 Devtoberfest 2025 - Scavenger Hunt
+# 🟡 Devtoberfest 2025 - Scavenger Hunt
 <!-- description --> This tutorial lets you enter the answer to the Devtoberfest Scavenger Hunt and win lots of points 😸.  
  
 ## You will learn

@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# 🟣 Devtoberfest 2025 - Bonus Points for SAP Cryptic Crossword
+# 🟡 Devtoberfest 2025 - Bonus Points for SAP Cryptic Crossword
 <!-- description --> Here's your chance to earn even more points for the Devtoberfest contest by entering the bonus answer from the SAP Cryptic Crossword puzzle.
 
 ## You will learn

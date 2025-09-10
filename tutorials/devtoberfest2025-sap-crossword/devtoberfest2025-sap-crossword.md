@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# 🟣 Devtoberfest 2025 - SAP Cryptic Crossword
+# 🟡 Devtoberfest 2025 - SAP Cryptic Crossword
 <!-- description --> As has become tradition, we offer you a crossword with many SAP terms, but all are relevant to SAP developers. You will win lots of points if you can complete the whole thing.
  
 ## You will learn

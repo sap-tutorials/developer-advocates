@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# 🟣 Devtoberfest 2025 - Scramble Challenge - Event-Based Processes CodeJam
+# 🟡 Devtoberfest 2025 - Scramble Challenge - Event-Based Processes CodeJam
 <!-- description --> You don't have to code all day. Let's have some fun with a little puzzle.  
  
 ## You will learn
