@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# 🟣 Devtoberfest 2025 - Scavenger Hunt - CHECKING ONLY
+# 🟡 Devtoberfest 2025 - Scavenger Hunt - CHECKING ONLY
 <!-- description --> This tutorial lets you check the hex digits you collect along the way, for your convenience -- but is NOT the tutorial to submit your final answer.
  
 ## You will learn
