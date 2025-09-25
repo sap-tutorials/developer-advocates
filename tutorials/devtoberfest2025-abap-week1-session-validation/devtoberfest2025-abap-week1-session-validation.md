@@ -1,10 +1,10 @@
 ---
 auto_validation: true
-time: 5                        
-author_name: Sheena M K                                             
+time: 5
+author_name: Sheena M K
 author_profile: https://github.com/sheenamk
 tags: [ tutorial>beginner, topic>cloud ]
-primary_tag: topic>cloud                      
+primary_tag: topic>cloud
 parser: v2
 ---
   
