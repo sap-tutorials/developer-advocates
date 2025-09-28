@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# 🟣 Devtoberfest 2025 - Week 3 - Interview for SAP Tech Job
+# 🟡 Devtoberfest 2025 - Week 3 - Interview for SAP Tech Job
 
 <!-- description --> We appreciate you coming to our Devtoberfest session(s), and this tutorial will allow you to get credit for attending.
 

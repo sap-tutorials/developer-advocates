@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# 🟣 Devtoberfest 2025 - Week 1 - New Developer Forums
+# 🟡 Devtoberfest 2025 - Week 1 - New Developer Forums
 
 <!-- description --> We appreciate you coming to our Devtoberfest session(s), and this tutorial will allow you to get credit for attending.
 
