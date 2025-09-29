@@ -22,7 +22,7 @@ parser: v2
 - Attend live or watch a recording of [🟢 Custom code development and transformation for Clean Core in SAP S/4HANA](https://youtube.com/watch?v=PuAcfsRhdDk).
 - Attend live or watch a recording of [🟢 Boost Your Developer Satisfaction with SAP Joule for Developers, ABAP AI Capabilities](https://www.youtube.com/watch?v=b9lmZHp2WaA).
 
-## Intro
+## Intro 
 
 This validation tutorial is part of our yearly and wonderful **Devtoberfest**, a month-long event filled with learning, fun, challenges, and prizes -- for developers by developers.
 
