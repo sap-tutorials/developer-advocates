@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# 🟢 (TODO) Devtoberfest 2025 - Week 3 - ABAP sessions
+# 🟢 Devtoberfest 2025 - Week 3 - ABAP sessions
 
 <!-- description --> We appreciate you coming to our Devtoberfest session(s), and this tutorial will allow you to get credit for attending.
 
