@@ -20,7 +20,7 @@ parser: v2
 
 - Attend live or watch a recording of [🟢 Clean Core Extensibility Strategy Powered by ABAP Cloud and Generative AI](https://www.youtube.com/watch?v=Zmo7YU9BUlc).
 - Attend live or watch a recording of [🟢 Custom code development and transformation for Clean Core in SAP S/4HANA](https://youtube.com/watch?v=PuAcfsRhdDk).
-- Attend live or watch a recording of [🟢 Boost Your Developer Satisfaction with SAP Joule for Developers, ABAP AI Capabilities](https://youtube.com/watch?v=PuAcfsRhdDk).
+- Attend live or watch a recording of [🟢 Boost Your Developer Satisfaction with SAP Joule for Developers, ABAP AI Capabilities](https://www.youtube.com/watch?v=b9lmZHp2WaA).
 
 ## Intro
 
@@ -40,4 +40,4 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 
 ### Question 3 - 🟢 Boost Your Developer Satisfaction with SAP Joule for Developers, ABAP AI Capabilities
 
-<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/PuAcfsRhdDk" frameborder="0" allowfullscreen></iframe>
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/b9lmZHp2WaA" frameborder="0" allowfullscreen></iframe>
