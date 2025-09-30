@@ -45,7 +45,7 @@ Like all clues, there are 2 parts of the clue:
 
 There are many other types of clues, like the answer is hidden in another word, or the word is a homophone of another word for which a clue is given. You can see examples in [this blog](http://www.sarahlolley.com/cryptic-crossword-riddles.html).
 
-### Why I love them? 
+#### Why I love them? 
 
 The main reason I love them is that they make you think.
 
