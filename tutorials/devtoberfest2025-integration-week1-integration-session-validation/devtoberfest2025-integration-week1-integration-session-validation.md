@@ -33,7 +33,6 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 
 >**NOTE:** Revisit this tutorial at the end of week 1.  We'll post questions covering what you learned during the week - answer the questions and you'll earn SAP Community badge credit.  See you again soon!
 
-<!--
 
 ### Question 1 - 🔴 Pipeline for Cloud Integration
 
@@ -50,4 +49,3 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 ### Question 4 - 🔴 Open Resource Discovery
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/IwyaX_XoSuo" frameborder="0" allowfullscreen></iframe>
--->
