@@ -28,4 +28,16 @@ This validation tutorial is part of our yearly and wonderful **Devtoberfest**, a
 
 ![Devtoberfest](devtoberfestBanner2.png) 
 
-The questions for October 2, 2025, will be published after that day’s sessions conclude. Stay tuned!
+For more info on Devtoberfest, see our [Devtoberfest group page](https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest).
+
+### Question 1 - 🔵 Leveraging Calculation Views in SAP BAS: an Introduction
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/67wcoMJhHqo" frameborder="0" allowfullscreen></iframe>
+
+### Question 2 - 🔵 Enrich Data Products with SAP Databricks
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/LWfiux8dOHI" frameborder="0" allowfullscreen></iframe>
+
+### Question 3 - 🔵 Behind the Magic: How Cirque du Soleil Reimagined Invoice Management with SAP Business AI
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/l4mQ73tFT1s" frameborder="0" allowfullscreen></iframe>
