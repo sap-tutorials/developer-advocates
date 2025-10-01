@@ -29,6 +29,8 @@ This validation tutorial is part of our yearly and wonderful **Devtoberfest**, a
 
 For more info on Devtoberfest, see our [Devtoberfest group page](https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest).
 
+<!--
+
 ### Question 1 - 🟢 Exploring the Path to SAP Certification
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/5znLNdpr5y8" frameborder="0" allowfullscreen></iframe>
@@ -37,3 +39,4 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/BAALIiRtChA" frameborder="0" allowfullscreen></iframe>
 
+-->
