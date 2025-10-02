@@ -36,3 +36,7 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 ### Question about 🔵 Enrich Data Products with SAP Databricks
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/LWfiux8dOHI" frameborder="0" allowfullscreen></iframe>
+
+### Question about 🔵 AI Agents at Work - From Buzzword to Business Impact
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/JdPvbHLuDD0" frameborder="0" allowfullscreen></iframe>
