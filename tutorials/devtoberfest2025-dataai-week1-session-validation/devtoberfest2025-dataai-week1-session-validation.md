@@ -20,6 +20,7 @@ parser: v2
 
 - Attend live or watch a recording of [🔵 Leveraging Calculation Views in SAP BAS: an Introduction](https://community.sap.com/t5/devtoberfest/leveraging-calculation-views-in-sap-bas-an-introduction/ev-p/14208844).
 - Attend live or watch a recording of [🔵 Enrich Data Products with SAP Databricks](https://community.sap.com/t5/devtoberfest/deep-dive-into-sap-databricks/ev-p/14208928).
+- Attend live or watch a recording of [🔵 AI Agents at Work - From Buzzword to Business Impact](https://community.sap.com/t5/devtoberfest/ai-agents-at-work-from-buzzword-to-business-impact/ec-p/14233017).
 
 ## Intro
 
