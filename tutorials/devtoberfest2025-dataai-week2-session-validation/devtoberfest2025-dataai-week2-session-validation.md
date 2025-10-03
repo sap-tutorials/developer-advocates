@@ -10,11 +10,11 @@ parser: v2
   
 # 🔵 Devtoberfest 2025 - Week 2 - Data & AI sessions
 
-<!-- description --> We appreciate you coming to our Devtoberfest session(s), and this tutorial will allow you to get credit for attending.
+<!-- description --> Thanks for joining our Devtoberfest session(s)! This tutorial will help you earn credit for attending.
 
 ## You will learn
 
-- A lot about technology – and yourself – during Devtoberfest
+- About technology—and yourself—through Devtoberfest
 
 ## Prerequisites
 
@@ -27,9 +27,7 @@ parser: v2
 
 ## Intro
 
-This validation tutorial is part of our yearly and wonderful **Devtoberfest**, a month-long event filled with learning, fun, challenges, and prizes -- for developers by developers.
-
-For more info on Devtoberfest, see our [Devtoberfest group page](https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest).
+This validation tutorial is part of **[Devtoberfest](https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest)**—our annual month-long celebration of learning, challenges, and prizes, all designed by developers for developers.
 
 The validation questions will be added here on or before October 9, 2025.
 
