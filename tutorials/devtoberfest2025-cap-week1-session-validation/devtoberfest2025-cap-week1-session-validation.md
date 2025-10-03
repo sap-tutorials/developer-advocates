@@ -29,5 +29,5 @@ This validation tutorial is part of our yearly and wonderful **Devtoberfest**, a
 
 For more info on Devtoberfest, see our [Devtoberfest group page](https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest).
 
-The question for 3rd October 2025 will be published after all sessions for the day have concluded.
+The questions for 3rd October 2025 will be published after all sessions for the day have concluded. 
 Thank you, and please stay tuned.
