@@ -33,12 +33,8 @@ The validation questions will be added here on or before October 9, 2025.
 
 <!--
 
-### Question 1 - 🔵 Devtoberfest Session on ISLM
+### Question 1 - 🔵 Developing AI-driven SAP HANA Cloud applications with SAP Business Application Studio and Joule
 
-<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/Zmo7YU9BUlc" frameborder="0" allowfullscreen></iframe>
-
-### Question 2 - 🔵 Devtoberfest Session Cline Vide Coding
-
-<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/PuAcfsRhdDk" frameborder="0" allowfullscreen></iframe>
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/MJnvltbF7yY" frameborder="0" allowfullscreen></iframe>
 
 -->
