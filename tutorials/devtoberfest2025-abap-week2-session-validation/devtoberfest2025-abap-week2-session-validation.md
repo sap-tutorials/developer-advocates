@@ -30,7 +30,6 @@ This validation tutorial is part of our yearly and wonderful **Devtoberfest**, a
 
 For more info on Devtoberfest, see our [Devtoberfest group page](https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest).
 
-<!--
 
 ### Question 1 - 🟢 SAP BTP ABAP Environment – How to Monitor and Support Custom Cloud Apps
 
@@ -43,5 +42,3 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 ### Question 3 - 🟢 Updates on Embedded Analytics in ABAP Cloud
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/iREHX4ufaH4" frameborder="0" allowfullscreen></iframe>
-
--->
