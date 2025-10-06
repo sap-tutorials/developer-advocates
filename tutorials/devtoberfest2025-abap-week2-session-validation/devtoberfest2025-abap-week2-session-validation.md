@@ -19,7 +19,7 @@ parser: v2
 ## Prerequisites
 
 - Attend live or watch a recording of [🟢 SAP BTP ABAP Environment – How to Monitor and Support Custom Cloud Apps](https://www.youtube.com/watch?v=TWzP1kBsFG0).
-- Attend live or watch a recording of [🟢 Explore the Latest Updates in ABAP CDS](https://youtube.com/watch?v=TWzP1kBsFG0).
+- Attend live or watch a recording of [🟢 Explore the Latest Updates in ABAP CDS](https://youtube.com/watch?v=VNJWHBUxtYY).
 - Attend live or watch a recording of [🟢 Updates on Embedded Analytics in ABAP Cloud](https://www.youtube.com/watch?v=iREHX4ufaH4).
 
 ## Intro
