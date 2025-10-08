@@ -33,7 +33,6 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 
 >**NOTE:** Revisit this tutorial at the end of week 2.  We'll post questions covering what you learned during the week - answer the questions and you'll earn SAP Community badge credit.  See you again soon!
 
-<!--
 
 ### Question 1 - 🔴 Warp-Speed for Event Creation
 
@@ -51,4 +50,3 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oZ0Bu6plkfk" frameborder="0" allowfullscreen></iframe>
 
--->
