@@ -31,10 +31,26 @@ This validation tutorial is part of **[Devtoberfest](https://community.sap.com/t
 
 The validation questions will be added here on or before October 9, 2025.
 
-<!--
-
-### Question 1 - 🔵 Developing AI-driven SAP HANA Cloud applications with SAP Business Application Studio and Joule
+### Question about 🔵 Developing AI-driven SAP HANA Cloud applications with SAP Business Application Studio and Joule
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/MJnvltbF7yY" frameborder="0" allowfullscreen></iframe>
 
--->
+### Question about 🔵 Accelerate AI & Generative AI Innovation in SAP S/4HANA with ISLM
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/oY7w0UW3HjI" frameborder="0" allowfullscreen></iframe>
+
+### Question about 🔵 Prompt, Create and Innovate with AI Vibe Coding
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/bYlTGcLtmko" frameborder="0" allowfullscreen></iframe>
+
+### Question about 🔵 Building Multi-Tool Research Agents: Amazon Bedrock, Generative AI Hub and Strands SDK
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/CydVK0Nshnc" frameborder="0" allowfullscreen></iframe>
+
+### Question about 🔵 Demystifying the MCP, A2A, and ACP Protocols to Build Custom Multi-Agent Systems
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/ki-4CHTT8O8" frameborder="0" allowfullscreen></iframe>
+
+### Question about 🔵 Elevate Productivity with AI in Mobile Apps using SAP Build
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/kKiACJgaR10" frameborder="0" allowfullscreen></iframe>
