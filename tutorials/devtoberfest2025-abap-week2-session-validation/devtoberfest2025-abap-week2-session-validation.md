@@ -19,7 +19,7 @@ parser: v2
 ## Prerequisites
 
 - Attend live or watch a recording of [🟢 SAP BTP ABAP Environment – How to Monitor and Support Custom Cloud Apps](https://www.youtube.com/watch?v=TWzP1kBsFG0).
-- Attend live or watch a recording of [🟢 Explore the Latest Updates in ABAP CDS](https://youtube.com/watch?v=TWzP1kBsFG0).
+- Attend live or watch a recording of [🟢 Explore the Latest Updates in ABAP CDS](https://youtube.com/watch?v=VNJWHBUxtYY).
 - Attend live or watch a recording of [🟢 Updates on Embedded Analytics in ABAP Cloud](https://www.youtube.com/watch?v=iREHX4ufaH4).
 
 ## Intro
@@ -30,13 +30,14 @@ This validation tutorial is part of our yearly and wonderful **Devtoberfest**, a
 
 For more info on Devtoberfest, see our [Devtoberfest group page](https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest).
 
+
 ### Question 1 - 🟢 SAP BTP ABAP Environment – How to Monitor and Support Custom Cloud Apps
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/TWzP1kBsFG0" frameborder="0" allowfullscreen></iframe>
 
 ### Question 2 - 🟢 Explore the Latest Updates in ABAP CDS
 
-<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/TWzP1kBsFG0" frameborder="0" allowfullscreen></iframe>
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/VNJWHBUxtYY" frameborder="0" allowfullscreen></iframe>
 
 ### Question 3 - 🟢 Updates on Embedded Analytics in ABAP Cloud
 

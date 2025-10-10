@@ -30,12 +30,14 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 
 >**NOTE:** The question for the tooling sessions for this week will be published within 24 hours of the last session of the day. 
 
-<!--
 
 ### Question 1 - 🟡 The New Developer Forums in the Community
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uQ-BVWqbpRE" frameborder="0" allowfullscreen></iframe>
 
 
--->
+### Question 2
+
+
+### Question 3
 

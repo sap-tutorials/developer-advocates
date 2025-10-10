@@ -30,12 +30,12 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 
 >**NOTE:** The question for the tooling sessions for this week will be published within 24 hours of the last session of the day. 
 
-<!--
+
 
 ### Question 1 - 🟡 Take the Next Step in Your Career and Master an SAP Certification
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yuQyllRor9w" frameborder="0" allowfullscreen></iframe>
 
 
--->
+### Question 2
 

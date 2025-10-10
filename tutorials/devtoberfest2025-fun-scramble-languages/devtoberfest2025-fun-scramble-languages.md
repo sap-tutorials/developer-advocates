@@ -125,6 +125,6 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 ### Inkblot
 <details>
     <summary>⇟ Hint 🔦</summary>
-    <i>Like Java (named after the island in the Malay Archipelago), Kotlin is also named after an island — this time in the Baltic Sea.</i>
+    <i>Like Java (named after the island in the Malay Archipelago), this language is also named after an island — this time in the Baltic Sea.</i>
 </details>
 
