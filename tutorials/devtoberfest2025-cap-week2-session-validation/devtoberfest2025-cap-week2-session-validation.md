@@ -19,7 +19,6 @@ parser: v2
 ## Prerequisites
 
 - Attend live or watch a recording of [🟠 Less code, same logic – reduce your custom handlers by using new CAP features](https://youtube.com/watch?v=0dyfMLFYif8).
-- Attend live or watch a recording of [🟠 Best Practices in CAP](https://www.youtube.com/watch?v=BrmPTjVeTN4).
 - Attend live or watch a recording of [🟠 Status-Transition Flows](https://www.youtube.com/watch?v=).
 - Attend live or watch a recording of [🟠 Taking UI5 Server Side Rendering to the next level with AI](https://www.youtube.com/watch?v=).
 ## Intro
