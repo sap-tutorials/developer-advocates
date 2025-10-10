@@ -30,8 +30,17 @@ This validation tutorial is part of our yearly and wonderful **Devtoberfest**, a
 
 For more info on Devtoberfest, see our [Devtoberfest group page](https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest).
 
+### Question 1 - 🟠 Less code, same logic – reduce your custom handlers by using new CAP features
 
-The questions for 10th October 2025 will be published after all sessions for the day have concluded.
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/0dyfMLFYif8" frameborder="0" allowfullscreen></iframe>
 
-Thank you, and please stay tuned.
+
+### Question 2 - 🟠 Status-Transition Flows
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/1XolXCjN5IQ" frameborder="0" allowfullscreen></iframe>
+
+
+### Question 3 - 🟠 Taking UI5 Server Side Rendering to the next level with AI
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/X8Q59aRg6lA" frameborder="0" allowfullscreen></iframe>
 
