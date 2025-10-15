@@ -38,7 +38,7 @@ This validation tutorial is part of **[Devtoberfest](https://community.sap.com/t
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/dEmaun_5YGA" frameborder="0" allowfullscreen></iframe> 
 
-### Question on 🔵 Manage and Optimize Prompts in SAP AI Core: Concepts and Application
+### Question on 🔵 Manage and Optimize Prompts in SAP AI Core - Concepts and Application
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/qXjV75yBplE" frameborder="0" allowfullscreen></iframe> 
 
@@ -46,15 +46,15 @@ This validation tutorial is part of **[Devtoberfest](https://community.sap.com/t
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/PDqQhKx6lvI" frameborder="0" allowfullscreen></iframe> 
 
-### Question on 🔵 SAP Data Products: how to handle them today and what is the plan for tomorrow?
+### Question on 🔵 SAP Data Products - how to handle them today and what is the plan for tomorrow?
 
-<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/dEmaun_5YGA" frameborder="0" allowfullscreen></iframe> 
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/8A9VqSIIyRw" frameborder="0" allowfullscreen></iframe> 
 
 ### Question on 🔵 Accelerate SAP CAP and Fiori Development with AI Tools
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/YKzEsg9uPZQ" frameborder="0" allowfullscreen></iframe> 
 
-### Question on 🔵 Behind the Magic: How Cirque du Soleil Reimagined Invoice Management with SAP Business AI
+### Question on 🔵 Behind the Magic - How Cirque du Soleil Reimagined Invoice Management with SAP Business AI
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/l4mQ73tFT1s" frameborder="0" allowfullscreen></iframe> 
 
