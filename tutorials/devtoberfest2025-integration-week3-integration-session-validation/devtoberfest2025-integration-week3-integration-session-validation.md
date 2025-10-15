@@ -35,7 +35,7 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 
 >**NOTE:** Revisit this tutorial at the end of week 3.  We'll post questions covering what you learned during the week - answer the questions and you'll earn SAP Community badge credit.  See you again soon!
 
-<!--
+
 ### Question 1 - 🔴 Using Intermediate Message Events and Success Factors Events
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CMVEobhPSIw" frameborder="0" allowfullscreen></iframe>
@@ -52,4 +52,3 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m51z53fc1c4" frameborder="0" allowfullscreen></iframe>
 
--->
