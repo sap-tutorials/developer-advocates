@@ -30,15 +30,33 @@ parser: v2
 
 This validation tutorial is part of **[Devtoberfest](https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest)**—our annual month-long celebration of learning, challenges, and prizes, all designed by developers for developers.
 
-The validation questions will be added here on or before October 16, 2025.
+### Question on 🔵 Bottom Line - Teaching Neural Networks with Snap!
 
-<!-- 
-### Question 1 - 🔵 Modernize your SAP Business Warehouse with SAP Business Data Cloud
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/_JSnHmGMbfY" frameborder="0" allowfullscreen></iframe>
 
-<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/Zmo7YU9BUlc" frameborder="0" allowfullscreen></iframe>
+### Question on 🔵 Modernize your SAP Business Warehouse with SAP Business Data Cloud
 
-### Question 2 - 🔵 SAP Data Products: how to handle them today and what is the plan for tomorrow?
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/dEmaun_5YGA" frameborder="0" allowfullscreen></iframe> 
 
-<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/PuAcfsRhdDk" frameborder="0" allowfullscreen></iframe> 
+### Question on 🔵 Manage and Optimize Prompts in SAP AI Core: Concepts and Application
 
--->
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/qXjV75yBplE" frameborder="0" allowfullscreen></iframe> 
+
+### Question on 🔵 What’s new in AI Core Orchestration
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/PDqQhKx6lvI" frameborder="0" allowfullscreen></iframe> 
+
+### Question on 🔵 SAP Data Products: how to handle them today and what is the plan for tomorrow?
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/dEmaun_5YGA" frameborder="0" allowfullscreen></iframe> 
+
+### Question on 🔵 Accelerate SAP CAP and Fiori Development with AI Tools
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/YKzEsg9uPZQ" frameborder="0" allowfullscreen></iframe> 
+
+### Question on 🔵 Behind the Magic: How Cirque du Soleil Reimagined Invoice Management with SAP Business AI
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/l4mQ73tFT1s" frameborder="0" allowfullscreen></iframe> 
+
+
+
