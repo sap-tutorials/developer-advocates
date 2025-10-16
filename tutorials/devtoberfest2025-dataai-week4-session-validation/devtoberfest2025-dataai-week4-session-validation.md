@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# 🔵 (TODO) Devtoberfest 2025 - Week 4 - Data & AI sessions
+# 🔵 Devtoberfest 2025 - Week 4 - Data & AI sessions
 
 <!-- description --> Thanks for joining our Devtoberfest session(s)! This tutorial will help you earn credit for attending.
 
