@@ -19,7 +19,7 @@ parser: v2
 ## Prerequisites
 
 -   Attend live or watch a recording of [🟣 Generate Process Artifacts by Importing BPMN Models from Any Process Design Tool](https://www.youtube.com/watch?v=3uzgJXBb_X0).
--   Attend live or watch a recording of [🟣 Roles and Authorization in SAP Build Process Automation - A Developer’s Guide](https://www.youtube.com/watch?v=AXTka16LJow).
+-   Attend live or watch a recording of [🟣 Roles and Authorization in SAP Build Process Automation - A Developers Guide](https://www.youtube.com/watch?v=AXTka16LJow).
 -   Attend live or watch a recording of [🟣 Supercharge SAP Build Process Automation with the UiPath Foundation Add-On](https://www.youtube.com/watch?v=pZv9632X9Ps).
 -   Attend live or watch a recording of [🟣 UI5 Middleware FE Mockserver in Practice — Setup, Use Cases, Live Coding](https://www.youtube.com/watch?v=er6Mx93shJI).
 -   Attend live or watch a recording of [🟣 Extend Fiori UIs in SAP Build - Empowering Adaptation Projects with Generative AI Capabilities](https://www.youtube.com/watch?v=3MpBQo2Aov)
