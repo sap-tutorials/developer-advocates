@@ -18,7 +18,7 @@ parser: v2
 
 ## Prerequisites
 
--   Attend live or watch a recording of [🟣 wdi5 v3: Faster, Smoother, Smarter](https://www.youtube.com/watch?v=YFUL0vGvX1Q).
+-   Attend live or watch a recording of [🟣 wdi5 v3 - Faster, Smoother, Smarter](https://www.youtube.com/watch?v=YFUL0vGvX1Q).
 -   Attend live or watch a recording of [🟣 Best Practices for Quickly Building Extensions to SAP SuccessFactors](https://www.youtube.com/watch?v=7NgGVBDojDc).
 -   Attend live or watch a recording of [🟣 Leverage Joule Studio to Implement Custom Skills for Smart Customer Advisory Companion](https://www.youtube.com/watch?v=dC5pTEHMt9E).
 -   Attend live or watch a recording of [🟣 Beyond UI5 Controls with the Rise of Web Components](https://www.youtube.com/watch?v=jVslHo5I5qg).
