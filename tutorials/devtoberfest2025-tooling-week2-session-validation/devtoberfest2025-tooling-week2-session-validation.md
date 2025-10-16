@@ -35,7 +35,7 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 
 > **NOTE:** The questions for the tooling sessions for this week will be published within 24 hours of the last session of the day.
 
-### Question 1 - 🟣 wdi5 v3: Faster, Smoother, Smarter
+### Question 1 - 🟣 wdi5 v3 - Faster, Smoother, Smarter
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YFUL0vGvX1Q" frameborder="0" allowfullscreen></iframe>
 
