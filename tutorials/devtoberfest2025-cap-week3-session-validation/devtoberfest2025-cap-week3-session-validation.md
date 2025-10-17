@@ -19,7 +19,7 @@ parser: v2
 ## Prerequisites
 
 - Attend live or watch a recording of [🟠 CAP Tools – What's New and Hot](https://youtube.com/watch?v=HLlX_e-kXJw).
-- Attend live or watch a recording of [🟠 A conversation with the head of the CAP organization, Ole Lilienthal](https://youtube.com/watch?v=).
+- Attend live or watch a recording of [🟠 Best Practices in CAP](https://www.youtube.com/watch?v=BrmPTjVeTN4).
 - Attend live or watch a recording of [🟠 Testing SAP CAP Node.js apps with cds.test](https://youtube.com/watch?v=).
 - Attend live or watch a recording of [🟠 SAP HANA Application Migration Assistant - Transforming with Gen AI](https://youtube.com/watch?v=h9_4C7FswKk).
 
