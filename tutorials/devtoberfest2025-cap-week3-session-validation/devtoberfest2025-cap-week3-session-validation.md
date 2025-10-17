@@ -20,7 +20,7 @@ parser: v2
 
 - Attend live or watch a recording of [🟠 CAP Tools – What's New and Hot](https://youtube.com/watch?v=HLlX_e-kXJw).
 - Attend live or watch a recording of [🟠 Best Practices in CAP](https://www.youtube.com/watch?v=BrmPTjVeTN4).
-- Attend live or watch a recording of [🟠 Testing SAP CAP Node.js apps with cds.test](https://youtube.com/watch?v=).
+- Attend live or watch a recording of [🟠 Testing SAP CAP Node.js apps with cds.test](https://youtube.com/watch?v=6kfixPTQH4U).
 - Attend live or watch a recording of [🟠 SAP HANA Application Migration Assistant - Transforming with Gen AI](https://youtube.com/watch?v=h9_4C7FswKk).
 
 ## Intro
@@ -31,6 +31,18 @@ This validation tutorial is part of our yearly and wonderful **Devtoberfest**, a
 
 For more info on Devtoberfest, see our [Devtoberfest group page](https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest).
 
-The questions for 17th October 2025 will be published after all sessions for the day have concluded.
+### Question 1 - 🟠 CAP Tools – What's New and Hot
 
-Thank you, and please stay tuned.
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/HLlX_e-kXJw" frameborder="0" allowfullscreen></iframe>
+
+### Question 2 - 🟠 Best Practices in CAP
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/BrmPTjVeTN4" frameborder="0" allowfullscreen></iframe>
+
+### Question 3 - 🟠 Testing SAP CAP Node.js apps with cds.test
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/6kfixPTQH4U" frameborder="0" allowfullscreen></iframe>
+
+### Question 4 - 🟠 SAP HANA Application Migration Assistant - Transforming with Gen AI
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/h9_4C7FswKk" frameborder="0" allowfullscreen></iframe>
