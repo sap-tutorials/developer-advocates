@@ -12,7 +12,7 @@ parser: v2
 
 ## Prerequisites
 
-- An SAP account - If you don't have one, [sign up for a free account](https://www.sap.com/try.html)
+- An SAP account - If you don't have one, [sign up for a free account](https://www.sap.com/)
 
 ## You will learn
 
