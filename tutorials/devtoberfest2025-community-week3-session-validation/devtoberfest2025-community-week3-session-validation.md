@@ -7,6 +7,7 @@ tags: [ tutorial>beginner, topic>cloud ]
 primary_tag: topic>cloud
 parser: v2
 ---
+ 
     
 # 🟡 Devtoberfest 2025 - Week 3 - Interview for SAP Tech Job
 
