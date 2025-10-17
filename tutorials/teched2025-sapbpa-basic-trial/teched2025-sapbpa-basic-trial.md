@@ -10,6 +10,8 @@ parser: v2
 
 # Setup SAP Build Process Automation Basic Trial
 
+<!-- description -->You will learn how to access your SAP Build Process Automation Basic Trial environment.
+
 ## Prerequisites
 
 - An SAP account - If you don't have one, [sign up for a free account](https://www.sap.com/)
