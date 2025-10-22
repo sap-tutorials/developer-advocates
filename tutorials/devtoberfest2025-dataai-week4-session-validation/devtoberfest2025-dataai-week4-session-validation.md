@@ -1,6 +1,6 @@
 ---
 auto_validation: true
-time: 10
+time: 15
 author_name: Vitaliy Rudnytskiy
 author_profile: https://github.com/Sygyzmundovych
 tags: [ tutorial>beginner, topic>cloud ]
@@ -18,13 +18,13 @@ parser: v2
 
 ## Prerequisites
 
-- Attend live or watch a recording of [🔵 SAP Business Data Cloud – An Architecture Deep Dive](https://community.sap.com/t5/devtoberfest/sap-business-data-cloud-an-architecture-deep-dive/ev-p/14214642).
-- Attend live or watch a recording of [🔵 AI Won't Take Your Job. But Someone Using it Might](https://community.sap.com/t5/devtoberfest/ai-won-t-take-your-job-but-someone-using-it-might/ev-p/14207268).
-- Attend live or watch a recording of [🔵 The SAP Generative AI Hub plug-in for LiteLLM](https://community.sap.com/t5/devtoberfest/the-sap-generative-ai-hub-plug-in-for-litellm/ev-p/14217011).
-- Attend live or watch a recording of [🔵 Build Your Own AI Agent-Based Solution with the Generative AI Hub (JS & LangGraph version)](https://community.sap.com/t5/devtoberfest/build-your-own-ai-agent-based-solution-with-the-generative-ai-hub-js-amp/ev-p/14219946).
-- Attend live or watch a recording of [🔵 Build Your Own AI Agent-Based Solution with the Generative AI Hub (Java & SpringAI version)](https://community.sap.com/t5/devtoberfest/build-your-own-ai-agent-based-solution-with-the-generative-ai-hub-java-amp/ev-p/14219968).
-- Attend live or watch a recording of [🔵 Want better RAG results? Optimize your Data](https://community.sap.com/t5/devtoberfest/want-better-rag-results-optimize-your-data/ev-p/14217033).
-- Attend live or watch a recording of [🔵 PromptOps - CICD and lifecycle management of prompts for code based agents](https://community.sap.com/t5/devtoberfest/promptops-cicd-and-lifecycle-management-of-prompts-for-code-based-agents/ev-p/14242147).
+- Attend live or watch a recording of [🔵 SAP Business Data Cloud – An Architecture Deep Dive](https://community.sap.com/t5/devtoberfest/sap-business-data-cloud-an-architecture-deep-dive/ev-p/14214642)
+- Attend live or watch a recording of [🔵 AI Won't Take Your Job. But Someone Using it Might](https://community.sap.com/t5/devtoberfest/ai-won-t-take-your-job-but-someone-using-it-might/ev-p/14207268)
+- Attend live or watch a recording of [🔵 The SAP Generative AI Hub plug-in for LiteLLM](https://community.sap.com/t5/devtoberfest/the-sap-generative-ai-hub-plug-in-for-litellm/ev-p/14217011)
+- Attend live or watch a recording of [🔵 Build Your Own AI Agent-Based Solution with the Generative AI Hub (JS & LangGraph version)](https://community.sap.com/t5/devtoberfest/build-your-own-ai-agent-based-solution-with-the-generative-ai-hub-js-amp/ev-p/14219946)
+- Attend live or watch a recording of [🔵 Build Your Own AI Agent-Based Solution with the Generative AI Hub (Java & SpringAI version)](https://community.sap.com/t5/devtoberfest/build-your-own-ai-agent-based-solution-with-the-generative-ai-hub-java-amp/ev-p/14219968)
+- Attend live or watch a recording of [🔵 Want better RAG results? Optimize your Data](https://community.sap.com/t5/devtoberfest/want-better-rag-results-optimize-your-data/ev-p/14217033)
+- Attend live or watch a recording of [🔵 PromptOps - CICD and lifecycle management of prompts for code based agents](https://community.sap.com/t5/devtoberfest/promptops-cicd-and-lifecycle-management-of-prompts-for-code-based-agents/ev-p/14242147)
 
 ## Intro
 
