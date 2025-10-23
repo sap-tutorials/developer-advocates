@@ -45,7 +45,7 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NRUgCQPS5xQ" frameborder="0" allowfullscreen></iframe>
 
-### Question 3 - 🟣 From Insights to Action: Process Excellence by Combining Process Mining, Task Mining & Automation
+### Question 3 - 🟣 From Insights to Action – Process Excellence by Combining Process Mining, Task Mining & Automation
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/w6tmODEoEwU" frameborder="0" allowfullscreen></iframe>
 
@@ -57,7 +57,7 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2ZyI6b81yLw" frameborder="0" allowfullscreen></iframe>
 
-### Question 6 - 🟣 From Clicks to Code: Automate SAP BTP Setup with Terraform
+### Question 6 - 🟣 From Clicks to Code – Automate SAP BTP Setup with Terraform
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1daQVSV_DGM" frameborder="0" allowfullscreen></iframe>
 
