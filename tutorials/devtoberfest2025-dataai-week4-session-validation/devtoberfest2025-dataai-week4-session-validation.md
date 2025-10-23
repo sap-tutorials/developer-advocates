@@ -1,6 +1,6 @@
 ---
 auto_validation: true
-time: 15
+time: 10
 author_name: Vitaliy Rudnytskiy
 author_profile: https://github.com/Sygyzmundovych
 tags: [ tutorial>beginner, topic>cloud ]
@@ -38,9 +38,9 @@ This validation tutorial is part of **[Devtoberfest](https://community.sap.com/t
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/16UFIuNYVo0" frameborder="0" allowfullscreen></iframe> 
 
-### Question on 🔵 Connect to Generative AI Hub with LiteLLM
+### Question on 🔵 Connect to Generative AI Hub with LiteLLM and Build AI Agents with CrewAI
 
-<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/UZz6Eh2XOog" frameborder="0" allowfullscreen></iframe> 
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/osVV9lqm3ms" frameborder="0" allowfullscreen></iframe> 
 
 ### Question on 🔵 Build Your Own AI Agent-Based Solution with the Generative AI Hub (JS & LangGraph version)
 
