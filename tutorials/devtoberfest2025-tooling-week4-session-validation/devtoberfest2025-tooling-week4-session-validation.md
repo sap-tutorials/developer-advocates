@@ -21,6 +21,8 @@ parser: v2
 - Attend live or watch a recording of [🟣 Document Translation with SAP Build Apps and Translation Hub](https://www.youtube.com/watch?v=4U31w3w_olc).
 - Attend live or watch a recording of [🟣 Taking Guided Experiences with SAP Build to the Next Level](https://www.youtube.com/watch?v=NRUgCQPS5xQ).
 - Attend live or watch a recording of [🟣 From Insights to Action: Process Excellence by Combining Process Mining, Task Mining & Automation](https://www.youtube.com/watch?v=w6tmODEoEwU).
+- Attend live or watch a recording of [🟣 End to End UI5 Tooling Connecting Apps, Libraries, and Components](https://www.youtube.com/watch?v=wXpIsrZ2WoE).
+- Attend live or watch a recording of [🟣 AI + SAP Fiori elements = Intelligent App Development at Scale](https://www.youtube.com/watch?v=2ZyI6b81yLw).
 - Attend live or watch a recording of [🟣 From Clicks to Code: Automate SAP BTP Setup with Terraform](https://www.youtube.com/watch?v=1daQVSV_DGM).
 
 ## Intro
@@ -33,7 +35,7 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 
 >**NOTE:** The questions for the tooling sessions for this week will be published within 24 hours of the last session of the day. 
 
-<!--
+
 
 ### Question 1 - 🟣 Document Translation with SAP Build Apps and Translation Hub
 
@@ -47,8 +49,17 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/w6tmODEoEwU" frameborder="0" allowfullscreen></iframe>
 
-### Question 4 - 🟣 From Clicks to Code: Automate SAP BTP Setup with Terraform
+### Question 4 - 🟣 End to End UI5 Tooling Connecting Apps, Libraries, and Components
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wXpIsrZ2WoE" frameborder="0" allowfullscreen></iframe>
+
+### Question 5 - 🟣 AI + SAP Fiori elements = Intelligent App Development at Scale
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2ZyI6b81yLw" frameborder="0" allowfullscreen></iframe>
+
+### Question 6 - 🟣 From Clicks to Code: Automate SAP BTP Setup with Terraform
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1daQVSV_DGM" frameborder="0" allowfullscreen></iframe>
 
--->
+
+ 
