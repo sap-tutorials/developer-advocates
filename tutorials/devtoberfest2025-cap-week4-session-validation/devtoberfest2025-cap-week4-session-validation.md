@@ -19,8 +19,8 @@ parser: v2
 ## Prerequisites
 
 - Attend live or watch a recording of [🟠 Agentic Coding with CAP](https://youtube.com/watch?v=vvSrbsiIfmA).
-- Attend live or watch a recording of [🟠 Plug'n'Ask: Enabling AI Context in CAP Through the Power of Plugins And MCP](https://youtube.com/watch?v=).
-- Attend live or watch a recording of [🟠 CAPuccino](https://youtube.com/watch?v=).
+- Attend live or watch a recording of [🟠 Plug'n'Ask: Enabling AI Context in CAP Through the Power of Plugins And MCP](https://youtube.com/watch?v=68VtJWNkYk4).
+- Attend live or watch a recording of [🟠 CAP Console](https://youtube.com/watch?v=xhnrPNWdAQ).
 
 ## Intro
 
@@ -36,8 +36,8 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 
 ### Question 2 - 🟠 Plug'n'Ask: Enabling AI Context in CAP Through the Power of Plugins And MCP 
 
-<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/68VtJWNkYk4" frameborder="0" allowfullscreen></iframe>
 
-### Question 3 - 🟠 CAPuccino
+### Question 3 - 🟠 CAP Console
 
-<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/xhnrPNWdAQ" frameborder="0" allowfullscreen></iframe>
