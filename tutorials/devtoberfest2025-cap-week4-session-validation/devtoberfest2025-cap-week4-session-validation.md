@@ -20,7 +20,7 @@ parser: v2
 
 - Attend live or watch a recording of [🟠 Agentic Coding with CAP](https://youtube.com/watch?v=vvSrbsiIfmA).
 - Attend live or watch a recording of [🟠 Plug'n'Ask: Enabling AI Context in CAP Through the Power of Plugins And MCP](https://youtube.com/watch?v=68VtJWNkYk4).
-- Attend live or watch a recording of [🟠 CAP Console](https://youtube.com/watch?v=xhnrPNWdAQ).
+- Attend live or watch a recording of [🟠 CAP Console](https://youtube.com/watch?v=4xhnrPNWdAQ).
 
 ## Intro
 
@@ -40,4 +40,4 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 
 ### Question 3 - 🟠 CAP Console
 
-<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/xhnrPNWdAQ" frameborder="0" allowfullscreen></iframe>
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/4xhnrPNWdAQ" frameborder="0" allowfullscreen></iframe>
