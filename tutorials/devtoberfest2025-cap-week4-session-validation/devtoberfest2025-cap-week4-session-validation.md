@@ -12,7 +12,7 @@ parser: v2
 
 <!-- description --> We appreciate you coming to our Devtoberfest session(s), and this tutorial will allow you to get credit for attending.
 
-## You will learn
+## You will learn 
 
 - A lot about technology – and yourself – during Devtoberfest
 
@@ -30,6 +30,14 @@ This validation tutorial is part of our yearly and wonderful **Devtoberfest**, a
 
 For more info on Devtoberfest, see our [Devtoberfest group page](https://community.sap.com/t5/devtoberfest/gh-p/Devtoberfest).
 
-The questions for 24th October 2025 will be published after all sessions for the day have concluded.
+### Question 1 - 🟠 Agentic Coding with CAP
 
-Thank you, and please stay tuned.
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/vvSrbsiIfmA" frameborder="0" allowfullscreen></iframe>
+
+### Question 2 - 🟠 Plug'n'Ask: Enabling AI Context in CAP Through the Power of Plugins And MCP 
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+
+### Question 3 - 🟠 CAPuccino
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
