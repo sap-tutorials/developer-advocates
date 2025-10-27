@@ -1,8 +1,8 @@
 ---
 auto_validation: true
 time: 5
-author_name: Daniel Wroblewski
-author_profile: https://github.com/thecodester
+author_name: DJ Adams
+author_profile: https://github.com/qmacro
 tags: [ tutorial>beginner, topic>cloud ]
 primary_tag: topic>cloud
 parser: v2
@@ -10,15 +10,15 @@ parser: v2
   
 # 🟡 Devtoberfest 2025 - Week 4 - Developer Advocates Discuss
 
-<!-- description --> We appreciate you coming to our Devtoberfest session(s), and this tutorial will allow you to get credit for attending.
+<!-- description --> We appreciate you coming to our Devtoberfest session, and this tutorial will allow you to get credit for attending.
 
 ## You will learn
 
-- A lot about technology – and yourself – during Devtoberfest
+- About agentic AI coding, MCP servers, IDEs and more
 
 ## Prerequisites
-- Attend live or watch a recording of [🟡 How to Interview for an SAP Tech Job](https://www.youtube.com/watch?v=ovf3h2YvM8w).
 
+- Attend live or watch a recording of [🟡 Developer Advocates Discuss: Developer Tools in the 21st Century](https://www.youtube.com/watch?v=ovf3h2YvM8w).
 
 ## Intro
 
@@ -30,12 +30,6 @@ For more info on Devtoberfest, see our [Devtoberfest group page](https://communi
 
 >**NOTE:** The question for the tooling sessions for this week will be published within 24 hours of the last session of the day. 
 
-<!--
-
-### Question 1 - 🟡 Developer Advocates Discuss
+### Question 1 - 🟡 Developer Advocates Discuss: Developer Tools in the 21st Century
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ovf3h2YvM8w" frameborder="0" allowfullscreen></iframe>
-
-
--->
-
