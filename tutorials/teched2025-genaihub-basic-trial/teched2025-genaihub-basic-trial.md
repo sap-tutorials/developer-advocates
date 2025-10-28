@@ -8,7 +8,7 @@ tags: [ tutorial>beginner, topic>artificial-intelligence, software-product>sap-a
 primary_tag: topic>artificial-intelligence
 parser: v2
 ---
- 
+
 # Setup Generative AI Hub Basic Trial
 
 <!-- description -->You will learn how to access your Generative AI Hub Basic Trial environment.
