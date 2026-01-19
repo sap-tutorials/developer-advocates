@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# Create Skill to Create / Update Shipment
+# 5 - Create Skill to Create / Update Shipment
 <!-- description --> Create a skill to enable the user to create a new shipment in the GTT system, or update an existing shipment.
  
 ## You will learn

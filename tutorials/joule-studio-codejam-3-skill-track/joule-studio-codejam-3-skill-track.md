@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# Create Skill to Track Shipments
+# 3 - Create Skill to Track Shipments
 <!-- description --> Create a skill to enable the user to track a shipment, where the user specifies a shipment ID and the skill returns information on that shipment.
  
 ## You will learn

@@ -8,8 +8,8 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# 🟣 Release and Deploy to Shared Environment
-<!-- description --> Create a release version of your project and deploy to your shared environment, where you can perform more testing.
+# 9 - Release and Deploy to Shared Environment
+<!-- description --> Create a release version of your project and deploy to your shared environment, where you can perform more testing or send to production.
  
 ## You will learn
 - How to create a release version of a Joule Studio project
@@ -21,22 +21,33 @@ parser: v2
 
 
 ## Intro
+In this tutorial, you will deploy your project to your shared environment.
 
+In a production setting, you would create two shared environments, one for testing one for production. The one for production you would change the settings so any projects deployed to it are exposed in the production Joule.
 
 
 
 ### Release project
-### Part 2: Release and Deploy the Project
+1. Open your project, and make sure it is saved.
 
-1. Open your **Project Overview** page in Joule Studio and click **Release**.  
-<img width="1785" height="650" alt="image" src="https://github.com/user-attachments/assets/faccf2e2-4d91-48e1-94a6-e76771abcdd2" />
+2. Click **Release** in the upper right.
 
-2. Once released, navigate to the **Released Version** of your project and click **Deploy**.  
-<img width="1798" height="583" alt="image" src="https://github.com/user-attachments/assets/4203bcc9-071a-417c-9216-763f674d74dc" />
+   Since this is your first release, the dialog will show the version as 1.0.0. You can add a release note if you want.
+
+   Click **Release**.
+
+   After the project is released, you will see a success message at the top of the screen.
+
 
 
 
 ### Deploy project
+1. Navigate to the released version by clicking **Show project version**.
+
+   You will now see a button to deploy the project.
+
+2. Click **Deploy**.
+
 3. In the deployment dialog, select the **Shared Environment** you just created and click **Deploy**.  
 <img width="1799" height="576" alt="image" src="https://github.com/user-attachments/assets/b4edd086-1d3b-495d-9548-9102548ee0a0" />
 
@@ -73,4 +84,16 @@ parser: v2
 4. Enter the same prompts used during private testing (see [Ex. 4.1](../ex4/ex4.1-test-joule-agent.md)) to validate the behavior.
 
 <img width="1795" height="502" alt="image" src="https://github.com/user-attachments/assets/00e848fa-a6d5-4f19-8351-4dcdba54de0c" />
+
+
+### Explore how to send to production
+We will not deploy to the shared Joule for this project, but still you should know how that would be done.
+
+Inside your environment, there is a setting to tell Joule Studio to send your skills and agents to Joule.
+
+In a production setting, you would create:
+
+- A test shared environment, whose projects would not be sent to Joule.
+
+- A production shared environment, whose projects would be sent to Joule.
 

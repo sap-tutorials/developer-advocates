@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# Test the shipping agent
+# 7 - Test the Shipping Agent
 <!-- description --> Use the private environment to test the shipping agent.
  
 ## You will learn

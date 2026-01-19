@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# Create agent to coordinate skills
+# 6 - Create Agent to Coordinate Skills
 <!-- description --> Create a Joule agent to coordinate the skills, allow us to control exactly how Joule interacts with the user.
  
 ## You will learn

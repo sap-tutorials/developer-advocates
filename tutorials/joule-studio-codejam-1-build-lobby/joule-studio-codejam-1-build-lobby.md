@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# Open and Explore the SAP Build Lobby 
+# 1 - Open and Explore the SAP Build Lobby 
 <!-- description --> Open the SAP Build Lobby and explore how to create projects and the other tools available for developers and admins.
  
 ## You will learn
