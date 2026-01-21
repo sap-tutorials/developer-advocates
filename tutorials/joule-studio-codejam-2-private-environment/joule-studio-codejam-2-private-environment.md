@@ -10,7 +10,7 @@ parser: v2
   
 # 2- Create Environments for Testing
 <!-- description --> Create SAP Build environments, which let you set aside different deployment areas for different lines of business, as well as private environments for individual testing. 
- 
+  
 ## You will learn
 - How to create a private environment
 - How to create a shared environment

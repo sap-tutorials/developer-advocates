@@ -40,7 +40,7 @@ While they can understand conversation context, their logic is **non-adaptive** 
 >    - through another Joule Skills
 >    - through Joule Agent
 
-
+ 
 
 ### Create Joule Studio project
 A Joule Studio project contains a set of custom skills, agents, and date types deployed together.

@@ -7,7 +7,7 @@ tags: [ tutorial>beginner, topic>cloud ]
 primary_tag: topic>cloud
 parser: v2
 ---
-  
+   
 # 1 - Open and Explore the SAP Build Lobby 
 <!-- description --> Open the SAP Build Lobby and explore how to create projects and the other tools available for developers and admins.
  
