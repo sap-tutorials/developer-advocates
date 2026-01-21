@@ -1,6 +1,6 @@
 ---
 auto_validation: true
-time: 5
+time: 10
 author_name: Daniel Wroblewski
 author_profile: https://github.com/thecodester
 tags: [ tutorial>beginner, topic>cloud ]
