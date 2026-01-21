@@ -25,6 +25,8 @@ parser: v2
 ## Intro
 **SAP Build** is a comprehensive low-code/no-code development platform that enables users to create enterprise applications, automate business processes, and design digital workspaces without extensive programming knowledge. The platform empowers both citizen developers and professional developers to build solutions with drag-and-drop simplicity while maintaining enterprise-grade security and scalability.
 
+![SAP Build](0-intro-1.png)
+
 The core components are:
 
 - **Joule Studio:** A capability within SAP Build that enables organizations to create and deploy custom Joule agents and skills that automate workflows and improve efficiency across SAP and non-SAP systems 
@@ -44,7 +46,14 @@ Open the [SAP Build Lobby](https://joule-studio-urve04n3.eu10.build.cloud.sap/lo
 
 Enter the credentials you received from your instructor, and click **Continue**.
 
+![SAP Build](1-signin-1.png)
+
 You will now see the SAP Build Lobby.
+
+![SAP Build Lobby](0-intro-1.png)
+
+
+
 
 
 ### Explore SAP Build
@@ -58,6 +67,7 @@ The **Lobby** shows a list of the existing SAP Build projects, and is where you 
 
 You can use the search and filter bars to filter the list of projects by different parameters, which helps when there are a lot of projects.
 
+![Lobby](2-explore-1.png)
 
 
 
@@ -68,19 +78,26 @@ You can use the search and filter bars to filter the list of projects by differe
 
 - **Events**: Here you can define the events -- for example, those triggered by SAP S/4HANA activities -- that you want to receive in SAP Build and use to trigger processes.
 
+![Connectors](2-explore-2.png)
 
 #### Store
 The **Store** is a set of SAP Build templates -- mostly SAP Build Process Automation processes with the rest actions. The vast majority are free to use.
+
+![Store](2-explore-3.png)
 
 #### Monitoring
 **Monitoring** lets you keep an eye on SAP Build Process Automation processes and automations -- instances that were triggered, who triggered them, their status, the data flowing through them, and more. You can also see events that were received by SAP Build Process Automation.
 
 **Monitoring** can also show you what events were sent to SAP Build for triggering processes. 
 
-
+![Monitoring](2-explore-4.png)
 
 #### Control Tower
-The **Control Tower** is a large set of tools for the administrator to set up SAP Build. For example, the administrator can:
+The **Control Tower** is a large set of tools for the administrator to set up SAP Build.
+
+![Control Tower](2-explore-5.png)
+
+For example, the administrator can:
 
 - Create separate environments for different LOBs
 
@@ -103,7 +120,9 @@ When you view the **Control Tower**, you will see only a subset of those capabil
 
 Go back to the lobby, and click **Create**. 
 
-You can now explore what types of projects you can build:
+![Control Tower](3-create-1.png)
+
+You can now explore what types of projects you can build (and the tools for building them):
 
 - **Application** (SAP Build Apps and SAP Build Code)
 
@@ -113,6 +132,8 @@ You can now explore what types of projects you can build:
 
 - **Business Site** (SAP Build Work Zone)
 
-Many of the options will say **Not Subscribed**, meaning that on this SAP BTP instance this capability/service has not been installed, or you do not have permission to create such a project.
+![Control Tower](3-create-2.png)
+
+Many of the options might say **Not Subscribed**, meaning that on this SAP BTP instance this capability/service has not been installed, or you do not have permission to create such a project.
 
 

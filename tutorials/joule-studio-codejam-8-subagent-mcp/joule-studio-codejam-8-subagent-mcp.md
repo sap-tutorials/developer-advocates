@@ -28,6 +28,8 @@ In this tutorial we will explore two additional features of agents:
 
 You will create an agent that uses an MCP server for converting currencies, and then use that agent within your logistics agent.
 
+>We probably could have just added the MCP server to the first agent, but we wanted to show the subagent feature as well 😊.
+
 
 
 
@@ -118,7 +120,11 @@ Now we have to instuct the agent to use the tool when someone asks for currency 
 In the instructions of the **Agent for Logistics** agent, replace the first paragraph under **Suggest Carrier Options** with this one.
 
 ```Text
-If the user asks for carrier suggestions, use the document “Carrier Selection Guide.docx” to present all available carrier options. Display the list of carriers for the user to view as a simple table, displaying only the name of the carrier and the price. If the user asks for the prices in a currency not USD, use the "Convert currencies" agent tool to get the currency conversions and show 2 columns, one for USD and one for the converted currency.
+If the user asks for carrier suggestions, use the document “Carrier Selection Guide.docx” to present all 
+available carrier options. Display the list of carriers for the user to view as a simple table, displaying only 
+the name of the carrier and the price. If the user asks for the prices in a currency not USD, use the "Convert  
+currencies" agent tool to get the currency conversions and show 2 columns, one for USD and one for the 
+converted currency.
 ```
 
 Click **Save** (upper right).
@@ -142,7 +148,9 @@ Click **Save** (upper right).
 
 2. Ask Joule for suggested carriers and prices by entering the following:
 
-    ```Suggest the best carriers from SFO to NYC, and show prices in euros```
+    ```Prompt
+    Suggest the best carriers from SFO to NYC, and show prices in euros
+    ```
 
     **Result**: Joule proposes the carriers based on the carrier rates document from our document grounding, and converts the prices to euros.
 
@@ -156,7 +164,7 @@ Click **Save** (upper right).
 
     If you scroll down and click **MCP Server**, you will see on the right that the MCP server was called and returned currency conversions for today.
 
-
+4. Click **Stop Testing**.
 
 
 

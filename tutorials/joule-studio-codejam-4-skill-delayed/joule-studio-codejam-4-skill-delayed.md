@@ -42,7 +42,7 @@ In this skill, we will use the same API but provide different binding, specifica
 
 
 ### Add action to skill
-1. In the skill builder, click on the **+** button.
+1. In the skill builder, click on the **+** button right under the trigger step.
 
     Choose **Call Action**
 
@@ -96,6 +96,8 @@ You need to create output parameters, so that the skill returns data to Joule (o
     | json             | json             | JSON                | Any    | ✅ Checked| ✅ Checked |
 
     Click **Apply**.
+
+5. Click **Save** (upper right).
     
     
 
@@ -126,7 +128,11 @@ You created the output parameters to send data back to Joule or the agent. Now w
 
     A new browser tab opens with Joule.
 
-3. As a prompt, enter `I would like to find all the delayed shipments`.
+3. As a prompt, enter the following:
+
+    ```Text
+    I would like to find all the delayed shipments
+    ```
 
     Joule will output a list of delayed shipments.
 

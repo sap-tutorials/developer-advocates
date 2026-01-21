@@ -148,7 +148,7 @@ In this action, we are creating a new shipment with a POST request, and using a 
     | altKey                   | Apply a Formula| ```ConcatenateStrings(["xri://sap.com/id:LBN#10020007892:EWWCLNT220:FT1_SHIPMENT:", <Skill Input-shipmentId>], "")```)| Note: Replace the <> with the skill input binding for shipment ID. |
     | arrivalLocationId        | Skill Inputs > destlocation | |
     | departureLocationId      | Skill Inputs > srclocation  | |
-    | plannedArrivalDateTime   | Static  | ```2026-03-31T16:30:00+02:00```  (December 20th, 2025 4:30:00 PM CET) |
+    | plannedArrivalDateTime   | Static  | ```2026-03-31T16:30:00+02:00``` |
     | plannedDepartureDateTime | Skill Input > datetime   |  |
     | serviceAgentLbnId        | Skill Inputs > carrier      | |
     | shipmentNo               | Skill Inputs > shipmentid   | |
@@ -173,7 +173,6 @@ You created the output parameters to send data back to Joule or the agent. Now w
 You will now create a condition branch in the Skill builder to check if a carrier exists for the shipment (update) or you are creating a fresh shipment without a carrier. 
 
 
-### 3. Create A Condition Branch
 1. In the skill builder, click on the **+** button after the action.
 
 2. Choose **Check Condition**.
@@ -274,11 +273,15 @@ You will create two **Send Message** steps, one for each of the condition branch
 
     A new browser tab opens with Joule.
 
-3. As a prompt, enter `Hello Joule, Could you please assist me in creating a Shipment?`.
+3. As a prompt, enter:
+
+    ```Text
+    Hello Joule, Could you please assist me in creating a Shipment?
+    ```
 
     Joule will trigger your Create Shipment skill but required parameters will be missing. Joule will prompt you for them.
 
-4. Enter the following prompt, changing the shipment ID to 91001<user number><your initials>:
+4. Enter the following prompt, changing the shipment ID to 91001<user number><your initials>, for example, `91001002DBW`:
 
     ```Text
     Shipment ID: 91001<User number><your initials>

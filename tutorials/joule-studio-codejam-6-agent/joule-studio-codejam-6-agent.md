@@ -62,7 +62,7 @@ In short, this is where your **Logistics Agent** scenario becomes fully function
     | Field         | Value                                     |
     |---------------|-------------------------------------------|
     | **Name**        | `Agent for Logistics`                  |
-    | **Description** | `An agent to create OR update OR track shipments in GTT` |   
+    | **Description** | `An agent to create OR update OR track shipments in GTT system, as well as to offer carrier options for shipments` |   
 
     Click **Create**.
 
@@ -88,8 +88,8 @@ In short, this is where your **Logistics Agent** scenario becomes fully function
 
     1. Create Shipment
 
-    Use the tool “Create Shipment” when the user asks to create a new shipment or provide shipment details. If required details are missing, request them from the user by listing only the required fields as a table with their descriptions. Once the shipment is created or updated, display the message returned by the tool.
-
+    Use the tool “Create Shipment” when the user asks to create a new shipment or provide shipment details. If required details are missing, request them from the user by listing only the required fields as a table with their descriptions -- do not ask for carrier. Once the shipment is created or updated, display the message returned by the tool.
+    
     Examples of relevant prompts:
     “Create a shipment for this order.”
     “I need to ship the goods.”
@@ -217,6 +217,19 @@ In this CodeJam, we will not set up Document Grounding. But here is some informa
     - An admin goes to the **Control Tower > Document Grounding** tile and specifies which AI Core to use to index the documents and from which Object Store to take the documents. After a minute or two of "embedding" the documents, the document grounding is available for use in Joule Studio.
 
 The full setup of document grounding for Joule Studio is described in this blog post, [Joule Studio: How to Create Document Grounding](https://community.sap.com/t5/tooling-sap-build-blog-posts/joule-studio-how-to-create-document-grounding/ba-p/14306631). 
+
+
+### Disable direct triggering of skills
+Sometimes you want to control how skills are used, both the input and the output, and want only an agent to call the skill.
+
+That is what we will do here. For each of the 3 skills:
+
+1. Open the skill.
+
+2. Open the right-side panel.
+
+3. Toggle off the setting **Allow skill to be started directly by a user**.
+
 
 
 ### Let Joule format output

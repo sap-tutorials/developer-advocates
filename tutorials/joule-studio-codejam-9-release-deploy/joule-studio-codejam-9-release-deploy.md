@@ -32,11 +32,11 @@ In a production setting, you would create two shared environments, one for testi
 
 2. Click **Release** in the upper right.
 
-   Since this is your first release, the dialog will show the version as 1.0.0. You can add a release note if you want.
+    Since this is your first release, the dialog will show the version as 1.0.0. You can add a release note if you want.
 
-   Click **Release**.
+    Click **Release**.
 
-   After the project is released, you will see a success message at the top of the screen.
+    After the project is released, you will see a success message at the top of the screen.
 
 
 
@@ -44,22 +44,22 @@ In a production setting, you would create two shared environments, one for testi
 ### Deploy project
 1. Navigate to the released version by clicking **Show project version**.
 
-   You will now see a button to deploy the project.
+    You will now see a button to deploy the project.
 
 2. Click **Deploy**.
 
 3. In the **Choose an Environment** dialog, select your shared environment you created at the start of the CodeJam.
 
-   Click **Deploy**.
+    Click **Deploy**.
 
 4. Select the environment variables.
 
-   | Field         | Value                                     |
-   |---------------|-------------------------------------------|
-   | **GetFromGTT**        | Select **gttGetService** destination                  |
-   | **PostToGTT** | Select **gttwriteservice** destination |   
+    | Field         | Value                                     |
+    |---------------|-------------------------------------------|
+    | **GetFromGTT**        | Select **gttGetService** destination                  |
+    | **PostToGTT** | Select **gttwriteservice** destination |   
 
-   Click **Deploy**.
+    Click **Deploy**.
 
 
 
@@ -70,15 +70,17 @@ In a production setting, you would create two shared environments, one for testi
 
 3. In the **Projects** tab, which should be selected automatically, you will see the projects deployed to this environment.
 
-   You should see the project you just deployed.
+    You should see the project you just deployed.
 
 4. Since this is a Joule-related project, open the **Joule** tab.
 
-   Here you will see all the Joule Studio projects deployed to this environment.
+   >The **Joule** tab may be hidden under the **More** button.
+
+    Here you will see all the Joule Studio projects deployed to this environment.
 
 5. Click **Launch**.
 
-   This launches Joule for this environment, meaning you can prompt for all the projects in this environment.
+    This launches Joule for this environment, meaning you can prompt for all the projects in this environment.
 
 Go ahead and test again the prompts for the your logistics agent.   
 

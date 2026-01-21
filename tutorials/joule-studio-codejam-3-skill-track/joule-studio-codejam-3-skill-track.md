@@ -100,29 +100,29 @@ Joule will try to understand the values from the context; if any required input 
 
 2. Click the **Parameters** tab.
 
-  >**Skill Inputs:** Data derived from the conversation.
+    >**Skill Inputs:** Data derived from the conversation.
 
-  >**Skill Outputs:** Data sent into the conversation context.
+    >**Skill Outputs:** Data sent into the conversation context.
 
-  >**Skill Variables:** Data stored during the skill execution, which can be set with a **Set Variable** step.
-  
+    >**Skill Variables:** Data stored during the skill execution, which can be set with a **Set Variable** step.
+
 3. Next to **Skill Inputs**, click **Configure**.
 
 4. In the **Configure Skill Inputs** dialog, click **Add Input** and enter the following details:
 
     | **Name**       | **Identifier** (auto-populated) | **Description**         | **Required** |
-    |----------------|----------------|--------------------------|---------------|
+    |----------------|----------------|--------------------------|:---------------:|
     | trackingID     | trackingiD     | Tracking Number              | ✅ |
 
     >The identifier is autopopulated based on the skill name.
 
-    Once all inputs are added, click **Apply**.
+    Click **Apply**.
 
 
 
 
 ### Add action to skill
-1. In the skill builder, click on the **+** button.
+1. In the skill builder, click on the **+** button right under the trigger step.
 
     Choose **Call Action**
 
@@ -161,7 +161,7 @@ Actions define a specific API call. But each time you add the action you can pro
 
     With the action selected, select the **Input** tab on the right pane. 
 
-    Click inside the $filter field, and select **Apply a Formula**. The formula editor opens.
+    Click inside the **$filter** field, and select **Apply a Formula**. The formula editor opens.
      
     Enter the following formula in the box:
 
@@ -169,7 +169,7 @@ Actions define a specific API call. But each time you add the action you can pro
     ConcatenateStrings(["trackingId eq ", <Tracking ID>, ""], "'")
     ```
 
-    In the formula editor, you need to replace `<Tracking ID>` with a reference to the input paramter. Select `<Tracking ID>` and then click **Skill Inputs > trackingID** from the left side, so that the formula looks like this:
+    In the formula editor, you need to replace `<Tracking ID>` with a reference to the input paramter. Select `<Tracking ID>` and then double-click **Skill Inputs > trackingID** from the left side, so that the formula looks like this:
 
 
     Click **Apply**.
@@ -211,7 +211,7 @@ You created the output parameters to send data back to Joule or the agent. Now w
     | gttstatus      | eventStatus_code     | getReadquery > result > d > results > plannedEvents > list - results > eventStatus_code |
     | json           | result           | getReadquery > result |
 
-3. Click **Save** (upper-right).
+3. Click **Save** (upper right).
 
 
 
@@ -229,15 +229,27 @@ A nice feature of Joule Studio is that you can test your project without having 
 
     Click **Continue**.
 
-    A new browser tab opens with Joule.
+    A new browser tab opens with Joule. 
 
-3. As a prompt, enter `I want to track the shipment 91001DBW`.
+    >The first time you run the test, it might take a couple of minutes for the browser tab to open.
+
+3. As a prompt, enter"
+
+    ```Text
+    I want to track the shipment 91001DBW.
+    ```
 
     Joule will output information from shipment **91001DBW**.
 
     The exact format varies, since we just returned data back to Joule and specified that Joule design the output. If we wanted to control the output, we could have specified a **Send Response** step and designed the output more precisely.
 
-4. Enter `I want to track the shipment 91001DBW` again, and the response will likely be formatted differently.
+4. Enter the prompt again.
+
+    ```Text
+    I want to track the shipment 91001DBW.
+    ```
+
+    The response will likely be formatted differently.
 
 5. Once you are done testing, click **Stop Testing**.
 

@@ -60,10 +60,15 @@ First, you will create an environment for yourself.
 
 2.  In the Control Tower, click on the **Environments** tile.
 
+    ![Environments](2-private-1.png)
+
 3.  Click the **Activate Private Environment** button.
+
+    ![Activate private](2-private-2.png)
 
     You will see a new environment labeled **Private** in the list of environments.
 
+    ![New private](2-private-3.png)
 
 
 ### Create a shared environment
@@ -71,14 +76,20 @@ Though you will not need a shared environment until we deploy the project toward
 
 1. In the same **environments** screen, click **Create**.
 
+    ![Create environment](3-shared-1.png)
+
 2. In the **Create Environment** form, fill in the following:
 
     | Field | Value |
     |-------|-------|
-    | Environment Name | `Joule Studio XXX` replacing `XXX` with your user number |
+    | Environment Name | `Joule Studio XXX` replacing `XXX` with your user number and initials |
     | Color | Whatever color you like 😸 |
     | Description | `Shared environment to test my skills and agents` |
 
+    ![Create environment](3-shared-2.png)
+
 3. Click **Create**.
 
-    You will see a new environment labeled **Joule Studio XXX** in the list of environments, this type not gray but with the color you assigned to it.
+    You will see a new environment labeled **Joule Studio XXX XXX** in the list of environments, this time not gray but with the color you assigned to it.
+
+    ![Create environment](3-shared-3.png)
