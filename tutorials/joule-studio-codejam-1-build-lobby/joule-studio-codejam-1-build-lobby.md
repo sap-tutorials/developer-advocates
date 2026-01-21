@@ -25,7 +25,7 @@ parser: v2
 ## Intro
 **SAP Build** is a comprehensive low-code/no-code development platform that enables users to create enterprise applications, automate business processes, and design digital workspaces without extensive programming knowledge. The platform empowers both citizen developers and professional developers to build solutions with drag-and-drop simplicity while maintaining enterprise-grade security and scalability.
 
-![SAP Build](0-intro-1.png)
+![SAP Build](0-Intro-1.png)
 
 The core components are:
 
@@ -50,7 +50,7 @@ Enter the credentials you received from your instructor, and click **Continue**.
 
 You will now see the SAP Build Lobby.
 
-![SAP Build Lobby](0-intro-1.png)
+![SAP Build](0-Intro-1.png)
 
 
 
