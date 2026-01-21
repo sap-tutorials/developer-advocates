@@ -57,6 +57,8 @@ In short, this is where your **Logistics Agent** scenario becomes fully function
 
 2. Click **Create**, and choose **Joule Agent**.
 
+    ![Empty agent](1-empty-1.png)
+
 3. In the **Create Joule Agent** dialog, enter the following details:
 
     | Field         | Value                                     |
@@ -66,7 +68,12 @@ In short, this is where your **Logistics Agent** scenario becomes fully function
 
     Click **Create**.
 
+    ![Name agent](1-empty-2.png)
+
     Once the Joule skill is created, you are taken to the skill builder.
+
+    ![Agent builder](2-instructions-1.png)
+
     
     
 
@@ -80,8 +87,6 @@ In short, this is where your **Logistics Agent** scenario becomes fully function
     >**💡 Tip:** Expertise defines the agent's professional identity and field of knowledge.	This tells the agent which general business area it is operating in, such as finance, human resources, or supply chain. Your input here will help shape the agent's overall tone, vocabulary, and scope.
 
 2. Enter the following for the **Instructions** section:
-
-    >**💡 Tip:** Instructions specifies the agent's core goal, rules, and constraints.	This is the most critical part, as it dictates what the agent should accomplish. It directs the agent's behavior by providing guardrails and setting its primary objective.
 
     ```Text
     You are responsible for handling logistics-related user requests involving shipments and carriers. You must determine which action to take based on the user’s input. Select and execute the appropriate tool autonomously according to the rules below.
@@ -129,9 +134,9 @@ In short, this is where your **Logistics Agent** scenario becomes fully function
     The user may request actions in any order (e.g., tracking first, then creating, or selecting carriers afterward).
     ```
 
-3. Enter the following for the **Additional Context** section:
+    >**💡 Tip:** Instructions specifies the agent's core goal, rules, and constraints.	This is the most critical part, as it dictates what the agent should accomplish. It directs the agent's behavior by providing guardrails and setting its primary objective.
 
-    >**💡 Tip:** Context allows you to feed the agent more specific, relevant, and potentially evolving information. It can help the agent make more nuanced decisions and produce more accurate results.
+3. Enter the following for the **Additional Context** section:
 
     ```Text
     Maintain a professional, clear, and courteous tone throughout all communications. Ensure every response is precise, concise, and free from ambiguity. Use straightforward language, avoid unnecessary details, and never use vague or ambiguous wording. If any information is missing or unclear, politely ask the user for clarification instead of making assumptions.
@@ -151,9 +156,16 @@ In short, this is where your **Logistics Agent** scenario becomes fully function
     Agent: "Tracking details for shipment 12345: [display tracking information]."
     ```
 
+    >**💡 Tip:** Context allows you to feed the agent more specific, relevant, and potentially evolving information. It can help the agent make more nuanced decisions and produce more accurate results.
+
+
 
 
 ### Set the models and settings
+For the agent, you can select the LLM you want to use, plus additional settings about the AI should work.
+
+![Models](3-model-1.png)
+
 1. Choose the **Model Settings** options as follows:
   
     | Field         | Value                                     |
@@ -173,9 +185,16 @@ Agents need at least one tool. Tools are the way agents perform tasks to fulfill
 
 1. In the **Tools** section, click **Add Tool**, and then **Joule Skill**.
 
+    ![Add skills](4-skill-1.png)
+
 2. In the **Add Tool** dialog, select all the skills, and then click **Add**.
 
+    ![Select skills](4-skill-2.png)
+
     The tools will be added under **Tools**.
+
+    ![Skills added](4-skill-3.png)
+
 
 
 
@@ -186,9 +205,11 @@ Document Grounding allows you "index" a set of documents located in a repository
 
 For this CodeJam, we have created a small document with pairs of start and destination locations (airport codes) and the price for sending a shipment on that route.
 
-This document has been uploaded to an Object Store service and destinations have already been set up to our AI Core and Object Store services. In addition, we have deined a document grounding resource group in the Control Tower for you to use.
+This document has been uploaded to an Object Store service and destinations have already been set up to our AI Core and Object Store services. In addition, we have created a document grounding resource group in the Control Tower for you to use.
 
 1. In the **Tools** section, click **Add Tool**, and then **Documents**.
+
+    ![Add document](5-documents-1.png)
 
 2. In the **Add Tool** dialog, enter the following.
 
@@ -199,6 +220,12 @@ This document has been uploaded to an Object Store service and destinations have
     | **Resource Group**        | Select **AI163**                |
 
     Click **Add**.
+
+    ![Document added](5-documents-2.png)
+
+    The Document Grounding will be added as a tool to the agent.
+
+    ![Document added](5-documents-3.png)
 
     >Document grounding in an SAP Build Joule agent is a capability that uses a Retrieval-Augmented Generation (RAG) technique to provide users with accurate, specific answers based on an organization's internal business documents. Instead of relying only on a large language model's (LLM) general training data, Joule can reference a customer's private data, such as HR policies, manuals and FAQs. 
 
@@ -219,18 +246,6 @@ In this CodeJam, we will not set up Document Grounding. But here is some informa
 The full setup of document grounding for Joule Studio is described in this blog post, [Joule Studio: How to Create Document Grounding](https://community.sap.com/t5/tooling-sap-build-blog-posts/joule-studio-how-to-create-document-grounding/ba-p/14306631). 
 
 
-### Disable direct triggering of skills
-Sometimes you want to control how skills are used, both the input and the output, and want only an agent to call the skill.
-
-That is what we will do here. For each of the 3 skills:
-
-1. Open the skill.
-
-2. Open the right-side panel.
-
-3. Toggle off the setting **Allow skill to be started directly by a user**.
-
-
 
 ### Let Joule format output
 You can tell Joule to display the agent response as is, or ask Joule to take that information and format as it sees fit.
@@ -238,5 +253,33 @@ You can tell Joule to display the agent response as is, or ask Joule to take tha
 Let's let Joule reformat the agent response.
 
 Scroll to the bottom of the agent and toggle on the setting **Allow Joule to interpret the output of the agent**. 
+
+Click **Save** (upper right).
+
+![Let Joule do](7-joule-1.png)
+
+
+
+### Disable direct triggering of skills
+Sometimes you want to control how skills are used, both the input and the output, and want only an agent to call the skill.
+
+That is what we will do here. For each of the 3 skills:
+
+1. Open the skill.
+
+2. Click the **Trigger** step.
+
+3. Toggle off the setting **Allow skill to be started directly by a user**.
+
+4. Click **Save** (upper right).
+
+![Toggle trigger](6-toggle-1.png)
+
+>**Important:** Remember to do this for all 3 skills.
+
+
+
+
+
 
 
