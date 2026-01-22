@@ -156,7 +156,7 @@ You created the output parameters to send data back to Joule or the agent. Now w
 
 3. As a prompt, enter the following:
 
-    ```Text
+    ```Prompt
     I would like to find all the delayed shipments
     ```
 

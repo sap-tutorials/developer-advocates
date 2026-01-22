@@ -358,7 +358,7 @@ You will create two **Send Message** steps, one for each of the condition branch
 
 3. As a prompt, enter:
 
-    ```Text
+    ```Prompt
     Hello Joule, Could you please assist me in creating a Shipment?
     ```
 
@@ -369,7 +369,7 @@ You will create two **Send Message** steps, one for each of the condition branch
 
 4. Enter the following prompt, changing the shipment ID to 91001<user number><your initials>, for example, `91001002DBW` (or any unique string):
 
-    ```Text
+    ```Prompt
     Shipment ID: 91001<User number><your initials>
     Source Location: SFO
     Destination Location: NYC
@@ -382,7 +382,7 @@ You will create two **Send Message** steps, one for each of the condition branch
 
 5. You can check if it was created by entering a prompt to track the shipment.
 
-    ```Text
+    ```Prompt
     Track the shipment 91001<User number><your initials>
     ```
 
@@ -394,7 +394,7 @@ You will create two **Send Message** steps, one for each of the condition branch
 
 6. Update the shipment by typing the following prompt.
 
-    ```Text
+    ```Prompt
     Update the Shipment ID: 91001<User number><your initials> with the carrier Fly By Night.
     All other values remain the same.
     ```

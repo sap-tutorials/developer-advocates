@@ -1,6 +1,6 @@
 ---
 auto_validation: true
-time: 5
+time: 15
 author_name: Daniel Wroblewski
 author_profile: https://github.com/thecodester
 tags: [ tutorial>beginner, topic>cloud ]
@@ -39,6 +39,8 @@ You will create an agent that uses an MCP server for converting currencies, and 
 
 2. Click **Create**, and choose **Joule Agent**.
 
+    ![New agent](1-empty-1.png)
+
 3. In the **Create Joule Agent** dialog, enter the following details:
 
     | Field         | Value                                     |
@@ -47,6 +49,8 @@ You will create an agent that uses an MCP server for converting currencies, and 
     | **Description** | `An agent for converting currencies and show the value of one currency in another currency` |   
 
     Click **Create**.
+
+    ![Name agent](1-empty-2.png)
 
     Once the Joule skill is created, you are taken to the skill builder.
 
@@ -70,18 +74,20 @@ You will create an agent that uses an MCP server for converting currencies, and 
 
 3. Enter the following for the **Additional Context** section:
 
-    >**💡 Tip:** Context allows you to feed the agent more specific, relevant, and potentially evolving information. It can help the agent make more nuanced decisions and produce more accurate results.
-
     ```Text
     Please show the currency conversion in a table, with the column headers with the currency abbreviations and the row values the currency amounts.
     ```
 
+![Agent instructions](1-empty-3.png)
+
 
 ### Add MCP server
-We have created an MCP server for converting currencies, and created a destination so it will be made available to Joule Studio.
+We have created an MCP server for converting currencies, and created a destination so the MCP server is available to Joule Studio and to be added to agents.
 
 
 1. In your agent, click **Add MCP Server**.
+
+    ![Add MCP Server](3-mcp-1.png)
 
 2. In the **Add MCP Server** dialog, enter the following details:
 
@@ -92,22 +98,37 @@ We have created an MCP server for converting currencies, and created a destinati
     | **Description for Agent** | `Use this MCP server for converting currencies` |   
     | **Destination** | Select **MCP-currency-antonio** | 
 
-    Once you select the destination, you should see a list of tools in that MCP server. Here you will seen one tool called **get_latest_base_currency**.
+    ![Configure MCP server](3-mcp-2.png)
+
+    Once you select the destination, scroll down and you should see a list of tools in that MCP server. Here you will seen one tool called **get_latest_base_currency**.
+
+    ![New tools](3-mcp-3.png)
 
     Click **Add Server**.
 
     You will see the MCP server added, plus an indication of how many tools are exposed through that server.
 
+    ![Server added](3-mcp-4.png)
+
+3. Click **Save** (upper right).
+
+
 
 ### Add currency agent as subagent
 1. Open your **Agent for Logistics** agent.
 
+    ![Open agent](4-subagent-1.png)
+
 2. Click **Add Tool > Joule Agent**.
 
-    Select **Convert currencies** agent.
+    ![Add agent](4-subagent-2.png)
+
+    Select **Agent for Converting Currencies** agent.
 
     Click **Add**.
-    
+
+    ![Select agent](4-subagent-3.png)
+
 3. Click **Save** (upper right).
 
 
@@ -119,6 +140,8 @@ Now we have to instuct the agent to use the tool when someone asks for currency 
 
 In the instructions of the **Agent for Logistics** agent, replace the first paragraph under **Suggest Carrier Options** with this one.
 
+![Replace instructions](5-instructions-1.png)
+
 ```Text
 If the user asks for carrier suggestions, use the document “Carrier Selection Guide.docx” to present all 
 available carrier options. Display the list of carriers for the user to view as a simple table, displaying only 
@@ -127,12 +150,16 @@ currencies" agent tool to get the currency conversions and show 2 columns, one f
 converted currency.
 ```
 
+![New instructions](5-instructions-2.png)
+
 Click **Save** (upper right).
 
 
 
 ### Test agent
 1. Click **Test**.
+
+    ![Start test](6-test-1.png)
 
     In the **Test Project** dialog, enter the following:
 
@@ -144,6 +171,8 @@ Click **Save** (upper right).
 
     Click **Continue**.
 
+    ![Test variables](6-test-2.png)
+
     A test Joule interface will open up, letting you talk with your skills and agents in the project.
 
 2. Ask Joule for suggested carriers and prices by entering the following:
@@ -154,18 +183,32 @@ Click **Save** (upper right).
 
     **Result**: Joule proposes the carriers based on the carrier rates document from our document grounding, and converts the prices to euros.
 
+    ![Results](6-test-3.png)
+
+    If you click on UPS, you will see the details and the price, in euros converted to up-to-date exchange rate returned by the MCP server.
+
+    ![Results euros](6-test-4.png)
+
+
 3. Explore the logs.
 
     First find **Joule list message** and expand the node. Here you will find information on how Joule and the agent responded to your prompt.
     
     Click **Joule selected a scenario to execute**, and on the right you will see that it selected the agent to respond with.
 
+    ![Logs](6-test-5.png)
+
     Open the **Agent** node, and click **Plan** and you can see that it figured out to check document grounding for carriers and then to use convert currencies agent to convert the currencies.
+
+    ![Logs 2](6-test-6.png)
 
     If you scroll down and click **MCP Server**, you will see on the right that the MCP server was called and returned currency conversions for today.
 
+    ![Logs 3](6-test-7.png)
+
 4. Click **Stop Testing**.
 
+    ![Stop Testing](6-test-8.png)
 
 
 

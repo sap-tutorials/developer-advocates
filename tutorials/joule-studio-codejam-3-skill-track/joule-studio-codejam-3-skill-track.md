@@ -318,7 +318,7 @@ A nice feature of Joule Studio is that you can test your project without having 
 
 3. As a prompt, enter:
 
-    ```Text
+    ```Prompt
     I want to track the shipment 91001DBW.
     ```
 
@@ -332,7 +332,7 @@ A nice feature of Joule Studio is that you can test your project without having 
 
 4. Enter the prompt again.
 
-    ```Text
+    ```Prompt
     I want to track the shipment 91001DBW.
     ```
 
