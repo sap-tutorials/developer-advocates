@@ -98,7 +98,7 @@ In order to interact with the GTT system, you will create a set of skills and ag
 
 - **Agent for Logistics** (agent): Orchestrates the calling of the skills, plus lets us call the document grounding to get carriers and their rates.
 
-    When designing the agent, we will change the settings of the skills so it can only be called via the agent, not directly.
+    When designing the agent, we will change the settings of the skills so they can only be called via the agent, not directly.
 
 - **Agent for Converting Currencies** (agent): An agent that retrieves currency exchange rates, and will let the user display the carrier rates in any currency.
 
@@ -146,7 +146,7 @@ We have also set up the following to support your work in Joule Studio:
 
 The last 2 blogs I really like because they give you directions no matter where you are starting from: whether you already have Joule, or SAP Build Process Automation, or both, or neither.
 
-Here is [The Complete Joule Studio Resource Hub: Everything You Need to Get Started](https://community.sap.com/t5/technology-blog-posts-by-sap/the-complete-joule-studio-resource-hub-everything-you-need-to-get-started/ba-p/14183113) (blog), though a little old, from August, still has a lot of great
+Here is [The Complete Joule Studio Resource Hub: Everything You Need to Get Started](https://community.sap.com/t5/technology-blog-posts-by-sap/the-complete-joule-studio-resource-hub-everything-you-need-to-get-started/ba-p/14183113) (blog), though a little old, from August, still has a lot of great resources.
 
 And finally a video on the latest features: [What's New in SAP BTP: Top New Features | Joule Studio Agent Builder | Q4 2025](https://www.youtube.com/watch?v=Bw6WGI_rc74&pp=ygUMam91bGUgc3R1ZGlv)
 
