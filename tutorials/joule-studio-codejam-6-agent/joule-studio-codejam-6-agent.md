@@ -114,7 +114,7 @@ In short, this is where your **Logistics Agent** scenario becomes fully function
 
     3. Track Shipment
 
-    If the user requests shipment tracking information, trigger the Track Shipment tool. Display the message from the tool exactly as provided.
+    If the user requests shipment tracking information, trigger the Track Shipment tool. Show the fields serviceAgentLbnId with label "Carrier", the field creationDateTime field with date converted to local time and formatted to MMM DD, YYYY HH:MM with timezone and the field with label "Creation Date", then show fields source location and the destination.
 
     Examples of relevant prompts:
     “Track shipment 12345.”
