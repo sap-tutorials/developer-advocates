@@ -71,6 +71,8 @@ The last skill creates or updates a shipment, and includes a few new things.
     | ```carrier```        | carrier        | ```Carrier Name```                | ⬜ Unchecked|
 
     >All identifiers are entered automatically and will be same as the **Name** field.
+    >
+    >The parameter type is automatically a string.
 
     ![Add inputs](2-input-2.png)
 

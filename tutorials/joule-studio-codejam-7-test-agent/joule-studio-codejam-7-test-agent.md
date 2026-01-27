@@ -15,7 +15,7 @@ parser: v2
 - How to test an agent
 
 ## Prerequisites
-- You have completed the previous tutorial in the Joule Studio CodeJam Mission, []().
+- You have completed the previous tutorial in the Joule Studio CodeJam Mission, [Create Agent to Coordinate Skills](joule-studio-codejam-6-agent).
 
 
 

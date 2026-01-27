@@ -90,11 +90,11 @@ In order to interact with the GTT system, you will create a set of skills and ag
 ![Skills and agents](skills1.png)
 
 
-- **Track Shimpent** (skill): When triggered, makes API call to GTT to get information about a specific shipment.
+- **Track Shipment** (skill): When triggered, makes API call to GTT to get information about a specific shipment.
 
-- **Get Delayed Shimpents** (skill): When triggered, makes API call to GTT to get list of delayed shipments, that is, with field `delayStatus` set to true.
+- **Get Delayed Shipments** (skill): When triggered, makes API call to GTT to get list of delayed shipments, that is, with field `delayStatus` set to true.
 
-- **Create Shimpent** (skill): When triggered, makes API call to GTT of type POST that either creates a new shipment (if the shipment ID does not exist) or updates an existing shipment (if the shipment ID exists).
+- **Create Shipment** (skill): When triggered, makes API call to GTT of type POST that either creates a new shipment (if the shipment ID does not exist) or updates an existing shipment (if the shipment ID exists).
 
 - **Agent for Logistics** (agent): Orchestrates the calling of the skills, plus lets us call the document grounding to get carriers and their rates.
 
@@ -144,7 +144,7 @@ We have also set up the following to support your work in Joule Studio:
 
 - [Setting Up Joule Studio for All Customer Flows and Entitlement Levels](https://community.sap.com/t5/technology-blog-posts-by-sap/setting-up-joule-studio-for-all-customer-flows-and-entitlement-levels/ba-p/14240537) (blog)
 
-The last 2 blogs I really like because they give you directions no matter where you are starting from: whether you already have Joule, or SAP Build Process Automation, or both, or neither.
+The last 2 blog posts are really good because they give you directions no matter where you are starting from: whether you already have Joule, or SAP Build Process Automation, or both, or neither.
 
 Here is [The Complete Joule Studio Resource Hub: Everything You Need to Get Started](https://community.sap.com/t5/technology-blog-posts-by-sap/the-complete-joule-studio-resource-hub-everything-you-need-to-get-started/ba-p/14183113) (blog), though a little old, from August, still has a lot of great resources.
 

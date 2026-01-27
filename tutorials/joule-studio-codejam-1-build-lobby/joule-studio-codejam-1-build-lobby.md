@@ -42,13 +42,17 @@ The core components are:
 
 
 ### Open the SAP Build lobby
-Open the [SAP Build Lobby](https://joule-studio-urve04n3.eu10.build.cloud.sap/lobby) for this CodeJam.
+Open the SAP Build Lobby for this CodeJam.
+
+>Your instructor will provide the URL.
 
 Enter the credentials you received from your instructor, and click **Continue**.
 
 ![SAP Build](1-signin-1.png)
 
 You will now see the SAP Build Lobby.
+
+>The SAP Build Lobby is the list of SAP Build projects in this instance of SAP Build
 
 ![SAP Build](0-Intro-1.png)
 
@@ -69,6 +73,22 @@ You can use the search and filter bars to filter the list of projects by differe
 
 ![Lobby](2-explore-1.png)
 
+For each project, you can click the chevron on the right to manage the project.
+
+![More options](Lobby1.png)
+
+You can manage the following:
+
+- The metadata for the project
+
+- The versions of the project, including editable, released, deployed and published versions
+
+- The people who can view and work on the project.
+
+![More options](Lobby2.png)
+
+
+
 
 
 #### Connectors
@@ -86,9 +106,7 @@ The **Store** is a set of SAP Build templates -- mostly SAP Build Process Automa
 ![Store](2-explore-3.png)
 
 #### Monitoring
-**Monitoring** lets you keep an eye on SAP Build Process Automation processes and automations -- instances that were triggered, who triggered them, their status, the data flowing through them, and more. You can also see events that were received by SAP Build Process Automation.
-
-**Monitoring** can also show you what events were sent to SAP Build for triggering processes. 
+**Monitoring** lets you keep an eye on SAP Build Process Automation processes and automations -- instances that were triggered, who triggered them, their status, the data flowing through them, and more. You can also see events that were received by SAP Build Process Automation for triggering processes.
 
 ![Monitoring](2-explore-4.png)
 
@@ -107,13 +125,8 @@ For example, the administrator can:
 
 - Determine which destinations can be used for calling backend services
 
-This is just a short list of the capabilities.
+This is just a short list of the capabilities. For more information, see [Use Control Tower](https://help.sap.com/docs/build/sap-build-core/managing-control-tower).
 
-When you view the **Control Tower**, you will see only a subset of those capabilities, since your user was not granted administrator access. These are the capabilities you will see:
-
-- Activate a private environment for testing your Joule skills and agents
-- Register an agent to run automations on your machine
-- Create document grounding
 
 
 ### Explore what you can build
@@ -135,5 +148,40 @@ You can now explore what types of projects you can build (and the tools for buil
 ![Control Tower](3-create-2.png)
 
 Many of the options might say **Not Subscribed**, meaning that on this SAP BTP instance this capability/service has not been installed, or you do not have permission to create such a project.
+
+
+### Explore actions and APIs for this project
+
+In this project you will enable users to interact with the Global Track and Trace (GTT) app via Joule.
+
+To do this, you will need 2 APIs, one GET and one POST, to call the backend. To expose APIs to Joule Studio (and to other SAP Build tools), we created two actions. Let's explore the actions.
+
+In the SAP Build Lobby, open **Connectors > Actions**.
+
+![Actions](action1.png)
+
+Open the action project **GTTReadService**, which will let us read shipments from GTT.
+
+>An action project lets you take a complex API call and only expose the input and output parameters that are meaningful to your developers, and also set all types of parameters. This makes it easy for developers who need to incorporate these APIs into their projects.
+
+Let's test the read action for the case where we want to track a shipment.
+
+1. Select the **Test** tab.
+
+2. Select the destination **gttGetService**.
+
+3. In the field **trackingId eq** enter the following:
+
+    ```Text
+    trackingId eq '91001DBW'
+    ```
+
+4. Click the **Test** button.
+
+    ![Test](action3.png)
+
+    You will now see a response from the backend with information about the shipment.
+
+    ![Response](action4.png)
 
 

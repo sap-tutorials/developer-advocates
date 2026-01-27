@@ -17,7 +17,7 @@ parser: v2
 - How to test your Joule Studio project in your shared environment
 
 ## Prerequisites
-- You have completed the previous tutorial in the Joule Studio CodeJam Mission, []().
+- You have completed the previous tutorial in the Joule Studio CodeJam Mission, [Add Subagent to Convert Currency Using MCP Server](joule-studio-codejam-8-subagent-mcp).
 
 
 ## Intro

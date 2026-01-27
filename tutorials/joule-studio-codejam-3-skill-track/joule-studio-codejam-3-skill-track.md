@@ -26,6 +26,8 @@ Each skill performs a single task — such as retrieving data, triggering transa
 
 ![Skill](0-intro-1.png)
 
+&nbsp;
+
 Functioning within clearly defined parameters, Joule skills are ideal for **low-complexity, high-frequency operations** where consistency and precision are critical.
 
 They are often tightly integrated with **SAP and third-party APIs** via **SAP Build actions**, enabling seamless execution of system-level commands.
@@ -34,16 +36,18 @@ While they can understand conversation context, their logic is **non-adaptive** 
 
 ![Joule Skills Overview](Joule%20Skills.jpg)
 
->💡 **Note:** Joule Skills can be triggered:
+&nbsp;
+
+>💡 **Note:** Joule skills can be triggered:
 > 
 >    - through SAP Joule’s conversational interface
->    - through another Joule Skills
->    - through Joule Agent
+>    - through another Joule skill
+>    - through a Joule agent
 
  
 
 ### Create Joule Studio project
-A Joule Studio project contains a set of custom skills, agents, and date types deployed together.
+A Joule Studio project contains a set of custom skills, agents, and data types deployed together.
 
 1. From the SAP Build Lobby, click **Create**.
 
@@ -55,9 +59,7 @@ A Joule Studio project contains a set of custom skills, agents, and date types d
 
 3. In the **Create Project** dialog, enter the following details.
 
-    >**IMPORTANT:** You must use your unique user number, and your initials.**
-    >
-    >The name of the project should be **Logistics Agent <user number> <YOUR INITIALS>**.
+    >**IMPORTANT:** In the project name, use your unique user number and your initials.
     >
     >So if your user is **003** and initials **DBW**, the name of the project should be **Logistics Agent 003 DBW**.
 
@@ -70,7 +72,7 @@ A Joule Studio project contains a set of custom skills, agents, and date types d
 
 4.  After filling in the details, click **Review**, then click **Create**.
 
-Your project will open to the Overview tab, where you can start adding skills and agents.
+Your project will open to the **Overview** tab, where you can start adding skills and agents.
 
 ![New project](1-project-4.png)
 
@@ -79,6 +81,8 @@ Your project will open to the Overview tab, where you can start adding skills an
 
 
 ### Create empty skill
+You will create a new artifact to the project, a skill.
+
 1. Click **Create**, and then choose **Joule Skill**.
 
     ![New skill](2-empty-1.png)
@@ -101,6 +105,8 @@ Once you create a new skill, the skill builder canvas opens for you to design th
 ![Skill builder](2-empty-3.png)
 
 >If you have any experience with SAP Build Process Automation, you will be familiar with the layout, which is used for designing processes.
+>
+>To the flow, you click the plus icon and add steps, then configure each step.
 
 
 
@@ -110,9 +116,11 @@ Once you create a new skill, the skill builder canvas opens for you to design th
 ### Add input parameters
 You can define parameters that are required by the skill. 
 
-Joule will try to understand the values from the context; if any required input parameters are missing Joule will automatically prompt the user to enter them. In the parameter description, you can define rules for the parameter.
+Joule will try to understand the values from the context. If any required input parameters are missing Joule will automatically prompt the user to enter them (or sometimes derive them without input). In the parameter description, you can define rules for the parameter, such as format.
 
 1. Click open the right-side panel, which is used to define the skill settings and parameters.
+
+    >You can also open the panel by clicking the **Trigger** step.
 
     ![Side pane](3-input-1.png)
 
@@ -134,7 +142,7 @@ Joule will try to understand the values from the context; if any required input 
 
     | **Name**       | **Identifier** (auto-populated) | **Description**         | **Required** |
     |----------------|----------------|--------------------------|:---------------:|
-    | trackingID     | trackingiD     | Tracking Number              | ✅ |
+    | `trackingID`     | `trackingid` (autopopulated)     | `Tracking Number`              | ✅ |
 
     >The identifier is autopopulated based on the skill name.
 
@@ -156,7 +164,7 @@ Joule will try to understand the values from the context; if any required input 
 ### Add action to skill
 Actions let skills retrieve data from a backend. Here, we want to retrieve info about a particular shipment.
 
-1. In the skill builder, click on the **+** button right under the trigger step.
+1. In the skill builder, click the **+** icon under the trigger step.
 
     ![New step](4-action-1.png)
 
@@ -172,13 +180,24 @@ Actions let skills retrieve data from a backend. Here, we want to retrieve info 
 
     ![getReadquery](4-action-4.png)
 
-    >If there a lot of actions, you can filter by **GTTReadService** (the name of the action project).
+    >If there are a lot of actions, you can filter by **GTTReadService** (the name of the action project).
 
     Click **Add** to the right of the action.
 
     The action is added to the skill flow.
 
     ![Action added](4-action-5.png)
+
+>By adding a skill, you automatically add to the project a dependency to the action project that contains the action.
+>
+>You can see this by opening up the project settings. Click the cog.
+>
+>![Dependency](dependency1.png)
+>
+>Under **Dependencies**, you can see the action project you added.
+>
+>![Dependency](dependency2.png)
+
 
 
 
@@ -207,7 +226,15 @@ Actions define a specific API call. But each time you add the action you can pro
 
 4. The variable is created but it likely will not be selected or even visible in the **Destination Variable** field.
 
-    >**Important:** You may need to refresh the page, reopen the skill and reselect the action to see the new variable.
+    >**Important:** To see the destination, you may need to:
+    >
+    >1. Close the configuration panel.
+    >
+    >2. Click the action again, which will reopen the configuration panel, and now you will see the destination.
+    >
+    >![Reopen](refresh.png)
+    >
+    >You can also refresh the page and then navigate back to your skill and then action.
 
     Select the new **GetFromGTT** variable for the action.
 
@@ -240,6 +267,9 @@ Actions define a specific API call. But each time you add the action you can pro
     ![Bind tracking ID](5-action2-7.png)
 
     Now the formula editor will show the syntax is valid (green).
+
+    >This creates the same input value we used to test the action in the first tutorial, except now the shipment ID will be taken from the input parameter, which takes it from the conversation.
+
     Click **Apply**.
 
     ![Formula updated](5-action2-8.png)
@@ -259,11 +289,13 @@ You need to create output parameters so that the skill returns data to Joule (or
 
 3. Click **Add Ouput** three times and add the following output parameters.
 
-    | **Name**          | **Identifier**     | **Description**     | **Type** | **Required** | **List** |
+    | **Name**          | **Description**     | **Type** | **Required** | **List** |
     |--------------------|---------------------|-----------|---------------|-----------|
-    | gttstatus        | gttstatus        | Status              | String | ⬜ Unchecked| ⬜ Unchecked|
-    | destinationcity  | destinationcity  | Destination City    | String | ⬜ Unchecked| ⬜ Unchecked|
-    | json             | json             | JSON                | Any    | ⬜ Unchecked| ⬜ Unchecked|
+    | `gttstatus`        |  `Status`              | **String** | ⬜ Unchecked| ⬜ Unchecked|
+    | `destinationcity`  | `Destination City`    | **String** | ⬜ Unchecked| ⬜ Unchecked|
+    | `json`             |  `JSON`                | **Any**    | ⬜ Unchecked| ⬜ Unchecked|
+
+    >The identifiers nare autopopulated.
 
     Click **Apply**.
 
@@ -282,11 +314,11 @@ You created the output parameters to send data back to Joule or the agent. Now w
 
 2. For each output parameter, bind the following by clicking inside the parameter field and selecting the corresponding mapping:
 
-    | **Field Name**     | **Mapped Value** | **Path** |
-    |--------------------|------------------|------------------------|
-    | destinationcity    | arrivalLocationId | getReadquery > result > d > list - results > arrivalLocationId |
-    | gttstatus      | eventStatus_code     | getReadquery > result > d > results > plannedEvents > list - results > eventStatus_code |
-    | json           | result           | getReadquery > result |
+    | **Field Name**     | **Mapped Value**  |
+    |--------------------|------------------|
+    | **destinationcity**     | getReadquery > result > d > list - results > arrivalLocationId |
+    | **gttstatus**      |  getReadquery > result > d > results > plannedEvents > list - results > eventStatus_code |
+    | **json**             | getReadquery > result |
 
     ![Fields mapped](7-end-2.png)
 
@@ -340,8 +372,23 @@ A nice feature of Joule Studio is that you can test your project without having 
 
     ![Response again](8-test-5.png)
 
-5. Once you are done testing, click **Stop Testing**.
+5. Notice that **Timeline** information on the right of the screen, which gives you information on how the response was derived.
+
+    The response is connected to **Joule object message**. If you open this you will information about how Joule handled the prompt.
+    
+    For example, the first node **Joule selected a scenario to execute** shows which skill or agent was selected in response to the prompt.
+
+    ![Logs](logs1.png)
+
+    **The scenario trackShipment is called with parameters** shows you which skill was triggered with what input parameters.
+
+    ![Logs](logs2.png)
+
+    And **Dialog function trackShipment finished** will show the actual data that was returned from the backend by the action.
+
+    ![Logs](logs3.png)
+ 
+6. Once you are done testing, click **Stop Testing**.
 
     ![Stop testing](8-test-6.png)
-
 
