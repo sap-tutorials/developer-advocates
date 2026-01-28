@@ -24,7 +24,7 @@ The last skill creates or updates a shipment, and includes a few new things.
 
 - You will use a different action and create a different destination variable
 
-- You will use the **Check Condition** step.
+- You will use the **Check Condition** step to provide different messages based on whether you are adding or updating a shipment.
 
 - You will define specific output using the **Send Response** step. 
 
@@ -54,6 +54,8 @@ The last skill creates or updates a shipment, and includes a few new things.
 
 
 ### Add input parameters
+You need to tell Joule to ask the user for the details of the shipment to create, so you will create input parameters.
+
 1. Click the **Trigger** step.
 
 2. Click the **Parameters** tab, and next to **Skill Inputs** click **Configure**.
@@ -70,7 +72,7 @@ The last skill creates or updates a shipment, and includes a few new things.
     | ```datetime```       | datetime       | ```Pick up Date - Convert this into ISO 8601```             | ✅ Checked|
     | ```carrier```        | carrier        | ```Carrier Name```                | ⬜ Unchecked|
 
-    >All identifiers are entered automatically and will be same as the **Name** field.
+    >All identifiers are entered automatically and will be the same as the **Name** field.
     >
     >The parameter type is automatically a string.
 
@@ -84,7 +86,7 @@ The last skill creates or updates a shipment, and includes a few new things.
 
 
 ### Add output parameters
-You need to create output parameters, so that the skill returns the new shipment ID, and provides back to Joule or the agent.
+You need to create output an parameter so that the skill returns the shipment ID back to Joule or the agent.
     
 1. Click the **Trigger** step.
 
@@ -94,9 +96,9 @@ You need to create output parameters, so that the skill returns the new shipment
 
 3. Click **Add Ouput** and add the following output parameter.
 
-    | **Name**          | **Identifier**     | **Description**     | **Type** | **Required** | **List** |
-    |--------------------|---------------------|-----------|---------------|-----------|-----------|
-    | Created Shipment Id             | createdShipmentId             | Created Shipment Id                | String    | ✅ Checked| ⬜ Unchecked |
+    | **Name**          |  **Description**     | **Type** | **Required** | **List** |
+    |--------------------|-----------|---------------|-----------|-----------|
+    | `Created Shipment Id`                        | `Created Shipment Id`                | String    | ✅ Checked| ⬜ Unchecked |
 
     Click **Apply**.
 
@@ -110,6 +112,8 @@ You need to create output parameters, so that the skill returns the new shipment
 
 
 ### Add action
+Now you'll create the action that will call the API for adding or updating a shipment.
+
 1. In the skill builder, click on the **+** button.
 
     ![Add step](4-action-1.png)
@@ -169,6 +173,8 @@ In this action, we are creating a new shipment with a POST request, and using a 
 
 
 ### Bind data to action inputs
+You need to pass the input parameters into the input fields of the action.
+
 1. Make sure the action is selected.
 
 2. Select the **Inputs** tab.
@@ -179,16 +185,16 @@ In this action, we are creating a new shipment with a POST request, and using a 
 
     >As the skill inputs are of type **String** and some of the action inputs are of type **DateTime**, you will have to use a formula for those action inputs.
 
-    | Field Name              | Mapped Path                 | Value |
-    |--------------------------|-----------------------------|-----------|
-    | actualBusinessTimestamp  | Skill Input > datetime    |  |
-    | altKey                   | Apply a Formula| ```ConcatenateStrings(["xri://sap.com/id:LBN#10020007892:EWWCLNT220:FT1_SHIPMENT:", <Skill Input-shipmentId>], "")```| Note: Replace the <> with the skill input binding for shipment ID. |
-    | arrivalLocationId        | Skill Inputs > destlocation | |
-    | departureLocationId      | Skill Inputs > srclocation  | |
-    | plannedArrivalDateTime   | Static  | ```2026-03-31T16:30:00+02:00``` |
-    | plannedDepartureDateTime | Skill Input > datetime   |  |
-    | serviceAgentLbnId        | Skill Inputs > carrier      | |
-    | shipmentNo               | Skill Inputs > shipmentid   | |
+    | Field Name              | Mapped Path or value                 |
+    |--------------------------|-----------------------------|
+    | **actualBusinessTimestamp**  | Skill Input > datetime    |  
+    | **altKey**                   | Apply a Formula<div>&nbsp;</div>```ConcatenateStrings(["xri://sap.com/id:LBN#10020007892:EWWCLNT220:FT1_SHIPMENT:", <Skill Input-shipmentId>], "")```<div>&nbsp;</div>Replace the <> with the skill input binding for shipment ID. |
+    | **arrivalLocationId**        | Skill Inputs > destlocation | 
+    | **departureLocationId**      | Skill Inputs > srclocation  | 
+    | **plannedArrivalDateTime**   | ```2026-03-31T16:30:00+02:00```  |  
+    | **plannedDepartureDateTime** | Skill Input > datetime   |  
+    | **serviceAgentLbnId**       | Skill Inputs > carrier      | 
+    | **shipmentNo**               | Skill Inputs > shipmentid   | 
 
 4. Click **Save** (upper right).
 
@@ -251,7 +257,7 @@ You will now create a condition branch in the Skill builder to check if a carrie
 
 
 ### Add Send Message for creating shipment
-A 'Send Message' step enables you to send a personalized and pre-defined message to the end user instead of letting Joule design the message.
+A **Send Message** step enables you to send a personalized and pre-defined message to the end user instead of letting Joule design the message as it sees fit.
 
 You will create two **Send Message** steps, one for each of the condition branches created in the previous exercise. 
 
@@ -277,23 +283,23 @@ You will create two **Send Message** steps, one for each of the condition branch
 
     | Field Name              | Value                |
     |--------------------------|-----------------------------|
-    | Message Type | Illustrated Message    |
-    | Title                   | `Success`|
-    | Text        | ```Shipment Id ${context.startEvent.shipmentid} created successfully in GTT```  |
-    | Illustration      | Success High Five  |
+    | **Message Type** | Illustrated Message    |
+    | **Title**                   | `Success`|
+    | **Text**        | ```Shipment Id ${context.startEvent.shipmentid} created successfully in GTT```  |
+    | **Illustration**      | Success High Five  |
 
     For the **Action Button** section, click **Add Button** and enter the following details:
   
     | Field Name              | Value                |
     |--------------------------|-----------------------------|
-    | Title                   | `View Shipment`|
-    | url        | ```https://store-content-dev.gtt-flp-lbnplatform.cfapps.eu10.hana.ondemand.com/cp.portal/site?sap-language=en#Shipment-track?sap-ui-app-id-hint=com.sap.gtt.app.sts```  |
+    | **Title**                   | `View Shipment`|
+    | **url**        | ```https://store-content-dev.gtt-flp-lbnplatform.cfapps.eu10.hana.ondemand.com/cp.portal/site?sap-language=en#Shipment-track?sap-ui-app-id-hint=com.sap.gtt.app.sts```  |
 
     ![Configure message](9-message1-5.png)
 
-    >**IMPORTANT:** You will not be able to directly access the GTT system due to restricted Authorization. Ask your instructor to show you the created shipment in the GTT system. 
+    >**IMPORTANT:** You will not be able to directly access the GTT system due to restricted authorization. Ask your instructor to show you the created shipment in the GTT system, or run the track shipment skill/agent. 
 
-    In the Preview on the right you can see how the message will look.
+    In the **Preview** area on the right, you can see how the message will look.
 
     Click **Save**.
 
@@ -316,17 +322,17 @@ You will create two **Send Message** steps, one for each of the condition branch
 
     | Field Name              | Value                |
     |--------------------------|-----------------------------|
-    | Message Type | Illustrated Message    |
-    | Title                   | `Success`|
-    | Text        | ```Carrier ${context.startEvent.carrier} has been updated for Shipment ${context.startEvent.shipmentid}```  |
-    | Illustration      | Success Check Mark  |
+    | **Message Type** | Illustrated Message    |
+    | **Title**                   | `Success`|
+    | **Text**        | ```Carrier ${context.startEvent.carrier} has been updated for Shipment ${context.startEvent.shipmentid}```  |
+    | **Illustration**      | Success Check Mark  |
 
     For the **Action Button** section, click **Add Button** and enter the following details:
   
     | Field Name              | Value                |
     |--------------------------|-----------------------------|
-    | Title                   | `View Shipment`|
-    | url        | ```https://store-content-dev.gtt-flp-lbnplatform.cfapps.eu10.hana.ondemand.com/cp.portal/site?sap-language=en#Shipment-track?sap-ui-app-id-hint=com.sap.gtt.app.sts```  |
+    | **Title**                   | `View Shipment`|
+    | **url**        | ```https://store-content-dev.gtt-flp-lbnplatform.cfapps.eu10.hana.ondemand.com/cp.portal/site?sap-language=en#Shipment-track?sap-ui-app-id-hint=com.sap.gtt.app.sts```  |
 
     ![Configure message](10-message2-2.png)
 
@@ -382,7 +388,7 @@ You will create two **Send Message** steps, one for each of the condition branch
 
     ![Shipment created](11-test-5.png)
 
-5. You can check if it was created by entering a prompt to track the shipment.
+5. You can check if it was created by entering a prompt to track the shipment (change the shipment ID to the one you created).
 
     ```Prompt
     Track the shipment 91001<User number><your initials>

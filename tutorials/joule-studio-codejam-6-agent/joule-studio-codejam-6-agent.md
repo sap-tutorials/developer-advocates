@@ -27,18 +27,26 @@ Functioning as orchestration layers, Joule agents combine analytical reasoning w
 
 Each Joule Agent is built around four key cognitive abilities:
 
-1. **Planning** – The agent determines the best sequence of actions to achieve a business goal, orchestrating multiple tools or Joule Skills as needed.  
+1. **Planning** – The agent determines the best sequence of actions to achieve a business goal, orchestrating multiple tools or Joule Skills as needed. 
+
 2. **Reflection** – The agent evaluates its own steps, identifies errors or missing data, and self-corrects to reach the desired outcome.  
+
 3. **Tool Usage** – The agent dynamically invokes SAP Build Actions, Joule Skills, or other APIs to perform operations, retrieve data, or trigger systems.  
+
 4. **Collaboration** – Agents can cooperate with other agents or human users, engaging in dialogue, confirmation, or validation when business logic requires oversight.
 
 ![Joule Skills vs Agents](Joule%20Skills%20vs%20Agents.jpg)
 
+&nbsp;
+
 While **Joule Skills** define *what* actions can be performed (e.g., analyze workloads or simulate optimizations), the **Joule Agent** defines *how* these skills are orchestrated in a conversational, goal-driven workflow.  
 
 This agent:
+
 - Combines multiple Joule Skills into an intelligent flow.  
-- Makes autonomous decisions based on data and context.  
+
+- Makes autonomous decisions based on data and context. 
+
 - Communicates naturally with warehouse supervisors.  
 
 In short, this is where your **Logistics Agent** scenario becomes fully functional.
@@ -70,7 +78,7 @@ In short, this is where your **Logistics Agent** scenario becomes fully function
 
     ![Name agent](1-empty-2.png)
 
-    Once the Joule skill is created, you are taken to the skill builder.
+    Once the Joule agent is created, you are taken to the agent builder.
 
     ![Agent builder](2-instructions-1.png)
 
@@ -78,13 +86,20 @@ In short, this is where your **Logistics Agent** scenario becomes fully function
     
 
 ### Add expertise, instructions and context
+An agents expertise, instructions and context are text-based information that tells the agent what to do and how to act.
+
+- **Expertise** defines the agent's professional identity and field of knowledge.	This tells the agent which general business area it is operating in, such as finance, human resources, or supply chain. Your input here will help shape the agent's overall tone, vocabulary, and scope.
+
+- **Instructions** specify the agent's core goal, rules, and constraints.	This is the most critical part, as it dictates what the agent should accomplish. It directs the agent's behavior by providing guardrails and setting its primary objective.
+
+- **Context** allows you to feed the agent more specific, relevant, and potentially evolving information. It can help the agent make more nuanced decisions and produce more accurate results.
+
+
 1. In the agent builder, enter the following for the **Expertise** section:
 
     ```Text
     Executes shipment creation and updates, retrieves tracking details, identifies delayed shipments, and presents carrier options according to the corporate Carrier Selection Guide.
     ```
-
-    >**💡 Tip:** Expertise defines the agent's professional identity and field of knowledge.	This tells the agent which general business area it is operating in, such as finance, human resources, or supply chain. Your input here will help shape the agent's overall tone, vocabulary, and scope.
 
 2. Enter the following for the **Instructions** section:
 
@@ -134,8 +149,6 @@ In short, this is where your **Logistics Agent** scenario becomes fully function
     The user may request actions in any order (e.g., tracking first, then creating, or selecting carriers afterward).
     ```
 
-    >**💡 Tip:** Instructions specifies the agent's core goal, rules, and constraints.	This is the most critical part, as it dictates what the agent should accomplish. It directs the agent's behavior by providing guardrails and setting its primary objective.
-
 3. Enter the following for the **Additional Context** section:
 
     ```Text
@@ -156,7 +169,6 @@ In short, this is where your **Logistics Agent** scenario becomes fully function
     Agent: "Tracking details for shipment 12345: [display tracking information]."
     ```
 
-    >**💡 Tip:** Context allows you to feed the agent more specific, relevant, and potentially evolving information. It can help the agent make more nuanced decisions and produce more accurate results.
 
 
 
@@ -201,11 +213,12 @@ Agents need at least one tool. Tools are the way agents perform tasks to fulfill
 
 
 ### Add document grounding as tool
-Document Grounding allows you "index" a set of documents located in a repository, such the SAP BTP Object Store service, so that the information can be fed into and used by an LLM, and your agent.
+Document grounding allows you to "index" a set of documents located in a repository, such as the SAP BTP Object Store service, so that the information can be fed into Joule alongside an LLM. Document grounding can be added as context for an Joule Studio agent.
 
 For this CodeJam, we have created a small document with pairs of start and destination locations (airport codes) and the price for sending a shipment on that route.
 
-This document has been uploaded to an Object Store service and destinations have already been set up to our AI Core and Object Store services. In addition, we have created a document grounding resource group in the Control Tower for you to use.
+This document has been uploaded to an Object Store service and destinations have already been set up to the Object Store as well as an AI Core instance, which is what chunks and embeds the documents for use in AI.
+
 
 1. In the **Tools** section, click **Add Tool**, and then **Documents**.
 
@@ -223,34 +236,30 @@ This document has been uploaded to an Object Store service and destinations have
 
     ![Document added](5-documents-2.png)
 
-    The Document Grounding will be added as a tool to the agent.
+    The document grounding will be added as a tool to the agent.
 
     ![Document added](5-documents-3.png)
 
-    >Document grounding in an SAP Build Joule agent is a capability that uses a Retrieval-Augmented Generation (RAG) technique to provide users with accurate, specific answers based on an organization's internal business documents. Instead of relying only on a large language model's (LLM) general training data, Joule can reference a customer's private data, such as HR policies, manuals and FAQs. 
-
-    >This process enhances the reliability and relevance of Joule's responses by reducing inaccuracies and hallucinations that can occur when an LLM operates without specific context. 
-
 3. Click **Save** (upper right).
 
-In this CodeJam, we will not set up Document Grounding. But here is some information about the process.
+>In this CodeJam, we will not set up Document Grounding. But here is some information about the process.
 
-    - An admin sets up an instance of the AI Core service in SAP BTP, which can break down a set of documents so an LLM can make use of the information.
+>- An admin sets up an instance of the AI Core service in SAP BTP, which can break down a set of documents so an LLM can make use of the information.
 
-    - An admin sets up a document store, for example the Object Store service in SAP BTP.
+>- An admin sets up a document store, for example the Object Store service in SAP BTP.
 
-    - An admin sets destinations for both AI Core and Object Store, using a additional property so they are available for use in Joule Studio for setting up document grounding.
+>- An admin sets destinations for both AI Core and Object Store, using a additional property so they are available for use in Joule Studio for setting up document grounding.
 
-    - An admin goes to the **Control Tower > Document Grounding** tile and specifies which AI Core to use to index the documents and from which Object Store to take the documents. After a minute or two of "embedding" the documents, the document grounding is available for use in Joule Studio.
+>- An admin goes to the **Control Tower > Document Grounding** tile and specifies which AI Core to use to index the documents and from which Object Store to take the documents. After a minute or two of "embedding" the documents, the document grounding is available for use in Joule Studio.
 
-The full setup of document grounding for Joule Studio is described in this blog post, [Joule Studio: How to Create Document Grounding](https://community.sap.com/t5/tooling-sap-build-blog-posts/joule-studio-how-to-create-document-grounding/ba-p/14306631). 
+>   ![Document grounding](docgrounding.png)
+
+>The full setup of document grounding for Joule Studio is described in this blog post, [Joule Studio: How to Create Document Grounding](https://community.sap.com/t5/tooling-sap-build-blog-posts/joule-studio-how-to-create-document-grounding/ba-p/14306631). 
 
 
 
 ### Let Joule format output
-You can tell Joule to display the agent response as is, or ask Joule to take that information and format as it sees fit.
-
-Let's let Joule reformat the agent response.
+You can tell Joule to display the agent response as is, or ask Joule to take that information and format as it sees fit. Let's let Joule reformat the agent response.
 
 Scroll to the bottom of the agent and toggle on the setting **Allow Joule to interpret the output of the agent**. 
 
@@ -261,9 +270,11 @@ Click **Save** (upper right).
 
 
 ### Disable direct triggering of skills
-Sometimes you want to control how skills are used, both the input and the output, and want only an agent to call the skill.
+Sometimes you want to control how skills are used, both the input and the output, and want only an agent to call the skill, since the agent can take the output and further manipulate it.
 
-That is what we will do here. For each of the 3 skills:
+That is what we will do here. 
+
+For each of the 3 skills:
 
 1. Open the skill.
 

@@ -46,6 +46,8 @@ In this skill, we will use the same API but provide different binding, specifica
 
 
 ### Add action to skill
+You will again add the action **getReadquery** to read data from the shipments app, but now you will change the filter to bring back only delayed shipments.
+
 1. In the skill builder, click on the **+** button right under the trigger step.
 
     ![Add step](2-action-1.png)
@@ -66,6 +68,8 @@ In this skill, we will use the same API but provide different binding, specifica
 
 
 ### Configure action
+Again, you need to map the action to a destination (that is, a specific backend), and also provided the filter for the API call.
+
 1. Make sure the action is selected.
 
 2. In the first, **General** tab, click inside the **Destination Variable** field. 
@@ -121,7 +125,7 @@ You need to create output parameters, so that the skill returns data to Joule (o
 
 
 ### Bind data to output parameters
-You created the output parameters to send data back to Joule or the agent. Now we need to supply the data.
+You created the output parameters to send data back to Joule or the agent. Now you need to supply the data.
 
 1. Click the **End** step.
 

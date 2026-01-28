@@ -295,7 +295,7 @@ You need to create output parameters so that the skill returns data to Joule (or
     | `destinationcity`  | `Destination City`    | **String** | ⬜ Unchecked| ⬜ Unchecked|
     | `json`             |  `JSON`                | **Any**    | ⬜ Unchecked| ⬜ Unchecked|
 
-    >The identifiers nare autopopulated.
+    >The identifiers are autopopulated.
 
     Click **Apply**.
 

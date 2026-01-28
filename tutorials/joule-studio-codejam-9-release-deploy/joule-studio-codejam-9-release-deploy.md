@@ -98,19 +98,19 @@ In a production setting, you would create two shared environments, one for testi
 
 4. Since this is a Joule-related project, open the **Joule** tab.
 
-   >The **Joule** tab may be hidden under the **More** button.
-   >
-   >![More](3-launch-4.png)
+    >The **Joule** tab may be hidden under the **More** button.
+    >
+    >![More](3-launch-4.png)
 
     Here you will see all the Joule Studio projects deployed to this environment.
 
-   >![Joule tab](3-launch-5.png)
+    >![Joule tab](3-launch-5.png)
 
 5. Click **Launch**.
 
     This launches in a new browser tab Joule for this environment, meaning you can prompt for all the projects in this environment.
 
-   >![Joule instance](3-launch-6.png)
+    >![Joule instance](3-launch-6.png)
 
 Go ahead and test again the prompts for the your logistics agent.   
 
@@ -128,4 +128,8 @@ In a production setting, you would create:
 - A test shared environment, whose projects would not be sent to Joule (toggle off).
 
 - A production shared environment, whose projects would be sent to Joule (toggle on).
+
+>**IMPORTANT:** Please do not turn this setting on.
+>
+>![Red button](redbutton.jpg)
 
