@@ -365,7 +365,7 @@ A nice feature of Joule Studio is that you can test your project without having 
 4. Enter the prompt again.
 
     ```Prompt
-    I want to track the shipment 91001DBW.
+    I want to track the shipment 91001DBW
     ```
 
     The response will likely be formatted differently.
@@ -391,4 +391,24 @@ A nice feature of Joule Studio is that you can test your project without having 
 6. Once you are done testing, click **Stop Testing**.
 
     ![Stop testing](8-test-6.png)
+
+
+
+### Test the skill in your language
+You can talk to Joule in your language, though the responses are still in English.
+
+1. Start the testing again.
+
+2. Enter a prompt in your language.
+
+    For example, in Italian, type in:
+
+    ```Prompt
+    Voglio tracciare la spedizione 91001DBW
+    ```
+
+    You should get the same response as before.
+
+    ![Italian](italian.png)
+
 

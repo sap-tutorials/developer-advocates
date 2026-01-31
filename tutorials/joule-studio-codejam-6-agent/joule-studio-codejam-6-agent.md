@@ -101,6 +101,8 @@ An agents expertise, instructions and context are text-based information that te
     Executes shipment creation and updates, retrieves tracking details, identifies delayed shipments, and presents carrier options according to the corporate Carrier Selection Guide.
     ```
 
+    Take a minute to look over the text and understand why this information is in the expertise.
+
 2. Enter the following for the **Instructions** section:
 
     ```Text
@@ -149,6 +151,8 @@ An agents expertise, instructions and context are text-based information that te
     The user may request actions in any order (e.g., tracking first, then creating, or selecting carriers afterward).
     ```
 
+    Take a few minutes to look over the text and understand why it is constructed this way. 
+
 3. Enter the following for the **Additional Context** section:
 
     ```Text
@@ -168,6 +172,8 @@ An agents expertise, instructions and context are text-based information that te
     User: "Track shipment 12345."
     Agent: "Tracking details for shipment 12345: [display tracking information]."
     ```
+
+    Take a minute to look over the text and think of anything else you might want to add.
 
 
 
@@ -216,6 +222,8 @@ Agents need at least one tool. Tools are the way agents perform tasks to fulfill
 Document grounding allows you to "index" a set of documents located in a repository, such as the SAP BTP Object Store service, so that the information can be fed into Joule alongside an LLM. Document grounding can be added as context for an Joule Studio agent.
 
 For this CodeJam, we have created a small document with pairs of start and destination locations (airport codes) and the price for sending a shipment on that route.
+
+![Document](doc.png)
 
 This document has been uploaded to an Object Store service and destinations have already been set up to the Object Store as well as an AI Core instance, which is what chunks and embeds the documents for use in AI.
 

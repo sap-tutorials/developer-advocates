@@ -111,9 +111,9 @@ You need to create output parameters, so that the skill returns data to Joule (o
 
 4. Click **Add Ouput** and add the following output parameter.
 
-    | **Name**          | **Identifier**     | **Description**     | **Type** | **Required** | **List** |
-    |--------------------|---------------------|-----------|---------------|-----------|
-    | json             | json             | JSON                | Any    | ✅ Checked| ✅ Checked |
+    | **Name**          |     **Description**     | **Type** | **Required** | **List** |
+    |--------|------------|-----------|---------------|-----------|
+    | `json`             |  `JSON`                | Any    | ✅ Checked| ✅ Checked |
 
     Click **Apply**.
 

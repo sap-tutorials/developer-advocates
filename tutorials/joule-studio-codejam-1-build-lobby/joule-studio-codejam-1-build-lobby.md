@@ -19,6 +19,7 @@ parser: v2
 ## Prerequisites
 - You have completed the previous tutorial in the Joule Studio CodeJam Mission, [Joule Studio CodeJam - Introduction](joule-studio-codejam-0-overview).
 - You have received credentials from your instructor.
+- You are using either Google Chrome or Microsoft Edge browser.
 
 
 
@@ -45,6 +46,8 @@ The core components are:
 Open the SAP Build Lobby for this CodeJam.
 
 >Your instructor will provide the URL.
+
+>Joule Studio supports Google Chrome or Microsoft Edge browsers only.
 
 Enter the credentials you received from your instructor, and click **Continue**.
 

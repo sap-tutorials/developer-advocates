@@ -164,7 +164,7 @@ In this action, we are creating a new shipment with a POST request, and using a 
 
     >**Important:** You may need to refresh the page, reopen the skill and reselect the action to see the new variable.
 
-    Select the new **GetFromGTT** variable for the action.
+    Select the new **PostToGTT** variable for the action.
 
     ![Select destination](5-destination-3.png)
 
@@ -185,7 +185,7 @@ You need to pass the input parameters into the input fields of the action.
 
     >As the skill inputs are of type **String** and some of the action inputs are of type **DateTime**, you will have to use a formula for those action inputs.
 
-    | Field Name              | Mapped Path or value                 |
+    | Field Name              | Mapped Path or Value                 |
     |--------------------------|-----------------------------|
     | **actualBusinessTimestamp**  | Skill Input > datetime    |  
     | **altKey**                   | Apply a Formula<div>&nbsp;</div>```ConcatenateStrings(["xri://sap.com/id:LBN#10020007892:EWWCLNT220:FT1_SHIPMENT:", <Skill Input-shipmentId>], "")```<div>&nbsp;</div>Replace the <> with the skill input binding for shipment ID. |
