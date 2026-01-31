@@ -298,7 +298,15 @@ For each of the 3 skills:
 
 
 
+### Questions to ponder
 
+- When we created the shipment with the agent, why did we not get those messages we created in the **Create Shipment** skill?
+
+- Why would I not want a skill to be called directly?
+
+- What are the advantages of using an agent?
+
+- Is there any way to make our instructions better?
 
 
 

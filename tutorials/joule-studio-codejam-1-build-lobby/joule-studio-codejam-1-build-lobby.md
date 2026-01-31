@@ -188,3 +188,13 @@ Let's test the read action for the case where we want to track a shipment.
     ![Response](action4.png)
 
 
+
+
+
+### Questions to ponder
+
+- What are SAP Build, Joule Studio and Joule, and what is the purpose of each?
+
+- What is the purpose of an action?
+
+- What is the purpose of a destination when used with an action?

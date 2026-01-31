@@ -122,3 +122,13 @@ A test Joule interface will open up, letting you talk with your skills and agent
     ![Delayed shipments](2-prompts-7.png)
 
 7. Click **Stop Testing**.
+
+
+### Questions to ponder
+- What is the disadvantage of the current way document grounding is made accessible in Joule Studio?
+
+- Responses can be constant for skills. How do we do that?
+
+- Responses are not constant for agents. Why?
+
+

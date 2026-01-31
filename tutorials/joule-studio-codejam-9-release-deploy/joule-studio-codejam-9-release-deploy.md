@@ -133,3 +133,9 @@ In a production setting, you would create:
 >
 >![Red button](redbutton.jpg)
 
+
+
+### Questions to ponder
+- What do environments allow you to do?
+
+- What are the authorizations available in an environment? See [Share an Environment](https://help.sap.com/docs/build-service/build-service-guide/share-environment).

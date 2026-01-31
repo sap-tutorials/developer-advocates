@@ -412,3 +412,18 @@ You can talk to Joule in your language, though the responses are still in Englis
     ![Italian](italian.png)
 
 
+### Questions to ponder
+
+- Was there a faster way than what was written to create a project?
+
+- Why would I want Joule to make the messages and not me?
+
+- There are 2 places in this skill where you see output fields. What are they?
+
+- When you added output parameters, this caused an error on the **End** step. Why?
+
+- If you don't save the project, what happens when you try to test?
+
+- When we tested, we got different formats and different fields for the same prompt. Why is that, based on AI and based on our actual project?
+
+

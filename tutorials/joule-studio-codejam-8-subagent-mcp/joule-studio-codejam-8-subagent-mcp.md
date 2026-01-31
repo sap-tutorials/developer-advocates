@@ -211,6 +211,11 @@ Click **Save** (upper right).
     ![Stop Testing](6-test-8.png)
 
 
+### Questions to ponder
+- What is the advantage of subagents?
 
+- What is the disadvantage of subagents the way they currently are designed? That is, what can I not do with subagents?
+
+- Did we need a subagent in this use case? Why or why not?
 
 

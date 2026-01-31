@@ -104,3 +104,14 @@ Though you will not need a shared environment until we deploy the project toward
     You will see a new environment labeled **Joule Studio XXX XXX** in the list of environments, this time not gray but with the color you assigned to it.
 
     ![Create environment](3-shared-3.png)
+
+
+
+
+### Questions to ponder
+- What is the difference between a shared environment and a private environment?
+
+- For each private environment, how many developers can use it?
+
+- What would your development flow be when creating Joule extensions with Joule Studio?  
+

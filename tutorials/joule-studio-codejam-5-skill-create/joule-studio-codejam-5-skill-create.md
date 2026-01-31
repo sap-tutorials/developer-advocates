@@ -416,3 +416,12 @@ You will create two **Send Message** steps, one for each of the condition branch
 7. Once you are done testing, click **Stop Testing**.
 
     ![Stop testing](11-test-8.png)
+
+
+
+### Questions to ponder
+- What is the code doing in the **Text** field of the messages?
+
+- What options do you have for comparing values in the condition step?
+
+- When I try to track a shipment that does not exist, why does Joule just say I cannot help you?

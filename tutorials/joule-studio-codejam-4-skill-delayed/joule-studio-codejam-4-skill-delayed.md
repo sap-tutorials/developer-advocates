@@ -173,3 +173,11 @@ You created the output parameters to send data back to Joule or the agent. Now y
 4. Once you are done testing, click **Stop Testing**.
 
     ![Stop testing](6-test-5.png)
+
+
+
+### Questions to ponder
+- Why can I set the type for an output parameter but not for an input parameter?
+
+- What is the purpose of actions?
+
