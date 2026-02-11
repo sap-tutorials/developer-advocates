@@ -317,7 +317,7 @@ You created the output parameters to send data back to Joule or the agent. Now w
     | **Field Name**     | **Mapped Value**  |
     |--------------------|------------------|
     | **destinationcity**     | getReadquery > result > d > list - results > arrivalLocationId |
-    | **gttstatus**      |  getReadquery > result > d > results > plannedEvents > list - results > eventStatus_code |
+    | **gttstatus**      |  getReadquery > result > d > list - results > plannedEvents > list - results > eventStatus_code |
     | **json**             | getReadquery > result |
 
     ![Fields mapped](7-end-2.png)
