@@ -78,7 +78,7 @@ You can use the search and filter bars to filter the list of projects by differe
 
 For each project, you can click the chevron on the right to manage the project.
 
-![More options](Lobby1.png)
+![More options](lobby1.png)
 
 You can manage the following:
 
