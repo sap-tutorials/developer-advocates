@@ -75,33 +75,34 @@ First, you will create an environment for yourself.
     ![New private](2-private-3.png)
 
 
-### Create a shared environment
-Though you will not need a shared environment until we deploy the project toward the end of the CodeJam, you will create the environment now.
+### Understand shared environment
+Though you will not create a shared environment for this CodeJam, we wanted you to understand what it is and how to create one.
 
 >A shared environment is a place to deploy your projects for your LOB that has its own settings and permissions. 
 >
 >- A shared test environment is a place for you to test your projects away from other projects of other LOBs, though with other projects from your LOB. 
 >
->- A production shared environment is a place for you to deploy your LOB projects that should be placed into production. Though all projects in all production shared environments will go into the production Joule, only people given permission to your production shared environment will be able to make use of your projects.
+>- A production shared environment is a place for you to deploy your LOB projects that should be placed into production. Though all projects in all production shared environments will go into the production Joule, only people given permission to your production shared environment will be able to make use of your projects, skills and agents.
 
+For this CodeJam, you have not been given admin permission to create an environment, but here is how it would work.
 
-1. In the same **environments** screen, click **Create**.
+1. In the same **environments** screen, you would click **Create** (for you this is disabled).
 
     ![Create environment](3-shared-1.png)
 
-2. In the **Create Environment** form, fill in the following:
+2. In the **Create Environment** form, you would fill in something like the following:
 
     | Field | Value |
     |-------|-------|
-    | Environment Name | `Joule Studio XXX` replacing `XXX` with your user number and initials |
-    | Color | Whatever color you like 😸 |
-    | Description | `Shared environment to test my skills and agents` |
+    | Environment Name | `Joule Studio 003 DBW` |
+    | Color | Whatever color you'd like 😸 |
+    | Description | `Shared environment for Sales team` |
 
     ![Create environment](3-shared-2.png)
 
-3. Click **Create**.
+3. You would click **Create**.
 
-    You will see a new environment labeled **Joule Studio XXX XXX** in the list of environments, this time not gray but with the color you assigned to it.
+    You would now see a new environment labeled **Sales** in the list of environments, this time not gray but with the color you assigned to it.
 
     ![Create environment](3-shared-3.png)
 
