@@ -83,7 +83,19 @@ we see that:
 - for each of these vocabulary resources there are HTML, XML and JSON representations
 - the HTML representation is especially useful for us as it describes the vocabulary's purpose in general, and gives details for each of the terms and types contained within it
 
-If we look specifically at the [XML source](https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml) representation of the "Capabilities" vocabulary in CSDL form, we see this:
+Here's a visual representation of those resources at <https://oasis-tcs.github.io/odata-vocabularies/>:
+
+```text
+vocabularies/                         <-- vocabularies overview page
+  |
+  +-- Org.OData.Capabilities.V1.html  <-- detailed info on the vocabulary & its terms
+  |
+  +-- Org.OData.Capabilities.V1.xml   <-- an XML representation of the vocabulary
+  |
+  +-- Org.OData.Capabilities.V1.json  <-- a JSON representation of the vocabulary
+```
+
+If we look specifically at the [XML representation](https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml) of the "Capabilities" vocabulary in CSDL form, we see this:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -118,7 +130,7 @@ Anyway, there are two thing of note here:
 - this document _also_ has references to vocabularies
 - there is a single `<Schema>` element, with the OData namespace "Org.Data.Capabilities.V1"
 
-And that specific schema is exactly the one that's referenced in the `<edmx:Include>` element within the `<edmx:Reference>` element:
+And that specific schema is exactly the one that's referenced in the `<edmx:Include>` element within our first `<edmx:Reference>` element:
 
 ```xml
 <edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
@@ -134,7 +146,7 @@ The `<edmx:Include>` element serves to identify a particular schema to be includ
 
 ### Take a first look at the annotations
 
-Now we understand how vocabulary resources are referenced to be included into an OData metadata document, let's now take a first look at what annotations are used in this particular OData metadata document, and how.
+Now we understand how vocabulary resources are referenced to be included into an OData metadata document, and how they're used to organize annotations, let's now take a first look at what annotations are used in this particular OData metadata document, and how.
 
 To set the scene, if we take brief look at the CSDL specification, we learn that:
 
@@ -163,10 +175,21 @@ First, we see the "annotation as child element" approach where the annotation "C
 </Schema>
 ```
 
-Further on in the metadata document we see an example of the other approach, where `<Annotation>` elements appear as direct children of a containing `<Annotations>` element, and the schema elements to which the annotations are applied are specified in `Target` attributes):
+Here, "Core" is the annotation vocabulary, and "Links" is the term (we'll look in more detail at this in the next tutorial).
 
-> Again, as explained in the previous [Metadata](https://developers.sap.com/tutorials/odata-dd-4-metadata.html) tutorial, in the "Get acquainted with the schema element" step, we'll leave out the XML namespace prefix `edm` her when writing elements that belong to that namespace.
+So in this case, the (entire) schema is being annotated with "Core.Links":
 
+```text
++--------+                 +------+
+|        |    annotates    | Core |
+| Schema | <-------------- +----------+
+|        |                 | Links    |
++--------+                 +----------+
+```
+
+Further on in the metadata document we see an example of the other approach, where `<Annotation>` elements appear as direct children of a containing `<Annotations>` element, and the schema elements to which the annotations are applied are specified in `Target` attributes:
+
+> Again, as explained in the previous [Metadata](https://developers.sap.com/tutorials/odata-dd-4-metadata.html) tutorial, in the "Get acquainted with the schema element" step, we'll leave out the XML namespace prefix `edm` here when writing elements that belong to that namespace.
 
 ```xml
 <Schema Namespace="Main" xmlns="http://docs.oasis-open.org/odata/ns/edm">
@@ -204,5 +227,25 @@ Here, three different annotations terms:
 - Capabilities.UpdateRestrictions
 
 are being applied via `Target="Main.EntityContainer/Categories"` to the "Categories" entityset in the entity container named "EntityContainer" in the "Main" OData namespace.
+
+```text
+                                        +--------------+
+                                        | Capabilities |
+                                   +--- +--------------------+
+                         annotates |    | DeleteRestrictions |
+                                   |    +--------------------+
++----------------------+           |
+| Main.EntityContainer |           |    +--------------+
++--------------------------+       |    | Capabilities |
+| Categories               | <-----+--- +--------------------+
++--------------------------+       |    | InsertRestrictions |
+                                   |    +--------------------+
+                                   |
+                                   |    +--------------+
+                                   |    | Capabilities |
+                                   +--- +--------------------+
+                                        | UpdateRestrictions |
+                                        +--------------------+
+```
 
 In the next tutorial we'll dig in to the detail of the annotations used in this OData metadata document.
