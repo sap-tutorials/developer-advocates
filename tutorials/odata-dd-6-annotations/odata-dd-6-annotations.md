@@ -48,7 +48,7 @@ The XML element structure contained within the `<Annotation>` element is the ann
 
 There's only a single record in the collection, and it looks like this:
 
-rel|author
+rel|href
 -|-
 `author`|`https://cap.cloud.sap`
 
