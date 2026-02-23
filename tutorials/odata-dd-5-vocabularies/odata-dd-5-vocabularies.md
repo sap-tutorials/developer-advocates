@@ -229,23 +229,23 @@ Here, three different annotations terms:
 are being applied via `Target="Main.EntityContainer/Categories"` to the "Categories" entityset in the entity container named "EntityContainer" in the "Main" OData namespace.
 
 ```text
-                                        +--------------+
-                                        | Capabilities |
-                                   +--- +--------------------+
-                         annotates |    | DeleteRestrictions |
-                                   |    +--------------------+
-+----------------------+           |
-| Main.EntityContainer |           |    +--------------+
-+--------------------------+       |    | Capabilities |
-| Categories               | <-----+--- +--------------------+
-+--------------------------+       |    | InsertRestrictions |
-                                   |    +--------------------+
-                                   |
-                                   |    +--------------+
-                                   |    | Capabilities |
-                                   +--- +--------------------+
-                                        | UpdateRestrictions |
-                                        +--------------------+
+                                              +--------------+
+                                              | Capabilities |
+                                         +--- +--------------------+
+                                         |    | DeleteRestrictions |
+                                         |    +--------------------+
++----------------------+                 |
+| Main.EntityContainer |                 |    +--------------+
++--------------------------+   annotates |    | Capabilities |
+| Categories               | <-----------+--- +--------------------+
++--------------------------+             |    | InsertRestrictions |
+                                         |    +--------------------+
+                                         |
+                                         |    +--------------+
+                                         |    | Capabilities |
+                                         +--- +--------------------+
+                                              | UpdateRestrictions |
+                                              +--------------------+
 ```
 
 In the next tutorial we'll dig in to the detail of the annotations used in this OData metadata document.
