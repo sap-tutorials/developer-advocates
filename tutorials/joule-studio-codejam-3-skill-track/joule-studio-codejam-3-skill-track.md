@@ -59,13 +59,13 @@ A Joule Studio project contains a set of custom skills, agents, and data types d
 
 3. In the **Create Project** dialog, enter the following details.
 
-    >**IMPORTANT:** In the project name, use your unique user number and your initials.
+    >**IMPORTANT:** In the project name, use **YOUR** unique user number and **YOUR** initials.
     >
-    >So if your user is **003** and initials **DBW**, the name of the project should be **Logistics Agent 003 DBW**.
+    >So if your user is **003** and initials **AJM**, the name of the project should be **Logistics Agent 003 AJM**.
 
     | Field         | Value                                     |
     |---------------|-------------------------------------------|
-    | **Name**        | `Logistics Agent <UserID> <INITIALS>`                  |
+    | **Name**        | `Logistics Agent <UserID> <YOUR INITIALS>`                  |
     | **Description** | `Joule skills for GTT shipment management.` |
 
     ![Name and description](1-project-3.png)
@@ -160,11 +160,86 @@ Joule will try to understand the values from the context. If any required input 
 
 
 
+### Add confirmation and status messages
+Joule Studio lets you to provide response data and enable Joule to design/format the response based on that data.
+
+But you can also design your own messages when you want the response to be exactly a certain format.
+
+There are several types of messages you can send:
+
+![Messages](messages1.png)
+
+- **Send Message:** Contains the main response to the user, which can be formatted as a text message, a card or a list.
+
+- **Send Status Message:** Contains info about the status of the request to Joule, so Joule can tell the user, for example, that a request to the backend is underway.
+
+- **Send Confirmation Request:** Let's you ask for confirmation that the user wants to proceed.
+
+You will make use of the **Send Message** in a later tutorial. In this tutorial, you will add the confirmation and status messages.
+
+1. Just after the trigger step, click the **+** button.
+
+    ![New step](4-action-1.png)
+
+    Click **Send Response**.
+
+    ![Send Response](confirm1.png)
+
+    Click **Send Confirmation Request**. 
+
+    ![Send Confirmation Request](confirm2.png)
+
+2. On the right-side panel, click **Open Message Editor**.
+
+    ![Open Message Editor](confirm3.png)
+
+3. Set the fields as follows:
+
+    | Field         | Value                                     |
+    |---------------|-------------------------------------------|
+    | **Title**        | `Did you want to track this shipment ID?`                  |
+    | **Text** | By this to the field **context > startEvent > trackingID**  |
+    | **Confirm** | `Yes` |
+    | **Cancel** | `No` |
+
+    ![Configure confirmation message](confirm4.png)
+
+    Click **Save**.
+
+4. Under the **Confirm** branch, click the **+** button.
+
+    ![Add step](messages2.png)
+
+    Click **Send Response**.
+
+    ![Send Response](messages3.png)
+
+    Select **Send Status Update**.
+
+    ![Send Status Update](messages4.png)
+
+5. On the right-side panel, click **Open Message Editor**.
+
+    ![Open Message Editor](messages5.png)
+
+6. For the **Message** field, enter `Checking GTT system ... `.
+
+    ![Configure status message](messages6.png)
+
+    Click **Save**.
+
+7. Click **Save** (upper right).
+
+
+
+    
+
+
 
 ### Add action to skill
 Actions let skills retrieve data from a backend. Here, we want to retrieve info about a particular shipment.
 
-1. In the skill builder, click the **+** icon under the trigger step.
+1. In the skill builder, click the **+** icon under the status message (in the **Confirm** branch).
 
     ![New step](4-action-1.png)
 
@@ -262,18 +337,17 @@ Actions define a specific API call. But each time you add the action you can pro
 
     The formula editor will show that the syntax is invalid.
     
-    In the formula editor, you need to replace `<Tracking ID>` with a reference to the input paramter. Select `<Tracking ID>` and then double-click **Skill Inputs > trackingID** from the left side, so that the formula looks like this:
+    In the formula editor, you need to replace `<Tracking ID>` with a reference to the input paramter. Select `<Tracking ID>` and then double-click **Skill Inputs > trackingID** from the left side.
 
     ![Bind tracking ID](5-action2-7.png)
 
     Now the formula editor will show the syntax is valid (green).
 
+    ![Formula updated](5-action2-8.png)
+
     >This creates the same input value we used to test the action in the first tutorial, except now the shipment ID will be taken from the input parameter, which takes it from the conversation.
 
     Click **Apply**.
-
-    ![Formula updated](5-action2-8.png)
-
 
 
 
@@ -312,7 +386,7 @@ You created the output parameters to send data back to Joule or the agent. Now w
 
     ![End binding](7-end-1.png)
 
-2. For each output parameter, bind the following by clicking inside the parameter field and selecting the corresponding mapping:
+2. For each output parameter, bind the following by clicking inside the parameter field and navigating to the indicated field:
 
     | **Field Name**     | **Mapped Value**  |
     |--------------------|------------------|
@@ -320,9 +394,38 @@ You created the output parameters to send data back to Joule or the agent. Now w
     | **gttstatus**      |  getReadquery > result > d > list - results > plannedEvents > list - results > eventStatus_code |
     | **json**             | getReadquery > result |
 
+    The mapped fields should look like this:
+
     ![Fields mapped](7-end-2.png)
 
+    >**IMPORTANT:** Do not copy and paste the above texts into the field. The text represent a path to the field to bind; find the field, and double-click it.
+
 3. Click **Save** (upper right).
+
+
+
+### Add a conversation starter
+Joule skills allow you to create a button in the Joule interface that lets the user start a conversation and trigger the skill.
+
+1. Click the trigger step to open the side panel.
+
+    ![Side panel](starter1.png)
+
+2. Click **Open Conversation Starter Editor**.
+
+    Set both the button and prompt texts to `Track Shipment`. 
+
+    ![Starter](starter2.png)
+
+    Click **Apply**.
+
+3. Click **Save** (upper right).
+
+
+
+
+
+
 
 
 
@@ -348,37 +451,55 @@ A nice feature of Joule Studio is that you can test your project without having 
 
     >The first time you run the test, it might take a couple of minutes for the browser tab to open.
 
-3. As a prompt, enter:
-
-    ```Prompt
-    I want to track the shipment 91001DBW.
-    ```
+3. Instead of typing the prompt, click the **Track Shipment** button.
 
     ![Enter prompt](8-test-3.png)
 
-    Joule will output information from shipment **91001DBW**.
+    Since the skill requires a shipment ID as input, Joule will ask for it.
+
+    ![Enter shipment ID](8-test-3a.png)
+
+    Enter `91001DBW`.
+
+    Joule will now give you a confirmation message to check if the correct shipment ID was selected.
+
+    ![Confirmation](8-test-3b.png)
+
+    Click **Yes**. 
+    
+    Joule will briefly show your status message.
+
+    ![Status](8-test-3c.png)
+    
+    And then Joule will output information from shipment **91001DBW**.
 
     ![Response](8-test-4.png)
 
     The exact format varies, since the skill returns data back to Joule and specified that Joule design the output. If we wanted to control the output, we could have specified a **Send Response** step and designed the output more precisely.
 
-4. Enter the prompt again.
+4. Request the same thing again, this time by entering the following prompt, and then clicking **Yes** to confirm:
 
     ```Prompt
     I want to track the shipment 91001DBW
     ```
 
-    The response will likely be formatted differently.
-
+    The response will likely be formatted differently. 
+    
     ![Response again](8-test-5.png)
 
-5. Notice that **Timeline** information on the right of the screen, which gives you information on how the response was derived.
+    >Why didn't Joule return exactly the same answer?
 
-    The response is connected to **Joule object message**. If you open this you will information about how Joule handled the prompt.
-    
-    For example, the first node **Joule selected a scenario to execute** shows which skill or agent was selected in response to the prompt.
+5. Notice that **Timeline** on the right of the screen, which gives you information on how the response was derived. The exact nodes are different depending on your flow.
+
+    If you performed the steps up to now, you probably will get the following:
+
+    - **Joule text message** represents the text response asking for the shipment ID. Under this, **Joule selected a scenario to execute** shows which skill (or agent) was selected in response to the prompt.
 
     ![Logs](logs1.png)
+
+    You will see the moment after confirmation where your status message was displayed.
+
+    ![Logs](logs1a.png)
 
     **The scenario trackShipment is called with parameters** shows you which skill was triggered with what input parameters.
 
@@ -395,21 +516,31 @@ A nice feature of Joule Studio is that you can test your project without having 
 
 
 ### Test the skill in your language
-You can talk to Joule in your language, though the responses are still in English.
+You can talk to Joule in your language.
 
 1. Start the testing again.
 
+    ![Joule Portuguese](Joule-Portuguese.png)
+
 2. Enter a prompt in your language.
 
-    For example, in Italian, type in:
+    Here is a sample prompt in English:
 
     ```Prompt
-    Voglio tracciare la spedizione 91001DBW
+    I want to track the shipment 91001DBW
+    ```    
+
+    For example, in Portuguese, type in:
+
+    ```Prompt
+    Quero rastrear a remessa 91001DBW
     ```
 
-    You should get the same response as before.
+3. Click **Yes** to confirm.
 
-    ![Italian](italian.png)
+    You should get the same response as before, and if your browser is set for Portuguese, your response will be in Portuguese.
+
+    ![Portuguese](Portuguese.png)
 
 
 ### Questions to ponder
