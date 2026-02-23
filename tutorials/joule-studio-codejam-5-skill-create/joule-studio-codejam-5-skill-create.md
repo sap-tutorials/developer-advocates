@@ -273,7 +273,7 @@ You will create two **Send Message** steps, one for each of the condition branch
 
     ![Send Message](9-message1-3.png)
 
-3. Select the **Send Message** on the **If** branch, and name it **Create Shipment Message** (i.e., set the in the **Step Name** field).
+3. Select the **Send Message** on the **If** branch, and name it **Create Shipment Message** (i.e., set the **Step Name** field).
 
 4. **Open Message Editor** on the right-side panel.
 
@@ -312,7 +312,7 @@ You will create two **Send Message** steps, one for each of the condition branch
 
 2. Select **Send Response**, and then **Send Message**.
 
-3. Select the **Send Message** on the **Default** branch, and name it **Update Shipment Message** (i.e., set the in the **Step Name** field).
+3. Select the **Send Message** on the **Default** branch, and name it **Update Shipment Message** (i.e., set the **Step Name** field).
 
 3. **Open Message Editor** on the right-side panel.
 

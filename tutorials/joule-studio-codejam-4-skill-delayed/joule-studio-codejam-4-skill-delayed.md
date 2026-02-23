@@ -88,6 +88,8 @@ Again, you need to map the action to a destination (that is, a specific backend)
 
     ![Bind filter](3-configure-2.png)
 
+    >**IMPORTANT:** DO NOT ENTER THE FORMULA DIRECTLY INTO THE FIELD. You must click **Apply a Formula** and enter the formula in the formula box.
+
     Enter the following formula in the box:
 
     ```JavaScript
@@ -131,7 +133,7 @@ You created the output parameters to send data back to Joule or the agent. Now y
 
     ![Click end](5-end-1.png)
 
-2. For **json** output parameter, map it to **getReadquery > result > d > results**.
+2. For **json** output parameter, map it to **getReadquery > result > d > list - results**.
 
     ![Bind end](5-end-2.png)
 

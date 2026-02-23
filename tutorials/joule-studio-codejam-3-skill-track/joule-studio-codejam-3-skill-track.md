@@ -198,7 +198,7 @@ You will make use of the **Send Message** in a later tutorial. In this tutorial,
     | Field         | Value                                     |
     |---------------|-------------------------------------------|
     | **Title**        | `Did you want to track this shipment ID?`                  |
-    | **Text** | By this to the field **context > startEvent > trackingID**  |
+    | **Text** | Bind this to the field **context > startEvent > trackingID**  |
     | **Confirm** | `Yes` |
     | **Cancel** | `No` |
 
@@ -327,7 +327,9 @@ Actions define a specific API call. But each time you add the action you can pro
 
     ![Open editor for filter](5-action2-5.png)
 
-    Enter the following formula in the box:
+    >**IMPORTANT:** DO NOT ENTER THE FORMULA DIRECTLY INTO THE FIELD. You must click **Apply a Formula** and enter the formula in the formula box.
+    
+    Select Enter the following formula in the box:
 
     ```JavaScript
     ConcatenateStrings(["trackingId eq ", <Tracking ID>, ""], "'")
