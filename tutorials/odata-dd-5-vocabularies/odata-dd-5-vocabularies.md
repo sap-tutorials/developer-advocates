@@ -14,7 +14,7 @@ time: 20
 
 ## You will learn
 
-- How annotations are organized into vocabularies
+- How vocabularies are used to organize annotations
 - How they're included within an OData metadata document
 
 ## Intro
@@ -30,7 +30,6 @@ In the previous [Metadata](https://developers.sap.com/tutorials/odata-dd-4-metad
 Here's what the relevant section of the wrapper in [the Northbreeze OData service's metadata document](https://odd.cfapps.eu10.hana.ondemand.com/northbreeze/$metadata) looks like:
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
   <edmx:Reference
     Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml">
@@ -80,10 +79,9 @@ we see that:
 
 - the reference points to an [XML representation](https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml) of a CSDL document "Org.OData.Capabilities.V1"
 - moving one level up from that CSDL document resource's location, there is a [vocabularies overview page](https://oasis-tcs.github.io/odata-vocabularies/vocabularies/) listing each of the OASIS Technical Committee vocabularies, including this "Capabilities" one.
+  ![OASIS OData TC - Vocabularies](oasis-vocabularies-toc.png)
 - for each of these vocabulary resources there are HTML, XML and JSON representations
 - the HTML representation is especially useful for us as it describes the vocabulary's purpose in general, and gives details for each of the terms and types contained within it
-
-![OASIS OData TC - Vocabularies](oasis-vocabularies-toc.png)
 
 If we look specifically at the [XML source](https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml) representation of the "Capabilities" vocabulary in CSDL form, we see this:
 
