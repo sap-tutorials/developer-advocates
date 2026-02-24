@@ -298,6 +298,27 @@ For each of the 3 skills:
 
 
 
+### Remove messages from Track Shipment skill
+Unfortunately, it seems if a skill has a confirmation message and is triggered from an agent, Joule will fail.
+
+So now that we want our track shipment skill to be triggered from an agent, we need to remove the confirmation message.
+
+1. Open the **Track Shipment** skill.
+
+2. Move the **getReadquery** action just after the trigger, and then delete the confirmation and status message.
+
+    ![Fix skill](fixSkill2.png)
+
+    The skill should now look like this:
+
+    ![Fix skill](fixSkill.png)
+
+3. Click **Save** (upper right).
+
+
+
+
+
 ### Questions to ponder
 
 - When we created the shipment with the agent, why did we not get those messages we created in the **Create Shipment** skill?
