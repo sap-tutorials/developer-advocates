@@ -419,6 +419,7 @@ You will create two **Send Message** steps, one for each of the condition branch
 
 
 
+
 ### Questions to ponder
 - What is the code doing in the **Text** field of the messages?
 
