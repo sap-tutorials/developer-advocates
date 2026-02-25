@@ -7,7 +7,7 @@ tags: [ tutorial>beginner, topic>cloud ]
 primary_tag: topic>cloud
 parser: v2
 ---
-  
+   
 # 4 - Create Skill to Show Delayed Shipments
 <!-- description --> Create a skill to return all shipments that are delayed.
  
