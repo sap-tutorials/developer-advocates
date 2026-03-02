@@ -62,6 +62,8 @@ A Joule Studio project contains a set of custom skills, agents, and data types d
     >**IMPORTANT:** In the project name, use **YOUR** unique user number and **YOUR** initials.
     >
     >So if your user is **003** and initials **AJM**, the name of the project should be **Logistics Agent 003 AJM**.
+    >
+    >DO NOT USE MY INITIALS, DBW 🙃
 
     | Field         | Value                                     |
     |---------------|-------------------------------------------|
@@ -179,7 +181,7 @@ You will make use of the **Send Message** in a later tutorial. In this tutorial,
 
 1. Just after the trigger step, click the **+** button.
 
-    ![New step](4-action-1.png)
+    ![New step](confirm0.png)
 
     Click **Send Response**.
 
@@ -301,7 +303,7 @@ Actions define a specific API call. But each time you add the action you can pro
 
 4. The variable is created but it likely will not be selected or even visible in the **Destination Variable** field.
 
-    >**Important:** To see the destination, you may need to:
+    >**IMPORTANT:** To see the destination, you may need to:
     >
     >1. Close the configuration panel.
     >
@@ -328,8 +330,12 @@ Actions define a specific API call. But each time you add the action you can pro
     ![Open editor for filter](5-action2-5.png)
 
     >**IMPORTANT:** DO NOT ENTER THE FORMULA DIRECTLY INTO THE FIELD. You must click **Apply a Formula** and enter the formula in the formula box.
+    >
+    >DO NOT DO THIS:
+    >
+    >![Do not do this](5-action2-5a.png)
     
-    Select Enter the following formula in the box:
+    Enter the following formula in the box:
 
     ```JavaScript
     ConcatenateStrings(["trackingId eq ", <Tracking ID>, ""], "'")

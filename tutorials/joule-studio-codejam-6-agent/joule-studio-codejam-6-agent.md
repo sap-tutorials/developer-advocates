@@ -238,7 +238,7 @@ This document has been uploaded to an Object Store service and destinations have
     |---------------|-------------------------------------------|
     | **Tool name**        | `Carrier Selection Guide`                  |
     | **Description** | `Internal guidelines required by the agent to select cheapest carrier based on the costs provided in the document. It covers the carrier selection guide as a table with all possible carriers for the given source and destination location.` |
-    | **Resource Group**        | Select **AI163**                |
+    | **Resource Group**        | Select **AI163**<div>&nbsp;</div>(The name might be different; ask your instruictor.)               |
 
     Click **Add**.
 
