@@ -7,7 +7,7 @@ tags: [ tutorial>beginner, topic>cloud ]
 primary_tag: topic>cloud
 parser: v2
 ---
-   
+  
 # 4 - Create Skill to Show Delayed Shipments
 <!-- description --> Create a skill to return all shipments that are delayed.
  
@@ -89,6 +89,9 @@ Again, you need to map the action to a destination (that is, a specific backend)
     ![Bind filter](3-configure-2.png)
 
     >**IMPORTANT:** DO NOT ENTER THE FORMULA DIRECTLY INTO THE FIELD. You must click **Apply a Formula** and enter the formula in the formula box.
+    >
+    >![Do not do this](DoNot.png)
+
 
     Enter the following formula in the box:
 

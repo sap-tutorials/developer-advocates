@@ -96,7 +96,7 @@ We have created an MCP server for converting currencies, and created a destinati
     |---------------|-------------------------------------------|
     | **Name**        | `Currency Conversions`                  |
     | **Description for Agent** | `Use this MCP server for converting currencies` |   
-    | **Destination** | Select **MCP-currency-antonio** | 
+    | **Destination** | Select **cap-mcp-convert-currency** | 
 
     ![Configure MCP server](3-mcp-2.png)
 
