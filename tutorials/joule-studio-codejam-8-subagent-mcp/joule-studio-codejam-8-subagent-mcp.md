@@ -100,7 +100,7 @@ We have created an MCP server for converting currencies, and created a destinati
 
     ![Configure MCP server](3-mcp-2.png)
 
-    Once you select the destination, scroll down and you should see a list of tools in that MCP server. Here you will seen one tool called **get_latest_base_currency**.
+    Once you select the destination, scroll down and you should see a list of tools in that MCP server. 
 
     ![New tools](3-mcp-3.png)
 
