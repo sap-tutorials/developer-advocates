@@ -24,7 +24,7 @@ parser: v2
 
 
 ## Intro
-**SAP Build** is a comprehensive low-code/no-code development platform that enables users to create enterprise applications, automate business processes, and design digital workspaces without extensive programming knowledge. The platform empowers both citizen developers and professional developers to build solutions with drag-and-drop simplicity while maintaining enterprise-grade security and scalability.
+**SAP Build** is a comprehensive suite of low-code and pro-code solutions designed to accelerate application development and automation with the power of generative AI.
 
 ![SAP Build](0-Intro-1.png)
 
@@ -104,7 +104,7 @@ You can manage the following:
 ![Connectors](2-explore-2.png)
 
 #### Store
-The **Store** is a set of SAP Build templates -- mostly SAP Build Process Automation processes with the rest actions. The vast majority are free to use.
+The **Store** is a set of SAP Build templates -- mostly SAP Build Process Automation processes and automations. The vast majority are free to use.
 
 ![Store](2-explore-3.png)
 
@@ -163,7 +163,7 @@ In the SAP Build Lobby, open **Connectors > Actions**.
 
 ![Actions](action1.png)
 
-Open the action project **GTTReadService**, which will let us read shipments from GTT.
+Open the action project **GTTReadService** by clicking on the action name. The action will let you read shipments from GTT.
 
 >An action project lets you take a complex API call and only expose the input and output parameters that are meaningful to your developers, and also set all types of parameters. This makes it easy for developers who need to incorporate these APIs into their projects.
 
@@ -178,6 +178,8 @@ Let's test the read action for the case where we want to track a shipment.
     ```Text
     trackingId eq '91001DBW'
     ```
+
+    >The actions was created to enable generic queries of the GTT backend, and that is why we need to provide `trackingId eq '91001DBW'` instead of just a tracking ID.
 
 4. Click the **Test** button.
 

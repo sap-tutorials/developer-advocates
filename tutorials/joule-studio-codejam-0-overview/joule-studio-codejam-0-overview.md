@@ -41,7 +41,7 @@ Joule comes out of the box with prebuilt skills and agents designed to work with
 
 But what if you want to add capabilities to Joule, for example, to search third-party APIs, create Microsoft Teams posts, or read and write to your own CAP service?
 
-You can extend Joule using Joule Studio, the no-code tool for creating your own custom skills and agents.
+You can extend Joule using Joule Studio, the no-code capability for creating your own custom skills and agents.
 
 - **Skills** are Joule skills are task-specific components for conversational automation, designed to run predefined operations within a business context. 
 
@@ -74,7 +74,7 @@ You will build skills and agents so you can use Joule to interact with the SAP B
 
 #### GTT
 
-The aim of SAP Business Network Global Track and Trace (GTT) is to capture, process and store tracking information about tracked business processes. 
+The aim of SAP Business Network Global Track and Trace (GTT) is to capture, process and store tracking information about certain business processes. 
 
 ![GTT](GTT1.png)
 
@@ -98,11 +98,15 @@ In order to interact with the GTT system, you will create a set of skills and ag
 
 - **Agent for Logistics** (agent): Orchestrates the calling of the skills, plus lets us call the document grounding to get carriers and their rates.
 
+    >**Document Grounding** is a way to add context to a Joule request by retrieving information from a set of documents. Document grounding takes the relevant documents and prepares them to be used by the agent. 
+
     When designing the agent, we will change the settings of the skills so they can only be called via the agent, not directly.
 
 - **Agent for Converting Currencies** (agent): An agent that retrieves currency exchange rates, and will let the user display the carrier rates in any currency.
 
-    This agent will be used as a subagent within our main agent, and this subagent will connect with an MCP server to import its tools inside the agent. 
+    This agent will be used as a subagent within our main agent, and this subagent will connect with an MCP server to import its tools inside the agent.
+
+    >An **MCP (Model Context Protocol) Server** is an open-source standard for connecting AI applications (agents) to external systems.
 
 In addition, you will learn how to test these skills/agents from within your design-time project, and then to create a shared environment to which you will deploy your project. 
 
@@ -111,7 +115,7 @@ The deployed project can be tested in the environment, or further sent to the pr
 
 
 ### Prerequisites
-For this CodeJam, we will provide you with an SAP BTP system to use for building Joule skills, and will give you:
+For this CodeJam, we will provide you access to a preconfigured SAP BTP subaccount with the applications and services needed for you to build Joule skills and agents. We will give you:
 
 - URL of Joule Studio
 
@@ -146,7 +150,7 @@ We have also set up the following to support your work in Joule Studio:
 
 The last 2 blog posts are really good because they give you directions no matter where you are starting from: whether you already have Joule, or SAP Build Process Automation, or both, or neither.
 
-Here is [The Complete Joule Studio Resource Hub: Everything You Need to Get Started](https://community.sap.com/t5/technology-blog-posts-by-sap/the-complete-joule-studio-resource-hub-everything-you-need-to-get-started/ba-p/14183113) (blog), though a little old, from August, still has a lot of great resources.
+Here is [The Complete Joule Studio Resource Hub: Everything You Need to Get Started](https://community.sap.com/t5/technology-blog-posts-by-sap/the-complete-joule-studio-resource-hub-everything-you-need-to-get-started/ba-p/14183113) (blog), though a little old still has a lot of great resources.
 
 And finally a video on the latest features: [What's New in SAP BTP: Top New Features | Joule Studio Agent Builder | Q4 2025](https://www.youtube.com/watch?v=Bw6WGI_rc74&pp=ygUMam91bGUgc3R1ZGlv)
 
