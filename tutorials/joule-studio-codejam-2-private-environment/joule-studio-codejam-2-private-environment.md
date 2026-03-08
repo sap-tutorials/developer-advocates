@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# 2- Create Environments for Testing
+# 2 - Create Environments for Testing
 <!-- description --> Create SAP Build environments, which let you set aside different deployment areas for different lines of business, as well as private environments for individual testing. 
   
 ## You will learn
@@ -46,7 +46,7 @@ So the flow of development would be something like this:
 
 4. You develop a Joule Studio project and test it inside your private environment.
 
-5. You deploy it to your test shared environment for the LOB and test it there.
+5. You deploy it to your test shared environment for a particular line of business and test it there.
 
 6. When ready, you deploy it to the production environment, which will automatically expose it to the production Joule.
 

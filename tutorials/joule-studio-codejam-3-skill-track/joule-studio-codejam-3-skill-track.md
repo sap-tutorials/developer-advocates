@@ -7,7 +7,7 @@ tags: [ tutorial>beginner, topic>cloud ]
 primary_tag: topic>cloud
 parser: v2
 ---
-   
+  
 # 3 - Create Skill to Track Shipments
 <!-- description --> Create a skill to enable the user to track a shipment, where the user specifies a shipment ID and the skill returns information on that shipment.
  
@@ -40,7 +40,7 @@ While they can understand conversation context, their logic is **non-adaptive** 
 
 >💡 **Note:** Joule skills can be triggered:
 > 
->    - through SAP Joule’s conversational interface
+>    - through Joule’s conversational interface
 >    - through another Joule skill
 >    - through a Joule agent
 
@@ -108,7 +108,7 @@ Once you create a new skill, the skill builder canvas opens for you to design th
 
 >If you have any experience with SAP Build Process Automation, you will be familiar with the layout, which is used for designing processes.
 >
->To the flow, you click the plus icon and add steps, then configure each step.
+>By default you get a flow that has just two steps: trigger and end. To this flow, you click the plus icon and add steps, then configure each step.
 
 
 
@@ -200,7 +200,7 @@ You will make use of the **Send Message** in a later tutorial. In this tutorial,
     | Field         | Value                                     |
     |---------------|-------------------------------------------|
     | **Title**        | `Did you want to track this shipment ID?`                  |
-    | **Text** | Bind this to the field **context > startEvent > trackingID**  |
+    | **Text** | Click **<>** on the right side of the field, and bind this to the field **context > startEvent > trackingID**  |
     | **Confirm** | `Yes` |
     | **Cancel** | `No` |
 
@@ -239,7 +239,7 @@ You will make use of the **Send Message** in a later tutorial. In this tutorial,
 
 
 ### Add action to skill
-Actions let skills retrieve data from a backend. Here, we want to retrieve info about a particular shipment.
+Actions let skills retrieve data from a backend. Here, you want to retrieve info about a particular shipment.
 
 1. In the skill builder, click the **+** icon under the status message (in the **Confirm** branch).
 
@@ -321,7 +321,7 @@ Actions define a specific API call. But each time you add the action you can pro
 
     ![Destination added](5-action2-4.png)
 
-5. To specify the shipment to track, we will add some filter data to the action.
+5. To specify the shipment to track, you will add some filter data to the action.
 
     With the action selected, select the **Input** tab on the right pane. 
 
@@ -353,7 +353,7 @@ Actions define a specific API call. But each time you add the action you can pro
 
     ![Formula updated](5-action2-8.png)
 
-    >This creates the same input value we used to test the action in the first tutorial, except now the shipment ID will be taken from the input parameter, which takes it from the conversation.
+    >This creates the same input value you used to test the action in the first tutorial, except now the shipment ID will be taken from the input parameter, which takes it from the conversation.
 
     Click **Apply**.
 
@@ -388,7 +388,7 @@ You need to create output parameters so that the skill returns data to Joule (or
 
 
 ### Bind data to output parameters
-You created the output parameters to send data back to Joule or the agent. Now we need to supply the data.
+You created the output parameters to send data back to Joule or the agent. Now you need to supply the data.
 
 1. Click the **End** activity.
 
@@ -483,7 +483,7 @@ A nice feature of Joule Studio is that you can test your project without having 
 
     ![Response](8-test-4.png)
 
-    The exact format varies, since the skill returns data back to Joule and specified that Joule design the output. If we wanted to control the output, we could have specified a **Send Response** step and designed the output more precisely.
+    The exact format varies, since the skill returns data back to Joule and specified that Joule design the output. If you wanted to control the output, you could have specified a **Send Response** step and designed the output more precisely.
 
 4. Request the same thing again, this time by entering the following prompt, and then clicking **Yes** to confirm:
 
@@ -563,6 +563,6 @@ You can talk to Joule in your language.
 
 - If you don't save the project, what happens when you try to test?
 
-- When we tested, we got different formats and different fields for the same prompt. Why is that, based on AI and based on our actual project?
+- When you tested, you got different formats and different fields for the same prompt. Why is that, based on AI and based on our actual project?
 
 
