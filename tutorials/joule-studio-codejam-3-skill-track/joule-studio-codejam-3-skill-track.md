@@ -528,7 +528,7 @@ You can talk to Joule in your language.
 
 1. Start the testing again.
 
-    ![Joule Portuguese](Joule-Portuguese.png)
+    ![Joule German](Joule-German.png)
 
 2. Enter a prompt in your language.
 
@@ -538,17 +538,17 @@ You can talk to Joule in your language.
     I want to track the shipment 91001DBW
     ```    
 
-    For example, in Portuguese, type in:
+    For example, in German, type in:
 
     ```Prompt
-    Quero rastrear a remessa 91001DBW
+    Ich möchte die Sendung 91001DBW verfolgen.
     ```
 
 3. Click **Yes** to confirm.
 
     You should get the same response as before, and if your browser is set for Portuguese, your response will be in Portuguese.
 
-    ![Portuguese](Portuguese.png)
+    ![German](German.png)
 
 
 ### Questions to ponder

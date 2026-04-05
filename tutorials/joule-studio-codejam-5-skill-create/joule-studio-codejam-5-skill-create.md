@@ -183,18 +183,57 @@ You need to pass the input parameters into the input fields of the action.
 
 3. Bind the action inputs from the skill inputs.
 
-    >As the skill inputs are of type **String** and some of the action inputs are of type **DateTime**, you will have to use a formula for those action inputs.
+    <table>
+    <tr>
+    <th><b>Field Name</b></th><th><b>Mapped Path or Value</b></th>
+    </tr>
 
-    | Field Name              | Mapped Path or Value                 |
-    |--------------------------|-----------------------------|
-    | **actualBusinessTimestamp**  | Skill Input > datetime    |  
-    | **altKey**                   | Apply a Formula<div>&nbsp;</div>```ConcatenateStrings(["xri://sap.com/id:LBN#10020007892:EWWCLNT220:FT1_SHIPMENT:", <Skill Input-shipmentId>], "")```<div>&nbsp;</div>Replace the <> with the skill input binding for shipment ID. |
-    | **arrivalLocationId**        | Skill Inputs > destlocation | 
-    | **departureLocationId**      | Skill Inputs > srclocation  | 
-    | **plannedArrivalDateTime**   | ```2026-03-31T16:30:00+02:00```  |  
-    | **plannedDepartureDateTime** | Skill Input > datetime   |  
-    | **serviceAgentLbnId**       | Skill Inputs > carrier      | 
-    | **shipmentNo**               | Skill Inputs > shipmentid   | 
+    <tr>
+    <td><b>actualBusinessTimestamp</b></td><td>Select <b>Skill Input > datetime</b></td>
+    </tr>
+
+    <tr>
+    <td><b>altKey</b></td><td>
+    
+    
+    ```json
+    ConcatenateStrings(["xri://sap.com/id:LBN#10020007892:EWWCLNT220:FT1_SHIPMENT:", <Skill Input-shipmentId>], "")
+    ```
+
+    Highlight the ***\<Skill Input-shipmentId\>*** placeholder and then select the skill input binding for shipment ID.
+
+    It should look like this:
+
+    ![Action inputs](actionInputs.png)
+
+    </td>
+    </tr>
+
+    <tr>
+    <td><b>arrivalLocationId</b></td><td><b>Select <b>Skill Input > destlocation</b></b></td>
+    </tr>
+
+    <tr>
+    <td><b>departureLocationId</b></td><td><b>Select <b>Skill Input > srclocation</b></b></td>
+    </tr>
+
+    <tr>
+    <td><b>plannedArrivalDateTime</b></td><td> <b>actualBusinessTimestamp</b> </td>
+    </tr>
+
+    <tr>
+    <td><b>plannedDepartureDateTime</b></td><td> <b>Select <b>Skill Input > datetime</b></b> </td>
+    </tr>
+
+    <tr>
+    <td><b>serviceAgentLbnId</b></td><td> <b>Select <b>Skill Input > carrier</b></b> </td>
+    </tr>
+
+    <tr>
+    <td><b>shipmentNo</b></td><td> <b>Select <b>Skill Input > shipmentid</b></b> </td>
+    </tr>
+    </table>
+
 
 4. Click **Save** (upper right).
 
@@ -416,7 +455,6 @@ You will create two **Send Message** steps, one for each of the condition branch
 7. Once you are done testing, click **Stop Testing**.
 
     ![Stop testing](11-test-8.png)
-
 
 
 

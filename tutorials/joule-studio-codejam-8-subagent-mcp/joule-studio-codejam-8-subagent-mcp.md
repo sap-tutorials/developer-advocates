@@ -189,6 +189,12 @@ Click **Save** (upper right).
 
     ![Results euros](6-test-4.png)
 
+    >Feel free to check the current exchange rate, to make sure the value is live, and not old and taken from the LLM's memory.
+    >
+    >Here's a link to exchange rate for euro on [Yahoo Finance](https://finance.yahoo.com/quote/EUR=X/).
+    >
+    >![Euro to USD](6-test-yahoo.png)
+
 
 3. Explore the logs.
 
