@@ -183,56 +183,16 @@ You need to pass the input parameters into the input fields of the action.
 
 3. Bind the action inputs from the skill inputs.
 
-    <table>
-    <tr>
-    <th><b>Field Name</b></th><th><b>Mapped Path or Value</b></th>
-    </tr>
-
-    <tr>
-    <td><b>actualBusinessTimestamp</b></td><td>Select <b>Skill Input > datetime</b></td>
-    </tr>
-
-    <tr>
-    <td><b>altKey</b></td><td>
-    
-    
-    ```json
-    ConcatenateStrings(["xri://sap.com/id:LBN#10020007892:EWWCLNT220:FT1_SHIPMENT:", <Skill Input-shipmentId>], "")
-    ```
-
-    Highlight the ***\<Skill Input-shipmentId\>*** placeholder and then select the skill input binding for shipment ID.
-
-    It should look like this:
-
-    ![Action inputs](actionInputs.png)
-
-    </td>
-    </tr>
-
-    <tr>
-    <td><b>arrivalLocationId</b></td><td><b>Select <b>Skill Input > destlocation</b></b></td>
-    </tr>
-
-    <tr>
-    <td><b>departureLocationId</b></td><td><b>Select <b>Skill Input > srclocation</b></b></td>
-    </tr>
-
-    <tr>
-    <td><b>plannedArrivalDateTime</b></td><td> <b>actualBusinessTimestamp</b> </td>
-    </tr>
-
-    <tr>
-    <td><b>plannedDepartureDateTime</b></td><td> <b>Select <b>Skill Input > datetime</b></b> </td>
-    </tr>
-
-    <tr>
-    <td><b>serviceAgentLbnId</b></td><td> <b>Select <b>Skill Input > carrier</b></b> </td>
-    </tr>
-
-    <tr>
-    <td><b>shipmentNo</b></td><td> <b>Select <b>Skill Input > shipmentid</b></b> </td>
-    </tr>
-    </table>
+    | Field Name              | Mapped Path or Value                 |
+    |--------------------------|-----------------------------|
+    | **actualBusinessTimestamp**  | Select **Skill Input > datetime**    |  
+    | **altKey**                   | Apply a Formula<div>&nbsp;</div>```ConcatenateStrings(["xri://sap.com/id:LBN#10020007892:EWWCLNT220:FT1_SHIPMENT:", <Skill Input-shipmentId>], "")```<div>&nbsp;</div>Replace the "Skill Input-shipmentId" placeholder with the skill input binding for shipment ID.<div>&nbsp;</div>The formula should look like this:<div>&nbsp;</div>![Input](actionInputs.png) |
+    | **arrivalLocationId**        | Select **Skill Inputs > destlocation** | 
+    | **departureLocationId**      | Select **Skill Inputs > srclocation**  | 
+    | **plannedArrivalDateTime**   | ```2026-03-31T16:30:00+02:00```  |  
+    | **plannedDepartureDateTime** | Select **Skill Input > datetime**   |  
+    | **serviceAgentLbnId**       | Select **Skill Inputs > carrier**      | 
+    | **shipmentNo**               | Select **Skill Inputs > shipmentid**   | 
 
 
 4. Click **Save** (upper right).
