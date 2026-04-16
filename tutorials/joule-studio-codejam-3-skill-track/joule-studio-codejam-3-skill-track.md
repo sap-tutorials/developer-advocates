@@ -412,29 +412,6 @@ You created the output parameters to send data back to Joule or the agent. Now y
 
 
 
-### Add a conversation starter
-Joule skills allow you to create a button in the Joule interface that lets the user start a conversation and trigger the skill.
-
-1. Click the trigger step to open the side panel.
-
-    ![Side panel](starter1.png)
-
-2. Click **Open Conversation Starter Editor**.
-
-    Set both the button and prompt texts to `Track Shipment`. 
-
-    ![Starter](starter2.png)
-
-    Click **Apply**.
-
-3. Click **Save** (upper right).
-
-
-
-
-
-
-
 
 
 ### Test the skill
@@ -459,11 +436,11 @@ A nice feature of Joule Studio is that you can test your project without having 
 
     >The first time you run the test, it might take a couple of minutes for the browser tab to open.
 
-3. Instead of typing the prompt, click the **Track Shipment** button.
+3. Enter into the prompt **Track Shipment**.
 
     ![Enter prompt](8-test-3.png)
 
-    Since the skill requires a shipment ID as input, Joule will ask for it.
+    Since the skill requires a shipmentv ID as input, Joule will ask for it.
 
     ![Enter shipment ID](8-test-3a.png)
 
