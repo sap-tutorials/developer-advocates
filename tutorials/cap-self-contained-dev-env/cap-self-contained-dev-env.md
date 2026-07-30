@@ -92,7 +92,9 @@ rm -rf assets/ LICENSE* README.md REUSE.toml
 
 At this point, you're all set to develop with CAP Node.js!
 
-### Further info
+### Wrap-up and further info
+
+For further info, refer to these resources:
 
 - The [Development Containers](https://containers.dev/) open specification
 - Information on [GitHub Codespaces](https://github.com/features/codespaces)

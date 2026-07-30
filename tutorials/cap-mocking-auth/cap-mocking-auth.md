@@ -313,7 +313,9 @@ This time, observe:
 
 Well done!
 
-### Further info
+### Wrap-up and further info
+
+For further info, refer to these resources:
 
 - Feature definition [FEA002 Mocking auth](https://github.com/qmacro/capref/blob/main/features/FEA002.md)
 - Blog post [Local-first dev with CAP Node.js - mocking auth](https://qmacro.org/blog/posts/2026/05/12/local-first-dev-with-cap-node-js-mocking-auth/)
