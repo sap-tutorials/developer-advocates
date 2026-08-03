@@ -5,7 +5,7 @@ author_profile: https://github.com/qmacro
 auto_validation: false
 primary_tag: software-product-function>sap-cloud-application-programming-model
 tags: [ software-product>sap-business-technology-platform, topic>cloud, tutorial>beginner ]
-time: 15
+time: 10
 ---
 
 # Set up a self-contained development environment for CAP Node.js
