@@ -37,7 +37,12 @@ In this tutorial we'll explore the feature with a simple model with different st
 
 ```shell
 cds init --add nodejs cap-status-transition-flows
-code cap-status-transition-flows
+```
+
+👉 Now open the new `cap-status-transition-flows/` directory in a new VS Code / Codespace window:
+
+```shell
+code cap-status-transition-flows/
 ```
 
 This should place you and any new terminal session in the new `cap-status-transition-flows/` directory.
