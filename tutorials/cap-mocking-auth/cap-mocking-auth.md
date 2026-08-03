@@ -18,7 +18,7 @@ time: 15
 
 ## Prerequisites
 
-You will need a development environment for CAP Node.js. See the tutorial [Set up a self-contained development environment for CAP Node.js](/tutorials/cap-self-contained-dev-env.html)  The assumptions in this tutorial are based on option 1 or option 2 in that tutorial, in that you have a VS Code (or GitHub Codespace) environment based on the foundation repository used in the setup described there, which also means that your starting directory will be `/workspaces/cap-nodejs-dev-env`. If you have your own CAP Node.js development environment setup, then please make the appropriate adjustments where necessary.
+You will need a development environment for CAP Node.js. See the tutorial [Set up a self-contained development environment for CAP Node.js](https://developers.sap.com/tutorials/cap-self-contained-dev-env.html)  The assumptions in this tutorial are based on option 1 or option 2 in that tutorial, in that you have a VS Code (or GitHub Codespace) environment based on the foundation repository used in the setup described there, which also means that your starting directory will be `/workspaces/cap-nodejs-dev-env`. If you have your own CAP Node.js development environment setup, then please make the appropriate adjustments where necessary.
 
 ## Intro
 
@@ -28,7 +28,7 @@ The CAP framework offers various auth strategies, including ones that support JW
 
 ### Set up a simple Northwind-based service
 
-The [OData Deep Dive](/mission.odata-deep-dive.html) mission is based around a cut-down version of the classic Northwind service called "Northbreeze". That service is available in the repository <https://github.com/SAP-samples/odata-dd-server> and is a good basis for our exploration of the mocked authentication strategy in this tutorial.
+The [OData Deep Dive](https://developers.sap.com/mission.odata-deep-dive.html) mission is based around a cut-down version of the classic Northwind service called "Northbreeze". That service is available in the repository <https://github.com/SAP-samples/odata-dd-server> and is a good basis for our exploration of the mocked authentication strategy in this tutorial.
 
 👉 Clone the repository:
 
@@ -48,7 +48,7 @@ This should present just the Northbreeze project in the Explorer, at the root. U
 
 ### Examine the service context
 
-Out of the box, the CDS model in this Northbreeze project comes with a single restriction on the `Categories` projection, in the form of a `@readonly` annotation - which exists as something to be examined in a different tutorial ([Learn how to read annotations in OData metadata documents](/tutorials/odata-dd-6-annotations.html), part of the OData Deep Dive mission). We will ignore this for the purposes of this tutorial.
+Out of the box, the CDS model in this Northbreeze project comes with a single restriction on the `Categories` projection, in the form of a `@readonly` annotation - which exists as something to be examined in a different tutorial ([Learn how to read annotations in OData metadata documents](https://developers.sap.com/tutorials/odata-dd-6-annotations.html), part of the OData Deep Dive mission). We will ignore this for the purposes of this tutorial.
 
 Talking of "out of the box", the CAP server by default, in local development mode, uses the mocked authentication strategy. 
 
