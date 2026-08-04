@@ -30,7 +30,7 @@ One solution to all those challenges is development containers, and in this tuto
 
 There's a bonus advantage of going with one of these container-based options: the command line environment you will have is the same as the environment that exists in pretty much all cloud scenarios - generally, a Unix style operating system with a Unix style shell, and specifically, a Linux distribution with a Bash shell.
 
-Of course, if you prefer to continue to manage your own developer tools installation on your own machine at the native OS level, that's also perfectly fine. Let's call that Option 0 :-).
+Of course, if you prefer to continue to [manage your own developer tools installation](https://cap.cloud.sap/docs/get-started/) on your own machine at the native OS level, that's also perfectly fine. Let's call that Option 0 :-).
 
 Regardless of which option you choose, we recommend you still read through all the steps in this tutorial, to answer to question at the end.
 
@@ -45,7 +45,7 @@ The repository at <https://github.com/SAP-samples/cap-nodejs-dev-env> contains a
 
 ### Option 1 - with VS Code and a container manager
 
-Clone the repository to your machine or download the ZIP file and unpack it. Open the cloned or unpacked directory in VS Code, whereupon you should be presented with an option to "Reopen in container":
+Clone the repository to your machine or download the ZIP file and unpack it. Open the cloned or unpacked directory in VS Code, whereupon you should be presented with an option to "Reopen in container" (which you should select):
 
 ![VS Code with the dialog box prompting "Reopen in container"](vs-code-reopen-in-container.png)
 
