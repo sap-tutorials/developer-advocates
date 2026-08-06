@@ -339,7 +339,7 @@ You will create two **Send Message** steps, one for each of the condition branch
 
     Click **Save**.
 
-  4. Click **Save** (upper right).
+4. Click **Save** (upper right).
 
 
 ### Test the skill
