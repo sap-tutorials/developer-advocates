@@ -222,7 +222,6 @@ With `.run` we can have a CAP server started up for us in the cds REPL.
 In addition to the normal CAP server log output, you should see something like this:
 
 ```log
-------------------------------------------------------------------------
 Following variables are made available in your repl's global context:
 
 from cds.entities: {
