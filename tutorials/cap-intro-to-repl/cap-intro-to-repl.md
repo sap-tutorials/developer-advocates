@@ -20,35 +20,19 @@ time: 15
 
 ## Prerequisites
 
-You will need a development environment for CAP Node.js. See the tutorial [Set
-up a self-contained development environment for CAP
-Node.js](https://developers.sap.com/tutorials/cap-self-contained-dev-env.html)
-The assumptions in this tutorial are based on option 1 or option 2 in that
-tutorial, in that you have a VS Code (or GitHub Codespace) environment based on
-the foundation repository used in the setup described there, which also means
-that your starting directory will be `/workspaces/cap-nodejs-dev-env`. If you
-have your own CAP Node.js development environment setup, then please make the
-appropriate adjustments where necessary.
+You will need a development environment for CAP Node.js. See the tutorial [Set up a self-contained development environment for CAP Node.js](https://developers.sap.com/tutorials/cap-self-contained-dev-env.html) The assumptions in this tutorial are based on option 1 or option 2 in that tutorial, in that you have a VS Code (or GitHub Codespace) environment based on the foundation repository used in the setup described there, which also means that your starting directory will be `/workspaces/cap-nodejs-dev-env`. If you have your own CAP Node.js development environment setup, then please make the appropriate adjustments where necessary.
 
 ## Intro
 
-In any language or development environment, having a REPL is a superpower, and
-it pays to embrace it and be at least a little familiar with it. CAP as a whole
-is built on solid foundations and practices that have matured over the decades,
-and the REPL is part of that, first appearing in the 1960's and initially
-popularized in the LISP and LISP-derivative language communities.
+In any language or development environment, having a REPL is a superpower, and it pays to embrace it and be at least a little familiar with it. CAP as a whole is built on solid foundations and practices that have matured over the decades, and the REPL is part of that, first appearing in the 1960's and initially popularized in the LISP and LISP-derivative language communities.
 
-Node.js has a REPL, and it is upon this REPL that the cds REPL is based. In
-this exercise, we'll explore the cds REPL.
+Node.js has a REPL, and it is upon this REPL that the cds REPL is based. In this exercise, we'll explore the cds REPL.
 
 ---
 
 ### Set up a host project
 
-It's always better to explore the cds REPL in the context of an existing CAP
-project, with its CDS model and some data. We'll use a cut down version of the
-classic Northwind service called "Northbreeze". That service is available in
-the repository <https://github.com/SAP-samples/odata-dd-server>.
+It's always better to explore the cds REPL in the context of an existing CAP project, with its CDS model and some data. We'll use a cut down version of the classic Northwind service called "Northbreeze". That service is available in the repository <https://github.com/SAP-samples/odata-dd-server>.
 
 👉 Clone the repository:
 
@@ -56,8 +40,7 @@ the repository <https://github.com/SAP-samples/odata-dd-server>.
 git clone https://github.com/SAP-samples/odata-dd-server
 ```
 
-👉 Now open the `northbreeze/` directory within the cloned repository in a new
-VS Code / Codespace window:
+👉 Now open the `northbreeze/` directory within the cloned repository in a new VS Code / Codespace window:
 
 ```bash
 code odata-dd-server/northbreeze/
@@ -65,8 +48,7 @@ code odata-dd-server/northbreeze/
 
 ### Briefly explore the Node.js REPL
 
-As the cds REPL is based on the Node.js REPL, let's start by briefly exploring
-the Node.js REPL, then move into the cds REPL.
+As the cds REPL is based on the Node.js REPL, let's start by briefly exploring the Node.js REPL, then move into the cds REPL.
 
 👉 Start a Node.js REPL:
 
@@ -82,8 +64,7 @@ Type ".help" for more information.
 >
 ```
 
-👉 To honor one of the pivotal moments in the birth of personal computing, enter
-this expression at the prompt:
+👉 To honor one of the pivotal moments in the birth of personal computing, enter this expression at the prompt:
 
 ```javascript
 2 + 2
@@ -111,8 +92,7 @@ which should present a list of REPL commands like this:
 
 ### Start the cds REPL
 
-Now it's time to switch to the cds REPL, and we'll see that it is indeed based
-on the Node.js REPL.
+Now it's time to switch to the cds REPL, and we'll see that it is indeed based on the Node.js REPL.
 
 👉 Start the cds REPL:
 
@@ -129,8 +109,7 @@ Welcome to cds repl v10.0.4
 >
 ```
 
-👉 At the prompt, try the `.help` command again, whereupon there should be
-extra commands shown:
+👉 At the prompt, try the `.help` command again, whereupon there should be extra commands shown:
 
 ```log
 .break     Sometimes you get stuck, this gets you out
@@ -149,12 +128,9 @@ There are cds REPL specific commands `.inspect`, `.run` and `.ql`.
 
 ### Explore with .inspect
 
-The `.inspect` command is useful for examining large and / or complex data
-structures, of which there are plenty in any given application or service, both
-from the data model perspective but also from the runtime perspective.
+The `.inspect` command is useful for examining large and / or complex data structures, of which there are plenty in any given application or service, both from the data model perspective but also from the runtime perspective.
 
-👉 First, try to look at the entire CDS facade, which is available in the `cds`
-variable:
+👉 First, try to look at the entire CDS facade, which is available in the `cds` variable:
 
 ```javascript
 cds
@@ -201,9 +177,7 @@ cds {
       ... (many many more lines)
 ```
 
-We can use regular JavaScript facilities to try to deal with this, such as
-`Object.keys(cds)` but this is a little cumbersome and doesn't give us enough
-information. Using `.inspect` is ideal.
+We can use regular JavaScript facilities to try to deal with this, such as `Object.keys(cds)` but this is a little cumbersome and doesn't give us enough information. Using `.inspect` is ideal.
 
 👉 Try it:
 
@@ -239,15 +213,13 @@ cds: cds {
 
 With `.run` we can have a CAP server started up for us in the cds REPL.
 
-👉 Try that now at the cds REPL prompt, specifying the current directory (which
-should be `northbreeze/`), like this:
+👉 Try that now at the cds REPL prompt, specifying the current directory (which should be `northbreeze/`), like this:
 
 ```javascript
 .run .
 ```
 
-In addition to the normal CAP server log output, you should see something like
-this:
+In addition to the normal CAP server log output, you should see something like this:
 
 ```log
 ------------------------------------------------------------------------
@@ -267,31 +239,23 @@ from cds.services: {
 Simply type e.g. Main in the prompt to use the respective objects.
 ```
 
-These are convenience variables that help us to get started in our model and
-runtime explorations.
+These are convenience variables that help us to get started in our model and runtime explorations.
 
-> This `.run` facility is so useful, it's also available as an option to the
-> `cds repl` command itself. For example, the equivalent would be `cds repl
-> --run .` (or `cds r -r .` for short).
+> This `.run` facility is so useful, it's also available as an option to the `cds repl` command itself. For example, the equivalent would be `cds repl --run .` (or `cds r -r .` for short).
 
-👉 At the prompt, explore these variables and what they represent, noticing the
-different object types (`SQLiteService`, `entity`, and so on).
+👉 At the prompt, explore these variables and what they represent, noticing the different object types (`SQLiteService`, `entity`, and so on).
 
 ### Try out some queries
 
-The cds REPL is a great place to explore the data model, the data itself, and
-the services available to us. A key component here is the concept of a query,
-which we express in CQL, either directly, or indirectly.
+The cds REPL is a great place to explore the data model, the data itself, and the services available to us. A key component here is the concept of a query, which we express in CQL, either directly, or indirectly.
 
-👉 At the prompt, let's start with a simple query expressed indirectly via the
-REST-style API, and the `db` object you examined in the previous step:
+👉 At the prompt, let's start with a simple query expressed indirectly via the REST-style API, and the `db` object you examined in the previous step:
 
 ```javascript
 await db.get(Products).where({ProductName:'Chai'})
 ```
 
-> Remember that here, as more generally in a Node.js context, almost everything
-is asynchronous, hence the need for `await`.
+> Remember that here, as more generally in a Node.js context, almost everything is asynchronous, hence the need for `await`.
 
 This should produce something like this:
 
@@ -312,15 +276,13 @@ This should produce something like this:
 ]
 ```
 
-👉 Try that same query now more directly expressed in CQL, using a tagged
-template string construction, which should produce the same result:
+👉 Try that same query now more directly expressed in CQL, using a tagged template string construction, which should produce the same result:
 
 ```javascript
 await cds.ql `select from ${Products} where ProductName = 'Chai'`
 ```
 
-There's a convenient "cql" mode in the cds REPL where we can express such
-CQL statements more cleanly and directly.
+There's a convenient "cql" mode in the cds REPL where we can express such CQL statements more cleanly and directly.
 
 👉 Switch into this mode:
 
@@ -357,15 +319,7 @@ and more.
 
 For further info, refer to these resources:
 
-- The article [How to use the Node.js
-  REPL](https://nodejs.org/learn/command-line/how-to-use-the-nodejs-repl) is a
-  good overview of the Node.js REPL
-- The [MITS ALTAIR
-  BASIC](https://deramp.com/downloads/mfe_archive/010-S100%20Computers%20and%20Boards/00-MITS/40-Software/BASIC/Altair%20BASIC%203.0/Documentation/Altair_8800_BASIC_Reference_Manual_1975.pdf)
-  manual has a reference to `2 + 2` which Microsoft co-founder Paul Allen typed
-  in to show MITS's Ed Roberts that their BASIC interpreter worked
-- The [CQL](https://cap.cloud.sap/docs/cds/cql) section of Capire has a wealth
-  of information
-- The [REST-style
-  API](https://cap.cloud.sap/docs/node.js/core-services#rest-style-api) is one
-  of a number of ways to query
+- The article [How to use the Node.js REPL](https://nodejs.org/learn/command-line/how-to-use-the-nodejs-repl) is a good overview of the Node.js REPL
+- The [MITS ALTAIR BASIC](https://deramp.com/downloads/mfe_archive/010-S100%20Computers%20and%20Boards/00-MITS/40-Software/BASIC/Altair%20BASIC%203.0/Documentation/Altair_8800_BASIC_Reference_Manual_1975.pdf) manual has a reference to `2 + 2` which Microsoft co-founder Paul Allen typed in to show MITS's Ed Roberts that their BASIC interpreter worked
+- The [CQL](https://cap.cloud.sap/docs/cds/cql) section of Capire has a wealth of information
+- The [REST-style API](https://cap.cloud.sap/docs/node.js/core-services#rest-style-api) is one of a number of ways to query
