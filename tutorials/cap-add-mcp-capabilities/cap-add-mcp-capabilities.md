@@ -311,7 +311,7 @@ should see something like this:
 ```
 
 Based on an initial request by the MCP client built into OpenCode, the MCP
-server has replied with information on two key facilities relating to the
+server has replied with information on two key tools relating to the
 `CatalogService` service: `describe` and `query`.
 
 ### Try out a query
@@ -337,7 +337,8 @@ what books are authored by Edgar Allen Poe?
 }
 ```
 
-What has happened is that the MCP client component of OpenCode has:
+What has happened is that the MCP client component of OpenCode has requested
+execution of the two tools:
 
 - `describe`: requested a detailed description of the service and entity
 - `query`: sent a query written in CQL to the MCP server, which has facilitated
