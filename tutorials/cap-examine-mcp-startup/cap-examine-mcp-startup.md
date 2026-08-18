@@ -5,7 +5,7 @@ author_profile: https://github.com/qmacro
 auto_validation: false
 primary_tag: software-product-function>sap-cloud-application-programming-model
 tags: [ software-product>sap-business-technology-platform, topic>cloud, tutorial>intermediate ]
-time: 15
+time: 20
 ---
 
 # Examine the details of the Model Context Protocol on startup
