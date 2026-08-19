@@ -146,7 +146,7 @@ itself.
 👉 Jump to the "Network" tab, where you should see something similar to this.
 
 ```text
- Network (5)          │ POST http://localhost:4004/mcp/catalog
+ Network (4)          │ POST http://localhost:4004/mcp/catalog
                       │
  ▶ MCP  POST 200 63ms │ Category: transport
    MCP  POST 202 12ms │
@@ -205,7 +205,7 @@ itself.
 
 > To move to the individual entries in each tab, use the `Tab` key.
 
-👉 Explore the details of each of the five HTTP requests, and observe,
+👉 Explore the details of each of the HTTP requests, and observe,
 especially from the detail of the first request which is shown:
 
 - the protocol uses JSON-RPC to convey the request representations
