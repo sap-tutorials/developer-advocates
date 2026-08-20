@@ -44,6 +44,8 @@ For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sa
 
 ### Answer for paint by numbers
 
+How would you describe the picture in 2 words?
+
 
 
 

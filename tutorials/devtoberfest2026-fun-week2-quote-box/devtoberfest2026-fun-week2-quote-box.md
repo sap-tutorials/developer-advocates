@@ -31,7 +31,15 @@ Quote Box 2
 
 ![Quote #2](quote1.png) 
 
-Enter the complete quote, with punctuations and spaces between the words (no quotation marks), ending in a period, followed by a space and the author of the quote.
+Enter the complete quote, with punctuations and spaces between the words (no quotation marks at the beginning or end), ending in a period, followed by a space and the author of the quote.
+
+So, for example, you might end up with this quote. Enter it just like this:
+
+>Here's to the crazy ones. The misfits. The rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently. Steve Jobs
+
+If there are quotations marks inside the quote, use this character: "
+
+The validation is NOT case sensitive, and if you put 2 or more spaces instead of 1, that is OK, too.
 
 ![Rule](rule.png) 
 
@@ -44,9 +52,14 @@ For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sa
 
 ### Answer for quote #1
 
-Enter the complete quote #1, with punctuations and spaces between the words (no quotation marks), ending in a period, followed by a space and the author of the quote.
+Enter the complete quote #1, with punctuations and spaces between the words, ending in a period, followed by a space and the author of the quote.
+
+No need for quotation marks at the start or end (though there may be in the middle), and the answer is NOT case-sensitive.
+
 
 
  ### Answer for quote #2
 
-Enter the complete quote #2, with punctuations and spaces between the words (no quotation marks), ending in a period, followed by a space and the author of the quote.
+Enter the complete quote #2, with punctuations and spaces between the words, ending in a period, followed by a space and the author of the quote.
+
+No need for quotation marks at the start or end (though there may be in the middle), and the answer is NOT case-sensitive.

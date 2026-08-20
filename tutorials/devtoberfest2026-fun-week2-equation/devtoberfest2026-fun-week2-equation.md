@@ -65,7 +65,7 @@ For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sa
 
 ### Answer for equation puzzle
 
-
+ 
 
 
  
