@@ -29,7 +29,7 @@ This tutorial is part of our yearly and wonderful **Devtoberfest**, a month-long
 
 For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sap.com/devtoberfest).
 
-### Answer for equation puzzle
+### Secret phrase from the Scavenger Hunt
 
 The answer is not case sensitive, and multiple spaces instead of just one space will be accepted. But you must break up the letters you found with spaces to make a logical phrase.
 
