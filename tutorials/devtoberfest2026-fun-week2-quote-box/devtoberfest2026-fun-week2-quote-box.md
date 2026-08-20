@@ -11,7 +11,7 @@ parser: v2
 # 🟡 Devtoberfest 2026 - Week 2 - Quote Box Puzzle
 
 <!-- description --> This is the quote box puzzle for Week 2 of Devtoberfest.
-
+ 
 ## You will learn
 
 - A lot about technology – and yourself – during Devtoberfest
@@ -58,7 +58,7 @@ No need for quotation marks at the start or end (though there may be in the midd
 
 
 
- ### Answer for quote #2
+### Answer for quote #2
 
 Enter the complete quote #2, with punctuations and spaces between the words, ending in a period, followed by a space and the author of the quote.
 

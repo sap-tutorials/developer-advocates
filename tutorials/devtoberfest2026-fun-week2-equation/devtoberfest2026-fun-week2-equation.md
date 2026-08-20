@@ -18,7 +18,7 @@ parser: v2
 - How to have fun
 
 ## Intro
-
+ 
 Here is an equation that you have to solve.
 
 ![Equation](equation.png) 

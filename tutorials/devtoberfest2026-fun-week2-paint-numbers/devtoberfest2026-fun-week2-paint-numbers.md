@@ -11,7 +11,7 @@ parser: v2
 # 🟡 Devtoberfest 2026 - Week 2 - Paint By Numbers
 
 <!-- description --> This is the paint by numbers puzzle for Week 2 of Devtoberfest.
-
+ 
 ## You will learn
 
 - A lot about technology – and yourself – during Devtoberfest
