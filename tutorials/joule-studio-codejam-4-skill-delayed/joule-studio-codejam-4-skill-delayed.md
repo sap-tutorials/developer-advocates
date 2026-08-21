@@ -95,9 +95,9 @@ Again, you need to map the action to a destination (that is, a specific backend)
 
     Enter the following formula in the box:
 
-    ```JavaScript
-    ConcatenateStrings(["delayStatus eq ", true, ""], "")
-    ```
+   ```JavaScript
+   ConcatenateStrings(["delayStatus eq ", true, ""], "")
+   ```
 
     ![Add formula](3-configure-3.png)
 
@@ -165,9 +165,9 @@ You created the output parameters to send data back to Joule or the agent. Now y
 
 3. As a prompt, enter the following:
 
-    ```Prompt
-    I would like to find all the delayed shipments
-    ```
+   ```Prompt
+   I would like to find all the delayed shipments
+   ```
 
     ![Prompt](6-test-3.png)
 

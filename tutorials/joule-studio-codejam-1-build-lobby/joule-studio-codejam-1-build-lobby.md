@@ -175,9 +175,9 @@ Let's test the read action for the case where we want to track a shipment.
 
 3. In the field **trackingId eq** enter the following:
 
-    ```Text
-    trackingId eq '91001DBW'
-    ```
+   ```Text
+   trackingId eq '91001DBW'
+   ```
 
     >The actions was created to enable generic queries of the GTT backend, and that is why we need to provide `trackingId eq '91001DBW'` instead of just a tracking ID.
 

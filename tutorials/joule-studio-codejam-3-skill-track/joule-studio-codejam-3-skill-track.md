@@ -337,9 +337,9 @@ Actions define a specific API call. But each time you add the action you can pro
     
     Enter the following formula in the box:
 
-    ```JavaScript
-    ConcatenateStrings(["trackingId eq ", <Tracking ID>, ""], "'")
-    ```
+   ```JavaScript
+   ConcatenateStrings(["trackingId eq ", <Tracking ID>, ""], "'")
+   ```
 
     ![Formula added](5-action2-6.png)
 
@@ -464,9 +464,9 @@ A nice feature of Joule Studio is that you can test your project without having 
 
 4. Request the same thing again, this time by entering the following prompt, and then clicking **Yes** to confirm:
 
-    ```Prompt
-    I want to track the shipment 91001DBW
-    ```
+   ```Prompt
+   I want to track the shipment 91001DBW
+   ```
 
     The response will likely be formatted differently. 
     
@@ -511,15 +511,15 @@ You can talk to Joule in your language.
 
     Here is a sample prompt in English:
 
-    ```Prompt
-    I want to track the shipment 91001DBW
-    ```    
+   ```Prompt
+   I want to track the shipment 91001DBW
+   ```    
 
     For example, in German, type in:
 
-    ```Prompt
-    Ich möchte die Sendung 91001DBW verfolgen.
-    ```
+   ```Prompt
+   Ich möchte die Sendung 91001DBW verfolgen.
+   ```
 
 3. Click **Yes** to confirm.
 

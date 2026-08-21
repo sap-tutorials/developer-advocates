@@ -365,9 +365,9 @@ You will create two **Send Message** steps, one for each of the condition branch
 
 3. As a prompt, enter:
 
-    ```Prompt
-    Hello Joule, Could you please assist me in creating a Shipment?
-    ```
+   ```Prompt
+   Hello Joule, Could you please assist me in creating a Shipment?
+   ```
 
 
     Joule will trigger your Create Shipment skill but required parameters will be missing. Joule will prompt you for them.
@@ -376,12 +376,12 @@ You will create two **Send Message** steps, one for each of the condition branch
 
 4. Enter the following prompt, changing the shipment ID to 91001<user number><your initials>, for example, `91001002DBW` (or any unique string):
 
-    ```Prompt
-    Shipment ID: 91001<User number><your initials>
-    Source Location: SFO
-    Destination Location: NYC
-    Pick-up Date and Time: December 15, 2025 5:00:00 PM CET
-    ```
+   ```Prompt
+   Shipment ID: 91001<User number><your initials>
+   Source Location: SFO
+   Destination Location: NYC
+   Pick-up Date and Time: December 15, 2025 5:00:00 PM CET
+   ```
 
     Joule will create a new shipment in the GTT system.
 
@@ -389,9 +389,9 @@ You will create two **Send Message** steps, one for each of the condition branch
 
 5. You can check if it was created by entering a prompt to track the shipment (change the shipment ID to the one you created).
 
-    ```Prompt
-    Track the shipment 91001<User number><your initials>
-    ```
+   ```Prompt
+   Track the shipment 91001<User number><your initials>
+   ```
 
     Joule will respond with the shipment you created.
 
@@ -401,10 +401,10 @@ You will create two **Send Message** steps, one for each of the condition branch
 
 6. Update the shipment by typing the following prompt.
 
-    ```Prompt
-    Update the Shipment ID: 91001<User number><your initials> with the carrier Fly By Night.
-    All other values remain the same.
-    ```
+   ```Prompt
+   Update the Shipment ID: 91001<User number><your initials> with the carrier Fly By Night.
+   All other values remain the same.
+   ```
 
     Joule will respond with the update message you created.
 
