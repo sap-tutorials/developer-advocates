@@ -50,9 +50,9 @@ A test Joule interface will open up, letting you talk with your skills and agent
 ### Enter prompts
 1. In Joule, enter the following:
 
-    ```Prompt
-    Hello Joule, Could you please assist me in creating a Shipment ?
-    ```
+   ```Prompt
+   Hello Joule, Could you please assist me in creating a Shipment ?
+   ```
 
     ![Prompt 1](2-prompts-1.png)
 
@@ -64,12 +64,12 @@ A test Joule interface will open up, letting you talk with your skills and agent
 
     >**Important:** Replace `<UserID>` and `<Initials>` with your user number and your initials.
 
-    ```Prompt
-    Shipment ID: 91001<UserID><Initials>
-    Source Location: SFO
-    Destination Location: NYC
-    Pick-up Date and Time: December 15, 2025 5:00:00 PM CET
-    ```
+   ```Prompt
+   Shipment ID: 91001<UserID><Initials>
+   Source Location: SFO
+   Destination Location: NYC
+   Pick-up Date and Time: December 15, 2025 5:00:00 PM CET
+   ```
 
     **Result**: Joule will report that it created the shipment, something like this:
 
@@ -78,9 +78,9 @@ A test Joule interface will open up, letting you talk with your skills and agent
     
 3. Ask Joule for suggested carriers and prices by entering the following:
 
-    ```Prompt
-    Suggest the best carriers from SFO to NYC
-    ```
+   ```Prompt
+   Suggest the best carriers from SFO to NYC
+   ```
 
     **Result**: Joule proposes the carriers based on the carrier rates document from our document grounding.
 
@@ -90,9 +90,9 @@ A test Joule interface will open up, letting you talk with your skills and agent
 
     >**Important:** Change `<Shipment ID>` with the your shipment ID.  
 
-    ```Prompt
-    Update the Shipment ID <Shipment ID> with the carrier DHL. All other values remain the same
-    ```
+   ```Prompt
+   Update the Shipment ID <Shipment ID> with the carrier DHL. All other values remain the same
+   ```
 
     **Result**: Joule responds with the success message you created earlier for updating shipments.
 
@@ -102,9 +102,9 @@ A test Joule interface will open up, letting you talk with your skills and agent
 
     >**Important:** Change `<Shipment ID>` with the your shipment ID.  
 
-    ```Prompt
-    I want to track the shipment <Shipment ID>
-    ```
+   ```Prompt
+   I want to track the shipment <Shipment ID>
+   ```
 
     **Result**: Joule responds with tracking info of the shipment in the GTT system.
 
@@ -113,9 +113,9 @@ A test Joule interface will open up, letting you talk with your skills and agent
 
 6. Ask Joule for a list of delayed shipments by entering the following:
 
-    ```Prompt
-    I would like to find all the delayed shipments
-    ```
+   ```Prompt
+   I would like to find all the delayed shipments
+   ```
 
     **Result**: Joule responds with a list of shipments with delayed status in the GTT system.
 

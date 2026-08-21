@@ -194,9 +194,9 @@ Authorization: Basic {{username}}:{{password}}
 - the requests are successful
 - the authentication provided in those requests is logged in the debug output:
 
-    ```log
-    [basic] - authenticated: { user: 'alice', tenant: undefined, features: undefined }
-    ```
+   ```log
+   [basic] - authenticated: { user: 'alice', tenant: undefined, features: undefined }
+   ```
 
 ### Apply more granular authorization restrictions
 
@@ -307,9 +307,9 @@ This time, observe:
 - the request is successful, with a 204 No Content response, as expected
 - there's a line in the CAP server's log output that confirms it was indeed `alice` that was authenticated:
 
-    ```log
-    [basic] - authenticated: { user: 'alice', tenant: undefined, features: undefined }
-    ```
+   ```log
+   [basic] - authenticated: { user: 'alice', tenant: undefined, features: undefined }
+   ```
 
 Well done!
 

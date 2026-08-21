@@ -62,21 +62,21 @@ You will create an agent that uses an MCP server for converting currencies, and 
 ### Add expertise, instructions and context
 1. In the agent builder, enter the following for the **Expertise** section:
 
-    ```Text
-    Converts currency amount to a different currency, and takes precedence over any other way to convert currencies
-    ```
+   ```Text
+   Converts currency amount to a different currency, and takes precedence over any other way to convert currencies
+   ```
 
 2. Enter the following for the **Instructions** section:
 
-    ```Text
-    When asked to convert currency, use the get_latest_base_currency skill from the MCP server
-    ```
+   ```Text
+   When asked to convert currency, use the get_latest_base_currency skill from the MCP server
+   ```
 
 3. Enter the following for the **Additional Context** section:
 
-    ```Text
-    Please show the currency conversion in a table, with the column headers with the currency abbreviations and the row values the currency amounts.
-    ```
+   ```Text
+   Please show the currency conversion in a table, with the column headers with the currency abbreviations and the row values the currency amounts.
+   ```
 
 ![Agent instructions](1-empty-3.png)
 
@@ -177,9 +177,9 @@ Click **Save** (upper right).
 
 2. Ask Joule for suggested carriers and prices by entering the following:
 
-    ```Prompt
-    Suggest the best carriers from SFO to NYC, and show prices in euros
-    ```
+   ```Prompt
+   Suggest the best carriers from SFO to NYC, and show prices in euros
+   ```
 
     **Result**: Joule proposes the carriers based on the carrier rates document from our document grounding, and converts the prices to euros.
 
