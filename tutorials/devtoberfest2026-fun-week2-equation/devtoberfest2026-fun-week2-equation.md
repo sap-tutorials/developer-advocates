@@ -18,7 +18,9 @@ parser: v2
 - How to have fun
 
 ## Intro
- 
+
+>**PLEASE NOTE:** This tutorial will not be working until the start of Devtoberfest.
+
 Here is an equation that you have to solve.
 
 ![Equation](equation.png) 
