@@ -4,7 +4,7 @@ author_name: DJ Adams
 author_profile: https://github.com/qmacro
 auto_validation: false
 primary_tag: software-product-function>sap-cloud-application-programming-model
-tags: [ software-product>sap-business-technology-platform, topic>cloud, tutorial>intermediate ]
+tags: [ software-product>sap-business-technology-platform, topic>cloud, tutorial>beginner ]
 time: 20
 ---
 
