@@ -25,7 +25,7 @@ Here is an equation that you have to solve.
 
 ![Equation](equation.png) 
 
-Here is the same equation written as a Python function.
+Here is the exact same equation written as a Python function.
 
 ```Python
 import math
