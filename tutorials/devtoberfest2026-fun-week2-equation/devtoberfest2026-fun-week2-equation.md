@@ -7,7 +7,7 @@ tags: [ tutorial>beginner, topic>cloud ]
 primary_tag: topic>cloud
 parser: v2
 ---
-  
+   
 # 🟡 Devtoberfest 2026 - Week 2 - Equation Puzzle
 
 <!-- description --> This is the equation puzzle for Week 2 of Devtoberfest.
