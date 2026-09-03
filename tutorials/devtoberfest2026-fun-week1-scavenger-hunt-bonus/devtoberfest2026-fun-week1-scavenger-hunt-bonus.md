@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# 🟡 Devtoberfest 2026 - Week 1 - Scavenger Hunt
+# 🟡 Devtoberfest 2026 - Week 1 - Scavenger Hunt - BONUS
 
 <!-- description --> This is the tutorial for the extra bonus for the Scavenger Hunt.
 
