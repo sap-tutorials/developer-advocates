@@ -26,13 +26,6 @@ For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sa
 
 This tutorial will be updated at the end of this week. 
 
-<!--
-
-### Question 1 - 🟡 <Name of Session>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/<video ##>" frameborder="0" allowfullscreen></iframe>
-
--->
 
 
 
