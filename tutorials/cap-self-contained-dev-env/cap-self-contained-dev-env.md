@@ -19,7 +19,7 @@ time: 10
 
 ## Prerequisites
 
-- Either: VS Code installed, with the Dev Containers extension, and also a container manager installed, such as [Docker Desktop](https://docs.docker.com/desktop/) or [Podman](https://docs.docker.com/desktop/)
+- Either: [VS Code](https://code.visualstudio.com/) installed, with the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension, and also a container manager installed, such as [Docker Desktop](https://docs.docker.com/desktop/) or [Podman](https://podman.io/)
 - Or: a free [GitHub](https://github.com) account (to use Codespaces), and a modern Web browser
 
 ## Intro
