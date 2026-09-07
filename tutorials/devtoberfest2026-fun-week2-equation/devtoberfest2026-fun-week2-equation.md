@@ -46,7 +46,7 @@ Answer the following questions to get values for the 10 variables, plug them in,
 
 * a = the year SAP was founded
 * b = decimal ASCII code for the currency symbol for US dollar
-* c = Get the clue from the Dubugging video in the [Expert sessions: CAP Node.js playlist](https://www.youtube.com/playlist?list=PL6RpkC85SLQDxW_6INTtprrvZ3WiXT8u5). JUst listen to DJ. 
+* c = Get the clue from the Dubugging video in the [Expert sessions: CAP Node.js playlist](https://www.youtube.com/playlist?list=PL6RpkC85SLQDxW_6INTtprrvZ3WiXT8u5). Just listen to DJ. 
 * d = Second name of SAP's ERP product for small and medium-sized enterprises, developed by a company founded by the father of former SAP CTO Shai Agassi
 * e = transaction code (numeric part only) of ABAP Editor
 * f = official technical version number for SAP NetWeaver 2004s 
