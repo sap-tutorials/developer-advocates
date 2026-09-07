@@ -10,9 +10,7 @@ time: 10
 
 # Set up a self-contained development environment for CAP Node.js
 
-<!-- description --> Use the power of containers and build a portable and
-abstracted development environment without committing to installing and
-maintaining tools directly on your own machine.
+<!-- description --> Use the power of containers and build a portable and abstracted development environment without committing to installing and maintaining tools directly on your own machine.
 
 ## You will learn
 
