@@ -76,6 +76,8 @@ This is the clue were you found DJ. For this, just click the **DONE** button.
 
 ### Clue 9
 
+### Clue 10
+
 
 
 
