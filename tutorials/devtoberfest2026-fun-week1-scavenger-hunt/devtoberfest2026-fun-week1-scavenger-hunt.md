@@ -17,7 +17,7 @@ parser: v2
 - A lot about technology – and yourself – during Devtoberfest
 - How to have fun
 
-## Intro
+## Intro 
 
 All of the instructions for the Scavenger Hunt are located in our SAP Community blog post at [https://url.sap/7afji2](https://url.sap/7afji2).
 
