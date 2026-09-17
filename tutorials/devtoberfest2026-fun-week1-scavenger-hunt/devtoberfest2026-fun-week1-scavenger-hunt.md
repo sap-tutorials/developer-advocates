@@ -12,7 +12,7 @@ parser: v2
 
 <!-- description --> This is the tutorial for entering your answer for the Scavenger Hunt.
 
-## You will learn
+## You will learn   
 
 - A lot about technology – and yourself – during Devtoberfest
 - How to have fun
