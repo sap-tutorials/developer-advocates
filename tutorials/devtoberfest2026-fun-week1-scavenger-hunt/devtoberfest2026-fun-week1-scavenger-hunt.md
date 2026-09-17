@@ -7,7 +7,7 @@ tags: [ tutorial>beginner, topic>cloud ]
 primary_tag: topic>cloud
 parser: v2
 ---
-  
+   
 # 🟡 Devtoberfest 2026 - Week 1 - Scavenger Hunt
 
 <!-- description --> This is the tutorial for entering your answer for the Scavenger Hunt.
