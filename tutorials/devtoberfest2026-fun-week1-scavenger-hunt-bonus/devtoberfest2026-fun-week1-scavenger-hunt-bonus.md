@@ -41,7 +41,7 @@ Then the answer of that clue would be `lisp`, and you would type it into the spa
 
 Finally, we are not naive to think that you likely will just shove the code into ChatGPT or Claude 🤖 and get the language it is written in. And if that's the way you want to earn your points, go ahead. But at least first take a guess in your head and see how well you do against AI. 
 
-Like in the conclusion to the book ***1984*** when the totalitarian state defeats the pair of rebels, AI will eventually win, but let's at least briefly revel in our independence of the machine (or the state).
+Like in the conclusion to the book ***1984*** when the totalitarian state defeats the pair of rebels, AI will eventually win, but let's at least briefly revel in our independence from the machine (or the state).
 
 ![Rule](rule.png) 
 
