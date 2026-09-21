@@ -25,12 +25,12 @@ For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sa
 
 ### Question 1 - 🟢 S/4HANA Custom Development - What happens in case of errors in BAPIs or RAP BOs?
 
-<div>&nbsp;</div><!-- No YouTube video available for this session -->
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/07oJmWDNz8" frameborder="0" allowfullscreen></iframe>
 
 ### Question 2 - 🟢 ABAP Language Innovations: What's New
 
-<div>&nbsp;</div><!-- No YouTube video available for this session -->
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/Kji6KVjDlz4" frameborder="0" allowfullscreen></iframe>
 
 ### Question 3 - 🟢 What's new with draft handling in RAP?
 
-<div>&nbsp;</div><!-- No YouTube video available for this session -->
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/ksNSSDad0Eg" frameborder="0" allowfullscreen></iframe>
