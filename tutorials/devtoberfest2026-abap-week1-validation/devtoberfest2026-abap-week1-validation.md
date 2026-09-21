@@ -5,7 +5,7 @@ author_name: Devtoberfest Planner
 author_profile: https://developers.sap.com/devtoberfest
 tags: [ tutorial>beginner, topic>cloud ]
 primary_tag: topic>cloud
-parser: v2
+parser: v2 
 ---
 # 🟢 Devtoberfest 2026 - Week 1 - Devtoberfest 2026 - Validation Tutorial - Extending the Core - Week 1
 
