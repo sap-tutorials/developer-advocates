@@ -12,7 +12,7 @@ parser: v2
 
 <!-- description --> This is the tutorial for entering your answer for the Scavenger Hunt.
 
-## You will learn   
+## You will learn
 
 - A lot about technology – and yourself – during Devtoberfest
 - How to have fun
@@ -31,7 +31,4 @@ For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sa
 
 ### Secret phrase from the Scavenger Hunt
 
-The answer is not case sensitive, and multiple spaces instead of just one space will be accepted. But you must break up the letters you found with spaces to make a logical phrase.
-
-
- 
+The answer is NOT case sensitive. You must have 1 and only 1 space between words, and no spaces before or after non-alphanumeric characters, if there are any.
