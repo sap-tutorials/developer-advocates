@@ -24,4 +24,21 @@ This tutorial is part of our yearly and wonderful **Devtoberfest**, a month-long
 
 For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sap.com/devtoberfest).
 
->Questions will be published at the end of the day for AI in Week 1.
+>Questions will be published at the end of the day Thursday for AI track Week 1.
+
+### Question 1 - 🟣 Bring AI into Your ABAP Applications with ISLM: Build, Integrate, and Consume AI Natively
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/MRZHKt5lywA" frameborder="0" allowfullscreen></iframe>
+
+### Question 2 - 🟣 Combining AI Agents with the power of SAP HANA embedded ML (part 2)
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/PgqWxZaNgNY" frameborder="0" allowfullscreen></iframe>
+
+### Question 3 - 🟣 Joule Work: The New Way of Working
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/3MbjM9uuAbo" frameborder="0" allowfullscreen></iframe>
+
+ ### Question 4 - 🟣 Meet Joule Studio and Build Your First Agent
+
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/XwHqKGFe7TQ" frameborder="0" allowfullscreen></iframe>
+
