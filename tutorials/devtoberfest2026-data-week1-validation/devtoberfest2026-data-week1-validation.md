@@ -23,7 +23,7 @@ For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sa
 
 ### Question 1 🔵 Building your knowledge graph on SAP HANA Cloud
 
-<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/VMrhg5gWAdU" frameborder="0" allowfullscreen></iframe>
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/EVWfXGdSx9c" frameborder="0" allowfullscreen></iframe>
 
 ### Question 2 🔵 Combining AI Agents with the power of SAP HANA embedded ML (part 1)
 
