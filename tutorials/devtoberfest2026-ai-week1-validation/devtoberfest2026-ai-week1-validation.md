@@ -7,7 +7,7 @@ tags: [ tutorial>beginner, topic>cloud ]
 primary_tag: topic>cloud
 parser: v2
 ---
-  
+   
 # 🟣 Devtoberfest 2026 - Week 1 - AI - Validation
 
 <!-- description --> This is the validation tutorial so you can get Devtoberfest points for watching the AI sessions for week 1.
@@ -24,7 +24,6 @@ This tutorial is part of our yearly and wonderful **Devtoberfest**, a month-long
 
 For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sap.com/devtoberfest).
 
->Questions will be published at the end of the day Thursday for AI track Week 1.
 
 ### Question 1 - 🟣 Bring AI into Your ABAP Applications with ISLM: Build, Integrate, and Consume AI Natively
 
