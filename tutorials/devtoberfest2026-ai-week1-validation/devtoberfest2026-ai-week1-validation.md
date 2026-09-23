@@ -37,7 +37,7 @@ For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sa
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/3MbjM9uuAbo" frameborder="0" allowfullscreen></iframe>
 
- ### Question 4 - 🟣 Meet Joule Studio and Build Your First Agent
+### Question 4 - 🟣 Meet Joule Studio and Build Your First Agent
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/rg6n5x7EI3Q" frameborder="0" allowfullscreen></iframe>
 
