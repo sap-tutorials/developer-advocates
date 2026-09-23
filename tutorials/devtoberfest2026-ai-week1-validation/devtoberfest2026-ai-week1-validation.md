@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
     
-# 🟣 Devtoberfest 2026 - Week 1 - AI - Validation
+# 🟣 Devtoberfest 2026 - Week 1 - AI - Validation (To Come)
 
 <!-- description --> This is the validation tutorial so you can get Devtoberfest points for watching the AI sessions for week 1.
 
