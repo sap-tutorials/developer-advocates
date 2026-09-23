@@ -9,7 +9,7 @@ parser: v2
 ---
 # 🔴 Devtoberfest 2026 - Week 1 - Validation Tutorial - Integration Week 1
 
-<!-- description --> This is the validation tutorial so you can get Devtoberfest points for watching the 🔴 Integration sessions for week 1.
+<!-- description --> This is the validation tutorial so you can get Devtoberfest points for watching the 🔴 Integration sessions for week 1. Happy Devtoberfest!
 
 ## You will learn
 
