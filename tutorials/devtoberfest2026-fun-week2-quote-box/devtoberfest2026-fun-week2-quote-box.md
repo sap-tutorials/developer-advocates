@@ -29,7 +29,7 @@ Quote Box 1
 
 Quote Box 2
 
-![Quote #2](quote1.png) 
+![Quote #2](quote2.png) 
 
 Enter the complete quote, with punctuations and spaces between the words (no quotation marks at the beginning or end), ending in a period, followed by a space and the author of the quote.
 
@@ -63,5 +63,3 @@ No need for quotation marks at the start or end (though there may be in the midd
 Enter the complete quote #2, with punctuations and spaces between the words, ending in a period, followed by a space and the author of the quote.
 
 No need for quotation marks at the start or end (though there may be in the middle), and the answer is NOT case-sensitive.
-
-
