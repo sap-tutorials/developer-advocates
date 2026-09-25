@@ -1,0 +1,70 @@
+[VALIDATE_1]
+###Rule
+single-choice
+
+###Question
+Which of the following coding agent plugins are offered for SAPUI5 development?
+
+###Match
+[ ] SAPUI5, UI5 Rust Conversion, UI5 Migration
+[x] UI5, UI5 TypeScript Conversion, UI5 Modernization
+[ ] OpenUI5, UI5 Golang Conversion, UI5 Legacy Converter
+
+[VALIDATE_1]
+
+[VALIDATE_2]
+###Rule
+single-choice
+
+###Question
+How does CAP help lower the cost in the AI Era.
+###Match
+[ ] Concise models - intent, not implementation
+[ ] Less boilerplate code 
+[ ] Out of the box(OOTB) Integrations
+[x] All of the above
+
+[VALIDATE_2]
+
+[VALIDATE_3]
+###Rule
+single-choice
+
+###Question
+Which testing frameworks and libraries does the CAP CDS test library now support?
+###Match
+[ ] Only Jest and Mocha
+[x] Vitest, Node Test Runner, and Chai
+[ ] Jasmine, Sinon, and AVA
+[ ] Cypress, Playwright, and Puppeteer
+
+[VALIDATE_3]
+
+[VALIDATE_4]
+###Rule
+single-choice
+
+###Question
+From which UI Theme Designer skill can you expect authoritative guidance on using the theme designer webapp?
+
+###Match
+[ ] /ui-theme-designer-design-tokens
+[x] /ui-theme-designer-help
+[ ] /ui-theme-designer-service
+[ ] /ui-theme-designer-webapp
+
+[VALIDATE_4]
+
+[VALIDATE_5]
+###Rule
+single-choice
+
+###Question
+What core problem does N8N primarily solve for developers and businesses?
+###Match
+[ ] Hosting and deploying web applications to the cloud
+[x] Connecting different apps and automating repetitive workflows without heavy coding
+[ ] Managing relational databases across multiple environments
+[ ] Monitoring application performance and error logging
+
+[VALIDATE_5]
