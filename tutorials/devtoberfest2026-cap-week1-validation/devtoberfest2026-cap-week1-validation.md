@@ -13,7 +13,7 @@ parser: v2
 
 ## You will learn
 
-- A lot about technology and yourself during Devtoberfest
+- A lot about technology and yourself during Devtoberfest!
 
 ## Intro
 
