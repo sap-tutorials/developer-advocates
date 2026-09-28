@@ -19,7 +19,7 @@ parser: v2
 
 This tutorial is part of our yearly and wonderful **Devtoberfest**, a month-long event filled with learning, fun, challenges, and prizes -- for developers by developers.
 
-![Devtoberfest](devtoberfestBanner2.png)
+![Devtoberfest](devtoberfest.jpg)
 
 For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sap.com/devtoberfest).
 
@@ -41,4 +41,4 @@ For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sa
 
 ### Question 5 - 🟠 How to use n8n for agentic integrations and cool insights
 
-<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/watch?v=BtCoFKnbyQo" frameborder="0" allowfullscreen></iframe>
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/BtCoFKnbyQo" frameborder="0" allowfullscreen></iframe>
