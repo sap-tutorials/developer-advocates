@@ -8,7 +8,7 @@ primary_tag: topic>cloud
 parser: v2
 ---
   
-# 🟡 Devtoberfest 2026 - TEST - Validation
+# 🟡 Devtoberfest 2026 - TEST - Validation - DO NOT USE
 
 <!-- description --> This is the validation tutorial so you can get Devtoberfest points for watching the fun sessions for week 4.
 
