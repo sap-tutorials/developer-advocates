@@ -26,7 +26,7 @@ For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sa
 
 This tutorial will be updated at the end of this day. 
 
-
+ 
 ### Question 1 - 🟣 Multi-model functionalities in SAP AI Core and prompt optimization
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/csvyl_PClkA" frameborder="0" allowfullscreen></iframe>
