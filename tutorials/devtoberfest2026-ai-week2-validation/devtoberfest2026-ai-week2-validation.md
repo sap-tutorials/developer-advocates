@@ -27,13 +27,13 @@ For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sa
 This tutorial will be updated at the end of this day. 
 
  
-### Question 1 - 🟣 Multi-model functionalities in SAP AI Core and prompt optimization
+### Question 1 - 🟣 AI Eating Brains! How I Fed Mine to Joule Work Desktop
 
-<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/csvyl_PClkA" frameborder="0" allowfullscreen></iframe>
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/o05bdEqb-SQ" frameborder="0" allowfullscreen></iframe>
 
-### Question 2 - 🟣 AI Eating Brains! How I Fed Mine to Joule Work Desktop
+### Question 2 - 🟣 Enable Your AI application to Run on Multiple Models to Ensure Resilience and Compliance
 
-<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/Gb95deDGGSA" frameborder="0" allowfullscreen></iframe>
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/MxwM_5iViIw" frameborder="0" allowfullscreen></iframe>
 
 ### Question 3 - 🟣 Real Pro-Code Development with Joule Studio
 
