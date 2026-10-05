@@ -39,7 +39,7 @@ This tutorial will be updated at the end of this day.
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/_7mOhtsUfII" frameborder="0" allowfullscreen></iframe>
 
- ### Question 4 - 🟣 From Intent to Arcade: Building Joule*Bert with Joule Studio and AI-Assisted Pro Code
+### Question 4 - 🟣 From Intent to Arcade: Building Joule*Bert with Joule Studio and AI-Assisted Pro Code
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/HN52Jm4OqD4" frameborder="0" allowfullscreen></iframe>
 
