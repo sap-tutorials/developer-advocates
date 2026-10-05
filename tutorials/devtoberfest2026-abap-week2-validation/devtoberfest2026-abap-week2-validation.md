@@ -7,9 +7,9 @@ tags: [ tutorial>beginner, topic>cloud ]
 primary_tag: topic>cloud
 parser: v2
 ---
-# 🟢 Devtoberfest 2026 - Week 2 - Devtoberfest 2026 - Validation Tutorial - Extending the Core - Week 2 
+# 🟢 Devtoberfest 2026 - Week 2 - Devtoberfest 2026 - Validation Tutorial - Extending the Core - Week 2
 
-<!-- description --> This is the validation tutorial so you can get Devtoberfest points for watching the 🟢 Extending the Core sessions for week 2. 
+<!-- description --> This is the validation tutorial so you can get Devtoberfest points for watching the 🟢 Extending the Core sessions for week 2.
 
 ## You will learn
 
