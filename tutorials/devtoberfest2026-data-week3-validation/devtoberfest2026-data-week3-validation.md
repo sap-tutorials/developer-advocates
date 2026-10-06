@@ -23,7 +23,7 @@ For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sa
 
 ### Question 1 🔵 SAP BDC in Business AI Platform: Contextualize and Reason
 
-<div>&nbsp;</div><!-- No YouTube video available for this session yet -->
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/cVul8fDPvGc" frameborder="0" allowfullscreen></iframe>
 
 ### Question 2 🔵 Move Data Less, Use It More: How Apache Arrow Accelerates Analytics and AI
 
