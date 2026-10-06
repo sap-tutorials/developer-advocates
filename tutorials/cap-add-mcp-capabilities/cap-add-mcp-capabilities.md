@@ -126,12 +126,12 @@ see the representation formatted nicely):
     {
       "ID": 3,
       "title": "The Raven",
-      "author": "Edgar Allen Poe"
+      "author": "Edgar Allan Poe"
     },
     {
       "ID": 4,
       "title": "Eleonora",
-      "author": "Edgar Allen Poe"
+      "author": "Edgar Allan Poe"
     },
     {
       "ID": 5,
@@ -182,16 +182,16 @@ service CatalogService {
 records that are emitted, nothing has changed.
 
 This is because the implementation of MCP capabilities is provided by the MCP
-adapter plugin `@cap-js/mcp`, which isn't installed.
+adapter plugin `@cap-js/mcp`, which we don't have yet.
 
-### Install the MCP adapter plugin
+### Add the MCP adapter plugin
 
 Let's address that now.
 
-👉 First, stop the CAP server (with `Ctrl-C`), then install the MCP adapter:
+👉 First, stop the CAP server (with `Ctrl-C`), then add the MCP adapter:
 
 ```bash
-npm install @cap-js/mcp
+npm add @cap-js/mcp
 ```
 
 👉 Now, restart the CAP server, this time asking for more detailed log output
@@ -273,7 +273,9 @@ Much of the protocol is done via HTTP POST requests, hence this error, but at
 least we can see some sort of response, which is all we need to see for now.
 
 Examining the protocol at the JSON-RPC level is best done with a specialized
-inspector, which is beyond the scope of this tutorial.
+inspector, which is beyond the scope of this tutorial, but is covered in a
+related tutorial: [Examine the details of the Model Context
+Protocol](/tutorials/cap-examine-mcp-startup).
 
 ### Start OpenCode and examine what is displayed
 
@@ -323,7 +325,7 @@ something out.
 👉 Enter this question:
 
 ```text
-what books are authored by Edgar Allen Poe?
+what books are authored by Edgar Allan Poe?
 ```
 
 👉 Observe what is logged in the MCP component of the CAP server:
@@ -333,7 +335,7 @@ what books are authored by Edgar Allen Poe?
 ...
 [mcp] - query {
   service: 'CatalogService',
-  cql: "SELECT title from Books where author = 'Edgar Allen Poe'"
+  cql: "SELECT title from Books where author = 'Edgar Allan Poe'"
 }
 ```
 
@@ -349,13 +351,13 @@ This flow is shown in OpenCode, as well as the response:
 
 ```text
 + Thought: 564ms
-The user is asking about books authored by Edgar Allen Poe.
+The user is asking about books authored by Edgar Allan Poe.
 Let me use the CatalogService to query for this.
 First, let me describe the data model.
 
 * cds_CatalogService_describe 
 * cds_CatalogService_query
-  [cql=SELECT title from Books where author = 'Edgar Allen Poe']
+  [cql=SELECT title from Books where author = 'Edgar Allan Poe']
 
 - The Raven
 - Eleonora
