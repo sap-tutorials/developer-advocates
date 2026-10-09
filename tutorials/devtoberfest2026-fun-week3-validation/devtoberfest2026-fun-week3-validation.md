@@ -10,12 +10,12 @@ parser: v2
      
 # 🟡 Devtoberfest 2026 - Week 3 - Fun - Validation
 
-<!-- description --> This is the validation tutorial so you can get Devtoberfest points for watching the fun sessions for week 3.
+<!-- description --> This is the validation tutorial so you can get Devtoberfest points for watching the fun sessions for week 3 of the Fun track.
 
 ## You will learn
 
 - A lot about technology – and yourself – during Devtoberfest
-
+ 
 ## Intro
 
 This tutorial is part of our yearly and wonderful **Devtoberfest**, a month-long event filled with learning, fun, challenges, and prizes -- for developers by developers. 
