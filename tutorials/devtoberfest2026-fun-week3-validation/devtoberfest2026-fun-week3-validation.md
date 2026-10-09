@@ -10,12 +10,12 @@ parser: v2
    
 # 🟡 Devtoberfest 2026 - Week 3 - Fun - Validation
 
-<!-- description --> This is the validation tutorial so you can get Devtoberfest points for watching the fun sessions for week 3.
+<!-- description --> This is the validation tutorial so you can get Devtoberfest points for watching the fun sessions for week 3 of the Fun track.
 
 ## You will learn
 
 - A lot about technology – and yourself – during Devtoberfest
-
+ 
 ## Intro
 
 This tutorial is part of our yearly and wonderful **Devtoberfest**, a month-long event filled with learning, fun, challenges, and prizes -- for developers by developers. 
@@ -23,9 +23,6 @@ This tutorial is part of our yearly and wonderful **Devtoberfest**, a month-long
 ![Devtoberfest](devtoberfest.jpg) 
 
 For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sap.com/devtoberfest).
-
-This tutorial will be updated at the end of this week. 
-
 
 ### Question 1 - 🟡 Build your Reputation: Why Reputation Matters for Technical Professionals
 
