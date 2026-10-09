@@ -29,7 +29,7 @@ For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sa
 
 ### Question 2 - 🟠 Building Code-Based AI Agents on BAIP
 
-<div>&nbsp;</div><!-- No YouTube video available for this session -->
+<div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/YmOjAjD2Hws" frameborder="0" allowfullscreen></iframe>
 
 ### Question 3 - 🟠 CAP-level Data Federation
 
