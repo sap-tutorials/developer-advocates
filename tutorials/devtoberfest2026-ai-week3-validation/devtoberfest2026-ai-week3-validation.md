@@ -11,7 +11,7 @@ parser: v2
 # 🟣 Devtoberfest 2026 - Week 3 - AI - Validation
 
 <!-- description --> This is the validation tutorial so you can get Devtoberfest points for watching the AI sessions for week 3.
-
+ 
 ## You will learn
 
 - A lot about technology – and yourself – during Devtoberfest
