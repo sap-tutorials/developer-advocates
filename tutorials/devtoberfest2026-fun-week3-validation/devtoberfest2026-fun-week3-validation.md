@@ -24,9 +24,6 @@ This tutorial is part of our yearly and wonderful **Devtoberfest**, a month-long
 
 For more info on Devtoberfest, see our [Devtoberfest page](https://developers.sap.com/devtoberfest).
 
-This tutorial will be updated at the end of this week. 
-
-
 ### Question 1 - 🟡 Build your Reputation: Why Reputation Matters for Technical Professionals
 
 <div>&nbsp;</div><iframe width="560" height="315" src="https://www.youtube.com/embed/_eTkbsdRUy4" frameborder="0" allowfullscreen></iframe>
