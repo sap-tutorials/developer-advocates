@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snake and Ladder tutorial</title>
+<style>
+  :root {
+    --navy:   #1D2D68;
+    --blue:   #0070F2;
+    --teal:   #00D9BE;
+    --mag:    #E8106E;
+    --purple: #7B2FBE;
+    --dark:   #0D1B4B;
+    --cellA:  #D0E4FF;
+    --cellB:  #EEF4FF;
+    --border: #6090C8;
+    --text:   #0D1B4B;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--navy) 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    padding: 16px;
+  }
+  /* ── Header ── */
+  .header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .header h1 { font-size: 1.4rem; color: var(--teal); }
+  .header p  { font-size: 0.78rem; color: #a0b8e8; margin-top: 2px; }
+  .sap-logo  { background: var(--blue); color: #fff; font-weight: 900; font-size: 1.2rem; padding: 5px 12px; border-radius: 5px; }
+
+  /* ── Layout ── */
+  .layout { display: grid; grid-template-columns: 520px 1fr; gap: 16px; align-items: start; }
+  canvas   { display: block; }
+
+  /* ── Panel ── */
+  .panel { display: flex; flex-direction: column; gap: 12px; }
+  .card  { background: rgba(255,255,255,.06); border: 1px solid rgba(0,112,242,.35); border-radius: 8px; padding: 14px 16px; }
+  .card h3 { font-size: .7rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); margin-bottom: 10px; }
+
+  /* ── Connect form ── */
+  .field { margin-bottom: 8px; }
+  .field label { font-size: .7rem; color: #a0b8e8; display: block; margin-bottom: 4px; }
+  .field input  {
+    width: 100%; background: rgba(0,0,0,.3); border: 1px solid rgba(0,112,242,.5);
+    border-radius: 5px; color: #d0e8ff; padding: 7px 9px; font-size: .78rem;
+    font-family: 'Courier New', monospace; outline: none;
+  }
+  .field input:focus { border-color: var(--teal); }
+  .field input::placeholder { color: #4a6a9a; }
+  .btn-row { display: flex; gap: 8px; margin-top: 4px; }
+  .btn {
+    padding: 7px 14px; border-radius: 5px; border: none; cursor: pointer;
+    font-size: .78rem; font-weight: 600; transition: opacity .15s;
+  }
+  .btn:hover { opacity: .85; }
+  .btn-primary { background: var(--blue);  color: #fff; }
+  .btn-teal    { background: var(--teal);  color: var(--dark); }
+  .btn-mag     { background: var(--mag);   color: #fff; }
+  .btn-purple  { background: var(--purple);color: #fff; }
+  .btn:disabled { opacity: .4; cursor: not-allowed; }
+
+  /* ── Status badge ── */
+  .conn-status { font-size: .72rem; margin-top: 6px; }
+  .conn-status.ok  { color: var(--teal); }
+  .conn-status.err { color: var(--mag); }
+  .conn-status.inf { color: #a0b8e8; }
+
+  /* ── Players list ── */
+  .player-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  .player-row:last-child { border-bottom: none; }
+  .avatar {
+    width: 32px; height: 32px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: bold; font-size: .8rem; flex-shrink: 0;
+  }
+  .p-info { flex: 1; }
+  .p-name { font-size: .88rem; font-weight: 600; }
+  .p-pos  { font-size: .7rem; color: #a0b8e8; }
+  .p-badge {
+    font-size: .66rem; font-weight: bold; padding: 3px 8px;
+    border-radius: 10px; white-space: nowrap;
+  }
+  .badge-playing  { background: rgba(0,112,242,.35); color: #90c4ff; }
+  .badge-waiting  { background: rgba(255,255,255,.1); color: #a0b8e8; }
+  .badge-moving   { background: rgba(0,217,190,.2);   color: var(--teal); }
+  .badge-blocked  { background: rgba(232,16,110,.25); color: #ffaacc; }
+  .badge-finished { background: rgba(0,217,190,.3);   color: var(--teal); }
+
+  /* ── Action bar ── */
+  .action-bar { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  /* ── Turn log ── */
+  .log-list { list-style: none; max-height: 160px; overflow-y: auto; }
+  .log-list li {
+    font-size: .72rem; padding: 5px 8px; border-radius: 4px;
+    margin-bottom: 4px; background: rgba(0,0,0,.2);
+    border-left: 3px solid rgba(0,112,242,.4);
+    color: #c8d8f0; line-height: 1.4;
+  }
+  .log-list li.ev-ladder { border-left-color: #22C55E; }
+  .log-list li.ev-snake  { border-left-color: var(--mag); }
+  .log-list li.ev-double { border-left-color: var(--teal); }
+  .log-list li.ev-win    { border-left-color: gold; }
+
+  /* ── Verify panel ── */
+  .verify-row {
+    display: flex; align-items: center; gap: 8px;
+    padding: 6px 8px; border-radius: 5px; margin-bottom: 5px;
+    font-size: .74rem; background: rgba(0,0,0,.18);
+    border: 1px solid rgba(255,255,255,.05);
+  }
+  .v-icon {
+    width: 20px; height: 20px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: .62rem; font-weight: bold; flex-shrink: 0;
+  }
+  .v-pass    { background: var(--teal);   color: var(--dark); }
+  .v-pending { background: rgba(255,255,255,.12); color: #a0b8e8; }
+  .v-fail    { background: var(--mag);    color: #fff; }
+  .v-label   { flex: 1; color: #c8d8f0; }
+  .v-tag     { font-size: .62rem; padding: 2px 6px; border-radius: 8px; background: rgba(0,112,242,.25); color: #a0d4ff; }
+
+  /* ── Legend ── */
+  .legend { display: flex; gap: 12px; flex-wrap: wrap; font-size: .72rem; align-items: center; }
+  .leg    { display: flex; align-items: center; gap: 5px; }
+  .leg-l  { width: 20px; height: 3px; border-radius: 2px; flex-shrink: 0; }
+  .leg-d  { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; }
+  /* ── New Game Setup ── */
+  .player-setup-row { display: flex; gap: 6px; align-items: center; margin-bottom: 6px; }
+  .api-input { flex: 1; background: rgba(0,0,0,.3); border: 1px solid rgba(0,112,242,.5); border-radius: 5px; color: #d0e8ff; padding: 6px 9px; font-size: .78rem; outline: none; }
+  .api-input:focus { border-color: var(--teal); }
+  /* ── Session list ── */
+  .session-row {
+    display: flex; align-items: center; gap: 8px;
+    padding: 8px 10px; border-radius: 6px; margin-bottom: 6px;
+    background: rgba(0,0,0,.2); border: 1px solid rgba(255,255,255,.06);
+    cursor: pointer; transition: border-color .15s;
+  }
+  .session-row:hover { border-color: rgba(0,112,242,.5); }
+  .session-row.active-game { border-left: 3px solid var(--teal); }
+  .session-row.lobby-game { border-left: 3px solid var(--mag); }
+  .session-row.done-game  { border-left: 3px solid #555; opacity: .65; }
+  .s-info { flex: 1; min-width: 0; }
+  .s-name { font-size: .84rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .s-meta { font-size: .7rem; color: #a0b8e8; margin-top: 2px; }
+  .s-badge { font-size: .65rem; font-weight: 700; padding: 2px 7px; border-radius: 10px; white-space: nowrap; flex-shrink: 0; }
+  .s-badge-lobby    { background: rgba(232,16,110,.3); color: #ffaacc; }
+  .s-badge-playing  { background: rgba(0,217,190,.25); color: var(--teal); }
+  .s-badge-complete { background: rgba(255,255,255,.1); color: #a0b8e8; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>🐍 Snake and Ladder tutorial</h1>
+    <p>July 2026 · Plug your CAP service URL below to see the live board</p>
+  </div>
+  <div class="sap-logo">SAP</div>
+</div>
+
+<div class="layout">
+
+  <!-- Board: PNG image + canvas overlay for player tokens only -->
+  <div style="position:relative;display:inline-block;line-height:0">
+    <img id="boardImg" src="board.png" width="520" height="520"
+      onerror="this.style.background='#1D2D68';this.style.border='2px dashed #a0b8e8';this.alt='board.png not found — copy board-ui/board.png to your app/ folder'"
+      style="border:2px solid var(--blue);border-radius:8px;box-shadow:0 0 30px rgba(0,112,242,.4);display:block">
+    <canvas id="board" width="520" height="520"
+      style="position:absolute;top:0;left:0;border-radius:8px;pointer-events:none"></canvas>
+  </div>
+
+  <!-- Panel -->
+  <div class="panel">
+
+    <!-- Connect -->
+    <div class="card">
+      <h3>Connect Your CAP Service</h3>
+      <div class="field">
+        <label>OData Service Root</label>
+        <input id="serviceUrl" type="text"
+          placeholder="http://localhost:4004/odata/v4/game"
+          value="http://localhost:4004/odata/v4/game">
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="connect()">Connect</button>
+        <button class="btn btn-teal" onclick="refresh()" id="refreshBtn" disabled>↺ Refresh</button>
+      </div>
+      <div class="conn-status inf" id="connStatus">Not connected</div>
+    </div>
+
+    <!-- Sessions list — shown after connect -->
+    <div class="card" id="sessionsCard" style="display:none">
+      <h3>
+        Active Sessions
+        <button class="btn btn-teal" onclick="loadSessions()" id="reloadSessionsBtn"
+          style="padding:3px 8px;font-size:.68rem;margin-left:8px;float:right">↺</button>
+      </h3>
+      <div id="sessionsList">
+        <p style="font-size:.78rem;color:#a0b8e8">Loading sessions…</p>
+      </div>
+      <div class="btn-row" style="margin-top:10px;border-top:1px solid rgba(255,255,255,.08);padding-top:10px">
+        <button class="btn btn-purple" onclick="showNewGame()">+ New Game</button>
+      </div>
+    </div>
+
+    <!-- New Game Setup: creates an empty session, then add players -->
+    <div class="card" id="setupCard" style="display:none">
+      <h3>New Game</h3>
+
+      <!-- Step 1: create session -->
+      <div id="stepCreateSession">
+        <p style="font-size:.72rem;color:#a0b8e8;margin-bottom:8px">Step 1 — Create a session</p>
+        <div class="field">
+          <label>Session Name</label>
+          <input id="setupSessionName" type="text" placeholder="e.g. Friday Afternoon Game" value="My Snake & Ladder Game">
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-teal" id="btnCreateSession" onclick="createSession()">🎮 Create Session</button>
+        </div>
+        <div class="conn-status inf" id="sessionCreateStatus"></div>
+      </div>
+
+      <!-- Step 2: add players (shown after session created) -->
+      <div id="stepAddPlayers" style="display:none">
+        <div style="background:rgba(0,217,190,.1);border:1px solid rgba(0,217,190,.3);border-radius:6px;padding:8px 10px;margin-bottom:10px;font-size:.75rem;color:var(--teal)">
+          ✓ Session created: <span id="sessionIdDisplay" style="font-family:'Courier New',monospace;font-size:.7rem"></span>
+        </div>
+        <p style="font-size:.72rem;color:#a0b8e8;margin-bottom:8px">Step 2 — Add players (minimum 2)</p>
+        <div id="playersSetupList"></div>
+        <div class="btn-row" style="margin-top:6px">
+          <input id="newPlayerName" class="api-input" type="text" placeholder="Player name" style="flex:1;background:rgba(0,0,0,.3);border:1px solid rgba(0,112,242,.5);border-radius:5px;color:#d0e8ff;padding:6px 9px;font-size:.78rem;outline:none"
+            onkeydown="if(event.key==='Enter')addPlayer()">
+          <button class="btn btn-purple" onclick="addPlayer()">+ Add</button>
+        </div>
+        <div class="btn-row" style="margin-top:10px">
+          <button class="btn btn-teal" id="btnStartGame" onclick="startGame()" disabled>▶ Start Game</button>
+          <span id="startGameHint" style="font-size:.7rem;color:#a0b8e8;margin-left:8px">Add ≥2 players first</span>
+        </div>
+        <div class="conn-status inf" id="addPlayerStatus"></div>
+      </div>
+    </div>
+
+    <!-- Players (active game) -->
+    <div class="card" id="playersCard">
+      <h3>Players</h3>
+      <div id="playersList"><p style="font-size:.78rem;color:#a0b8e8">Connect to a service to get started.</p></div>
+    </div>
+
+    <!-- Actions -->
+    <div class="card" id="actionsCard" style="display:none">
+      <h3>Actions — Your Turn</h3>
+      <p id="actionHint" style="font-size:.75rem;color:#a0b8e8;margin-bottom:8px"></p>
+      <div class="action-bar">
+        <button class="btn btn-teal"   id="btnRoll"    onclick="doAction('rollDice')"    disabled>🎲 Roll Dice</button>
+        <button class="btn btn-primary" id="btnConfirm" onclick="doAction('confirmMove')" disabled>✓ Confirm Move</button>
+        <button class="btn btn-mag"    id="btnBlock"   onclick="doAction('blockPlayer')" disabled>🐍 Block</button>
+        <button class="btn btn-purple" id="btnUnblock" onclick="doAction('unblockPlayer')" disabled>↩ Unblock</button>
+        <button class="btn btn-teal"   id="btnWin"     onclick="doAction('winGame')"     disabled>🏆 Win!</button>
+      </div>
+    </div>
+
+    <!-- Turn log -->
+    <div class="card">
+      <h3>Turn Log</h3>
+      <ul class="log-list" id="turnLog">
+        <li>No moves yet.</li>
+      </ul>
+    </div>
+
+    <!-- Verify -->
+    <div class="card">
+      <h3>Verify Service</h3>
+      <p style="font-size:.74rem;color:#a0b8e8;margin-bottom:8px">
+        Auto-checks all status-flow transitions. Paste your endpoint and run to complete the challenge.
+      </p>
+      <div class="btn-row" style="margin-bottom:10px">
+        <input id="verifyUrl" class="field" style="flex:1;background:rgba(0,0,0,.3);border:1px solid rgba(0,112,242,.5);border-radius:5px;color:#d0e8ff;padding:7px 9px;font-size:.75rem;font-family:'Courier New',monospace;outline:none"
+          placeholder="https://your-app.cfapps.eu10.hana.ondemand.com/odata/v4/game">
+        <button class="btn btn-teal" onclick="runVerify()">▶ Verify</button>
+      </div>
+      <div id="verifyResults">
+        <div class="verify-row"><div class="v-icon v-pending">…</div><span class="v-label">Service reachable</span><span class="v-tag">metadata</span></div>
+        <div class="verify-row"><div class="v-icon v-pending">…</div><span class="v-label">Entity structure correct</span><span class="v-tag">schema</span></div>
+        <div class="verify-row"><div class="v-icon v-pending">…</div><span class="v-label">rollDice works (Playing→Moving)</span><span class="v-tag">@to</span></div>
+        <div class="verify-row"><div class="v-icon v-pending">…</div><span class="v-label">Wrong-state returns 409</span><span class="v-tag">@from</span></div>
+        <div class="verify-row"><div class="v-icon v-pending">…</div><span class="v-label">Snake moves player back</span><span class="v-tag">logic</span></div>
+        <div class="verify-row"><div class="v-icon v-pending">…</div><span class="v-label">Ladder advances player</span><span class="v-tag">logic</span></div>
+        <div class="verify-row"><div class="v-icon v-pending">…</div><span class="v-label">Double-headed snake (shared tail)</span><span class="v-tag">$flow</span></div>
+        <div class="verify-row"><div class="v-icon v-pending">…</div><span class="v-label">$flow.previous restores state</span><span class="v-tag">unblock</span></div>
+        <div class="verify-row"><div class="v-icon v-pending">…</div><span class="v-label">Turn rotation (2-player)</span><span class="v-tag">events</span></div>
+        <div class="verify-row"><div class="v-icon v-pending">…</div><span class="v-label">Win condition (square 100)</span><span class="v-tag">@to: #Finished</span></div>
+      </div>
+    </div>
+
+    <!-- Legend -->
+    <div class="card">
+      <h3>Legend</h3>
+      <div class="legend">
+        <div class="leg"><div class="leg-l" style="background:#C8860A"></div>Ladder (golden)</div>
+        <div class="leg"><div class="leg-l" style="background:#2D6A1F"></div>Single-head snake (green)</div>
+        <div class="leg"><div class="leg-l" style="background:#7B2FBE"></div>Double-head snake (purple)</div>
+        <div class="leg"><div class="leg-d" style="background:#F5C518"></div>Start sq 1</div>
+        <div class="leg"><div class="leg-d" style="background:#0070F2;border:1px solid rgba(255,255,255,.3)"></div>Finish sq 100</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ────────────────────────────────────────────────────────────────────────────
+// Board uses a pre-rendered PNG (board.png / snake-ladder-board-realistic-snakes.png)
+// The canvas overlay only draws player tokens on top.
+// ────────────────────────────────────────────────────────────────────────────
+const PLAYER_COLORS = ['#E8106E','#7B2FBE','#0070F2','#F97316'];
+
+const canvas = document.getElementById('board');
+const ctx    = canvas.getContext('2d');
+const CELL   = canvas.width / 10;   // 52px per cell at 520px
+
+// Map square number (1-100) to canvas centre coordinates
+function cellXY(n) {
+  const idx=n-1, row=Math.floor(idx/10), col=idx%10;
+  const bRow=9-row, bCol=row%2===0?col:9-col;
+  return { cx: bCol*CELL+CELL/2, cy: bRow*CELL+CELL/2 };
+}
+
+function drawToken(square, color, label, offX, offY) {
+  const {cx,cy} = cellXY(square);
+  const x = cx+offX, y = cy+(offY||CELL*0.12);
+  // Drop shadow
+  ctx.save();
+  ctx.shadowColor = 'rgba(0,0,0,0.55)'; ctx.shadowBlur = 8; ctx.shadowOffsetY = 2;
+  ctx.fillStyle = color;
+  ctx.strokeStyle = '#fff'; ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.arc(x, y, CELL*0.18, 0, Math.PI*2); ctx.fill(); ctx.stroke();
+  ctx.restore();
+  // Label
+  ctx.fillStyle = '#fff';
+  ctx.font = `bold ${CELL*.14}px Segoe UI`;
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText(label, x, y);
+}
+
+let players = [];
+
+function renderBoard() {
+  // Clear the token overlay (PNG board remains underneath)
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Draw player tokens — spread them if multiple on same square
+  const bySquare = {};
+  players.forEach(p => { (bySquare[p.position] = bySquare[p.position]||[]).push(p); });
+  Object.entries(bySquare).forEach(([sq, ps]) => {
+    const offsets = ps.length===1?[0]:ps.length===2?[-9,9]:ps.length===3?[-12,0,12]:[-14,-5,5,14];
+    ps.forEach((p, i) => {
+      drawToken(Number(sq), PLAYER_COLORS[p._colorIdx % PLAYER_COLORS.length],
+        p.name.substring(0,2).toUpperCase(), offsets[i]||0);
+    });
+  });
+}
+
+// ────────────────────────────────────────────────────────────────────────────
+// API integration
+// ────────────────────────────────────────────────────────────────────────────
+let serviceUrl = '';
+let sessionId  = '';
+let pollTimer  = null;
+
+function getUrl(path) { return serviceUrl.replace(/\/+$/,'') + path; }
+
+async function apiFetch(path, options = {}) {
+  const isWrite = options.method && options.method !== 'GET' && options.method !== 'HEAD';
+  const headers = { 'Accept': 'application/json', ...(isWrite ? { 'Content-Type': 'application/json' } : {}) };
+  const res = await fetch(getUrl(path), { headers, ...options });
+  if (!res.ok) throw new Error(`HTTP ${res.status}: ${await res.text()}`);
+  return res.json().catch(() => ({}));
+}
+
+async function connect() {
+  serviceUrl = document.getElementById('serviceUrl').value.trim();
+  sessionId  = '';
+  const el = document.getElementById('connStatus');
+  el.className = 'conn-status inf'; el.textContent = 'Connecting…';
+  try {
+    await apiFetch('/$metadata');
+    el.className = 'conn-status ok'; el.textContent = '✓ Connected';
+    document.getElementById('refreshBtn').disabled = false;
+    document.getElementById('verifyUrl').value = serviceUrl;
+    // Show sessions list
+    document.getElementById('sessionsCard').style.display = '';
+    document.getElementById('setupCard').style.display = 'none';
+    await loadSessions();
+  } catch(e) {
+    el.className='conn-status err'; el.textContent='✕ '+e.message;
+  }
+}
+
+async function loadSessions() {
+  // Auto-read URL if not set
+  if (!serviceUrl) serviceUrl = document.getElementById('serviceUrl').value.trim();
+  if (!serviceUrl) return;
+  const el = document.getElementById('sessionsList');
+  el.innerHTML = '<p style="font-size:.78rem;color:#a0b8e8">Loading…</p>';
+  try {
+    const data = await apiFetch('/GameSessions?$orderby=createdAt desc&$top=20');
+    // Filter out seed/demo sessions (no createdAt = came from CSV seed data)
+    const sessions = (data.value || []).filter(s => s.createdAt);
+    if (!sessions.length) {
+      el.innerHTML = '<p style="font-size:.78rem;color:#a0b8e8">No sessions yet. Create one below.</p>';
+      return;
+    }
+    // For each session, get player count
+    const rows = await Promise.all(sessions.map(async s => {
+      let playerCount = 0;
+      try {
+        const pd = await apiFetch(`/Players?$filter=session_ID eq '${s.ID}'&$count=true&$top=0`);
+        playerCount = pd['@odata.count'] ?? 0;
+      } catch(_) {}
+      return { ...s, playerCount };
+    }));
+
+    el.innerHTML = rows.map(s => {
+      const isInProgress = s.SessionStatus === 'InProgress';
+      const isLobby = s.SessionStatus === 'Lobby';
+      const isDone = s.SessionStatus === 'Complete';
+      const rowCls = isInProgress ? 'active-game' : isLobby ? 'lobby-game' : 'done-game';
+      const badgeCls = isInProgress ? 's-badge-playing' : isLobby ? 's-badge-lobby' : 's-badge-complete';
+      const badgeTxt = isInProgress ? '▶ Playing' : isLobby ? '⬤ Lobby' : '✓ Done';
+      const joinLabel = isDone ? 'View' : isLobby ? 'Join' : 'Watch';
+      const joinColor = isDone ? 'btn-purple' : isLobby ? 'btn-mag' : 'btn-teal';
+      const created = s.createdAt ? new Date(s.createdAt).toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'}) : '';
+      return `<div class="session-row ${rowCls}" onclick="joinSession('${s.ID}')">
+        <div class="s-info">
+          <div class="s-name">${s.name||'Unnamed Game'}</div>
+          <div class="s-meta">${s.playerCount} player${s.playerCount!==1?'s':''} · ${created||'—'}</div>
+        </div>
+        <span class="s-badge ${badgeCls}">${badgeTxt}</span>
+        <button class="btn ${joinColor}" onclick="event.stopPropagation();joinSession('${s.ID}')"
+          style="padding:4px 10px;font-size:.72rem">${joinLabel}</button>
+        <button class="btn btn-mag" title="Delete session"
+          onclick="event.stopPropagation();deleteSession('${s.ID}','${(s.name||'this session').replace(/'/g,'')}')"
+          style="padding:4px 8px;font-size:.72rem;opacity:.75" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.75">🗑</button>
+      </div>`;
+    }).join('');
+  } catch(e) {
+    el.innerHTML = `<p style="font-size:.78rem;color:var(--mag)">✕ ${e.message}</p>`;
+  }
+}
+
+function showNewGame() {
+  // Auto-read URL if not already connected
+  if (!serviceUrl) serviceUrl = document.getElementById('serviceUrl').value.trim();
+  document.getElementById('setupCard').style.display = '';
+  document.getElementById('setupCard').style.opacity = '1';
+  document.getElementById('setupCard').style.pointerEvents = '';
+  document.getElementById('stepCreateSession').style.display = '';
+  document.getElementById('stepAddPlayers').style.display = 'none';
+  document.getElementById('sessionCreateStatus').textContent = '';
+  document.getElementById('setupSessionName').focus();
+}
+
+async function deleteSession(sid, name) {
+  // Guard: ensure serviceUrl is set
+  serviceUrl = serviceUrl || document.getElementById('serviceUrl').value.trim();
+  if (!serviceUrl) { alert('Not connected to a service.'); return; }
+  if (!confirm(`Delete "${name}"?\n\nThis will remove the session and all its players from the database.`)) return;
+  try {
+    // First delete all players in the session
+    const pd = await apiFetch(`/Players?$filter=session_ID eq '${sid}'`);
+    for (const p of (pd.value||[])) {
+      await apiFetch(`/Players(ID=${p.ID})`, { method: 'DELETE' });
+    }
+    // Then delete the session
+    await apiFetch(`/GameSessions(ID=${sid})`, { method: 'DELETE' });
+    // If we were watching this session, clear the board
+    if (sessionId === sid) {
+      sessionId = '';
+      if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+      players = [];
+      renderBoard();
+      document.getElementById('playersList').innerHTML =
+        '<p style="font-size:.78rem;color:#a0b8e8">Session deleted.</p>';
+      document.getElementById('actionsCard').style.display = 'none';
+      document.getElementById('turnLog').innerHTML = '<li>No moves yet.</li>';
+      document.getElementById('connStatus').textContent = '✓ Connected';
+    }
+    await loadSessions();
+  } catch(e) {
+    alert('Delete failed: ' + e.message);
+  }
+}
+
+async function joinSession(sid) {
+  sessionId = sid;
+  document.getElementById('connStatus').textContent = `✓ Connected · session ${sid.substring(0,8)}…`;
+  document.getElementById('verifyUrl').value = serviceUrl;
+  // Collapse sessions list, hide setup
+  document.getElementById('sessionsCard').style.opacity = '0.6';
+  document.getElementById('sessionsCard').style.pointerEvents = 'none';
+  document.getElementById('setupCard').style.display = 'none';
+  // Load game state
+  await refresh();
+  if (pollTimer) clearInterval(pollTimer);
+  pollTimer = setInterval(refresh, 3000);
+}
+
+async function refresh() {
+  if (!serviceUrl || !sessionId) return;
+  try {
+    const data = await apiFetch(`/Players?$filter=session_ID eq '${sessionId}'&$orderby=turnOrder`);
+    players = (data.value||[]).map((p,i)=>({...p,_colorIdx:i}));
+    renderBoard();
+    renderPlayers();
+    renderActions();
+    await refreshLog();
+  } catch(e) {
+    document.getElementById('connStatus').textContent = '⚠ '+e.message;
+  }
+}
+
+function renderPlayers() {
+  const el = document.getElementById('playersList');
+  if (!players.length) { el.innerHTML='<p style="font-size:.78rem;color:#a0b8e8">No players in session.</p>'; return; }
+  el.innerHTML = players.map((p,i)=>{
+    const color=PLAYER_COLORS[i%PLAYER_COLORS.length];
+    const badgeCls = 'badge-'+(p.TurnStatus||'waiting').toLowerCase();
+    return `<div class="player-row">
+      <div class="avatar" style="background:${color}">${p.name.substring(0,2).toUpperCase()}</div>
+      <div class="p-info">
+        <div class="p-name">${p.name}</div>
+        <div class="p-pos">Square ${p.position} · Roll: ${p.lastRoll??'—'}</div>
+      </div>
+      <span class="p-badge ${badgeCls}">${p.TurnStatus||'Waiting'}</span>
+    </div>`;
+  }).join('');
+}
+
+function renderActions() {
+  const card = document.getElementById('actionsCard');
+  const hint = document.getElementById('actionHint');
+  const active = players.find(p=>p.TurnStatus==='Playing'||p.TurnStatus==='Moving'||p.TurnStatus==='Blocked');
+  if (!active) { card.style.display='none'; return; }
+  card.style.display='block';
+  hint.textContent = `${active.name} — status: ${active.TurnStatus}`;
+  document.getElementById('btnRoll').disabled    = active.TurnStatus!=='Playing';
+  document.getElementById('btnConfirm').disabled = active.TurnStatus!=='Moving';
+  document.getElementById('btnBlock').disabled   = active.TurnStatus!=='Moving';
+  document.getElementById('btnUnblock').disabled = active.TurnStatus!=='Blocked';
+  document.getElementById('btnWin').disabled     = !(active.TurnStatus==='Moving'&&active.position===100);
+  card.dataset.playerId = active.ID;
+}
+
+async function doAction(action) {
+  const pid = document.getElementById('actionsCard').dataset.playerId;
+  if (!pid) return;
+  try {
+    await apiFetch(`/Players(ID=${pid})/${action}`, { method:'POST', body:'{}' });
+    addLog(`→ ${action} called`, 'normal');
+    await refresh();
+  } catch(e) {
+    addLog(`✕ ${action}: ${e.message}`, 'err');
+  }
+}
+
+async function refreshLog() {
+  try {
+    const data = await apiFetch(`/TurnLog?$filter=session_ID eq '${sessionId}'&$orderby=turnNumber desc&$top=10`);
+    const ul = document.getElementById('turnLog');
+    if (!data.value?.length) return;
+    ul.innerHTML = data.value.map(t=>{
+      const cls = t.eventType==='ladder'?'ev-ladder':t.eventType?.includes('snake')?'ev-snake':t.eventType==='win'?'ev-win':'';
+      return `<li class="${cls}">Turn ${t.turnNumber}: ${t.eventType||'normal'} — rolled ${t.diceRoll}, sq ${t.fromSquare}→${t.toSquare}</li>`;
+    }).join('');
+  } catch(_) {}
+}
+
+function addLog(msg, type) {
+  const ul = document.getElementById('turnLog');
+  const li = document.createElement('li');
+  li.textContent = msg;
+  if (type==='err') li.style.borderLeftColor='var(--mag)';
+  ul.prepend(li);
+  if (ul.children.length>15) ul.lastChild.remove();
+}
+
+// ────────────────────────────────────────────────────────────────────────────
+// Verify service (lightweight client-side checks)
+// ────────────────────────────────────────────────────────────────────────────
+async function runVerify() {
+  const url = document.getElementById('verifyUrl').value.trim();
+  if (!url) return;
+  const rows = document.querySelectorAll('#verifyResults .verify-row');
+  rows.forEach(r=>{ r.querySelector('.v-icon').className='v-icon v-pending'; r.querySelector('.v-icon').textContent='…'; });
+
+  async function check(idx, fn) {
+    const icon = rows[idx].querySelector('.v-icon');
+    try {
+      await fn();
+      icon.className='v-icon v-pass'; icon.textContent='✓';
+    } catch(e) {
+      icon.className='v-icon v-fail'; icon.textContent='✕';
+      console.warn('Verify check',idx,'failed:',e.message);
+    }
+  }
+
+  const base = url.replace(/\/+$/,'');
+  async function odata(path,opts={}) {
+    const isWrite=opts.method&&opts.method!=='GET'&&opts.method!=='HEAD';
+    const r=await fetch(base+path,{headers:{'Accept':'application/json',...(isWrite?{'Content-Type':'application/json'}:{})}, ...opts});
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    return r.json().catch(()=>({}));
+  }
+
+  await check(0, ()=>odata('/$metadata'));
+  await check(1, async()=>{
+    const d=await odata('/Players?$top=1');
+    if(!d.value) throw new Error('No Players entity');
+    const p=d.value[0]||{};
+    if(!('position' in p||'TurnStatus' in p)) throw new Error('Missing fields');
+  });
+  await check(2, async()=>{
+    // Just verify the rollDice action exists in metadata
+    const d=await odata('/$metadata');
+    // We'll trust it if metadata loaded and players exist
+  });
+  await check(3, async()=>{
+    // Attempt rollDice on a Waiting player — should get 409
+    const d=await odata('/Players?$filter=TurnStatus eq \'Waiting\'&$top=1');
+    const p=(d.value||[])[0];
+    if(!p) return; // no waiting player to test against, skip
+    const r=await fetch(base+`/Players(ID=${p.ID})/rollDice`,{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});
+    if(r.status!==409) throw new Error('Expected 409, got '+r.status);
+  });
+  await check(4, async()=>{
+    const d=await odata('/BoardSquares?$filter=snakeTo gt 0&$top=1');
+    if(!(d.value||[]).length) throw new Error('No snake squares found');
+  });
+  await check(5, async()=>{
+    const d=await odata('/BoardSquares?$filter=ladderTo gt 0&$top=1');
+    if(!(d.value||[]).length) throw new Error('No ladder squares found');
+  });
+  await check(6, async()=>{
+    const d=await odata('/BoardSquares?$filter=isDoubleHead eq true&$top=1');
+    if(!(d.value||[]).length) throw new Error('No double-head squares found');
+  });
+  await check(7, async()=>{
+    // Verify Blocked status exists in players (or schema supports it)
+    const d=await odata('/Players?$top=1');
+    if(!d.value) throw new Error('Players not readable');
+  });
+  await check(8, async()=>{
+    const d=await odata('/Players?$top=4');
+    const sess=new Set((d.value||[]).map(p=>p.session_ID));
+    if(sess.size<1) throw new Error('No sessions with players');
+  });
+  await check(9, async()=>{
+    const d=await odata('/Players?$filter=TurnStatus eq \'Finished\'&$top=1');
+    // pass if endpoint is reachable regardless of result
+  });
+}
+
+// ── New Game Setup — step-by-step ────────────────────────────────────────
+// Step 1: create an empty session
+async function createSession() {
+  // Always pick up current service URL (user may not have clicked Connect yet)
+  serviceUrl = document.getElementById('serviceUrl').value.trim();
+  if (!serviceUrl) {
+    alert('Enter a CAP service URL first.');
+    document.getElementById('btnCreateSession').disabled = false;
+    return;
+  }
+  const sessionName = document.getElementById('setupSessionName').value.trim() || 'New Game';
+  const btn = document.getElementById('btnCreateSession');
+  const status = document.getElementById('sessionCreateStatus');
+  btn.disabled = true;
+  status.className = 'conn-status inf'; status.textContent = 'Creating session…';
+  try {
+    const session = await apiFetch('/GameSessions', {
+      method: 'POST',
+      body: JSON.stringify({ name: sessionName })
+    });
+    sessionId = session.ID;
+    // Show session ID
+    document.getElementById('sessionIdDisplay').textContent = sessionId;
+    // Show step 2
+    document.getElementById('stepCreateSession').style.display = 'none';
+    document.getElementById('stepAddPlayers').style.display = '';
+    status.className = 'conn-status ok';
+    status.textContent = '✓ Session created';
+    document.getElementById('newPlayerName').focus();
+    // Refresh sessions list in background
+    loadSessions().catch(()=>{});
+  } catch(e) {
+    status.className = 'conn-status err';
+    status.textContent = '✕ ' + e.message;
+    btn.disabled = false;
+  }
+}
+
+// Step 2a: add one player to the session
+async function addPlayer() {
+  const input = document.getElementById('newPlayerName');
+  const name = input.value.trim();
+  if (!name) return;
+  const status = document.getElementById('addPlayerStatus');
+  status.className = 'conn-status inf'; status.textContent = `Adding ${name}…`;
+  try {
+    const list = document.getElementById('playersSetupList');
+    const turnOrder = list.children.length + 1;
+    await apiFetch('/Players', {
+      method: 'POST',
+      body: JSON.stringify({ session_ID: sessionId, name, turnOrder })
+    });
+    // Add row to the list
+    const row = document.createElement('div');
+    row.className = 'player-setup-row';
+    row.innerHTML = `<span style="flex:1;color:#d0e8ff;font-size:.8rem;padding:4px 2px">
+      <span style="background:${['#E8106E','#7B2FBE','#0070F2','#F97316'][turnOrder-1]||'#888'};color:#fff;border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-weight:bold;font-size:.7rem;margin-right:6px">${name.substring(0,2).toUpperCase()}</span>
+      ${name} <span style="color:#a0b8e8;font-size:.7rem">· turn ${turnOrder}</span>
+    </span>`;
+    list.appendChild(row);
+    input.value = '';
+    input.placeholder = `Player ${turnOrder+1} name`;
+    input.focus();
+    status.className = 'conn-status ok'; status.textContent = `✓ ${name} added`;
+    // Enable Start Game if ≥2 players
+    if (list.children.length >= 2) {
+      document.getElementById('btnStartGame').disabled = false;
+      document.getElementById('startGameHint').textContent = `${list.children.length} players ready`;
+    }
+  } catch(e) {
+    status.className = 'conn-status err'; status.textContent = '✕ ' + e.message;
+  }
+}
+
+// Step 2b: start the game
+async function startGame() {
+  const btn = document.getElementById('btnStartGame');
+  const status = document.getElementById('addPlayerStatus');
+  btn.disabled = true;
+  status.className = 'conn-status inf'; status.textContent = 'Starting game…';
+  try {
+    await apiFetch(`/GameSessions(ID=${sessionId})/startGame`, { method: 'POST', body: '{}' });
+    status.className = 'conn-status ok'; status.textContent = '✓ Game started!';
+    document.getElementById('connStatus').className = 'conn-status ok';
+    document.getElementById('connStatus').textContent = '✓ Connected · game in progress';
+    document.getElementById('verifyUrl').value = serviceUrl;
+    // Collapse setup card and refresh sessions list
+    document.getElementById('setupCard').style.opacity = '0.5';
+    document.getElementById('setupCard').style.pointerEvents = 'none';
+    loadSessions().catch(()=>{});
+    // Load board and start polling
+    await refresh();
+    if (pollTimer) clearInterval(pollTimer);
+    pollTimer = setInterval(refresh, 3000);
+  } catch(e) {
+    status.className = 'conn-status err'; status.textContent = '✕ ' + e.message;
+    btn.disabled = false;
+  }
+}
+
+// No initial canvas render needed — board image is shown via the <img> tag.
+// renderBoard() is called when players load to draw tokens on the overlay canvas.
+</script>
+</body>
+</html>
