@@ -946,9 +946,9 @@ A ready-made board UI (`board.html`), its board image (`board.png`), and a verif
 
 **Download the board UI files.** Download these three files (right-click each link and choose **Save Link As…**):
 
-- [board.html](https://raw.githubusercontent.com/sap-tutorials/Tutorials/master/tutorials/snake-and-ladder-cap/board.html) — the single-page board UI
-- [board.png](https://raw.githubusercontent.com/sap-tutorials/Tutorials/master/tutorials/snake-and-ladder-cap/board.png) — the pre-rendered board image
-- [verify.js](https://raw.githubusercontent.com/sap-tutorials/Tutorials/master/tutorials/snake-and-ladder-cap/verify.js) — the 14-check verification script
+- [board.html](https://github.com/sap-tutorials/developer-advocates/blob/main/tutorials/snake-and-ladder-cap/board.html) — the single-page board UI
+- [board.png](https://github.com/sap-tutorials/developer-advocates/blob/main/tutorials/snake-and-ladder-cap/board.png) — the pre-rendered board image
+- [verify.js](https://github.com/sap-tutorials/developer-advocates/blob/main/tutorials/snake-and-ladder-cap/verify.js) — the 14-check 
 
 **Serve the board UI from CAP to avoid CORS errors.** The board UI runs in the browser and fetches data from `http://localhost:4004`. If you open the HTML file straight from disk (a `file://` URL) — or through a separate preview server such as VS Code's Live Preview — the browser blocks those requests with a **CORS error**, because the page's origin differs from the service's origin. The clean fix is to let CAP serve the UI itself: anything placed in the project's `app/` folder is served at the server root, so the page and the OData service share the same origin and no CORS configuration is needed.
 
