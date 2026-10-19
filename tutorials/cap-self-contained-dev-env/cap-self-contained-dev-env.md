@@ -12,21 +12,21 @@ time: 10
 
 <!-- description --> Use the power of containers and build a portable and abstracted development environment without committing to installing and maintaining tools directly on your own machine.
 
-🚨 **At the Developer Garage at SAP TechEd 2026? Choose the _GitHub Codespaces_ option!**
+🚨 **At the Developer Garage at SAP TechEd 2026? Choose the _GitHub Codespaces_ option!** 🚨
 
 ## You will learn
 
 - What the dev container concept is and how to use it
-- How to set up a repeatable, reliable and temporary environments for development
+- How to set up a repeatable, reliable and temporary environments for
+  development
 
 ## Prerequisites
 
-- Either: VS Code installed, with the Dev Containers extension, and also a
-  container manager installed, such as [Docker
-  Desktop](https://docs.docker.com/desktop/) or
-  [Podman](https://docs.docker.com/desktop/)
-- Or: a free [GitHub](https://github.com) account (to use Codespaces), and a
-  modern Web browser 
+- Either: [VS Code](https://code.visualstudio.com/) installed, with the [Dev
+  Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+  extension, and also a container manager installed, such as [Docker
+  Desktop](https://docs.docker.com/desktop/) or [Podman](https://podman.io/)
+- Or: a free [GitHub](https://github.com) account (to use Codespaces)
 
 ## Intro
 
