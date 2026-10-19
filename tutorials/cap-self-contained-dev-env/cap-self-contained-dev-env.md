@@ -12,10 +12,13 @@ time: 10
 
 <!-- description --> Use the power of containers and build a portable and abstracted development environment without committing to installing and maintaining tools directly on your own machine.
 
+🚨 **At the Developer Garage at SAP TechEd 2026? Choose the _GitHub Codespaces_ option!** 🚨
+
 ## You will learn
 
-- How to use a development container in VS Code
-- What GitHub Codespaces are and how they can be useful
+- What the dev container concept is and how to use it
+- How to set up a repeatable, reliable and temporary environments for
+  development
 
 ## Prerequisites
 
@@ -71,7 +74,7 @@ files:
   which points to the container image definition, and also specifies which
   extensions to add to VS Code (this includes the [SAP CDS Language
   Support](https://marketplace.visualstudio.com/items?itemName=SAPSE.vscode-cds)
-  extension) plus which ports to publish from the container to the host 
+  extension) plus which ports to publish from the container to the host
 
 ### Option 1 - with VS Code and a container manager
 
@@ -135,6 +138,14 @@ project, you can remove the other files that are in there:
 rm -rf assets/ LICENSE* README.md REUSE.toml
 ```
 
+Originating as a repository on GitHub, there's also a `.git/` directory that
+you might also want to remove, so as not to accumulate changes as you work
+through tutorials based on this setup:
+
+```shell
+rm -rf .git/
+```
+
 At this point, you're all set to develop with CAP Node.js!
 
 ### Wrap-up and further info
@@ -146,4 +157,3 @@ For further info, refer to these resources:
 - Capire, the official [CAP documentation](https://cap.cloud.sap/docs/)
 
 You may want to refer to Capire if you need help answering the question.
-
