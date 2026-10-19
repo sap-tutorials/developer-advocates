@@ -49,8 +49,6 @@ facilities.
 In CAP, MCP is just another protocol, and through CAP's "magic made simple"
 approach, extremely straightforward to configure.
 
-> At the time of writing, the MCP adapter in CAP is in beta status.
-
 ---
 
 ### Set up a simple CAP service
@@ -104,10 +102,10 @@ below to be emitted:
 > The path on which `CatalogService` is served - `/odata/v4/catalog` - indicates
 > that this is OData v4.
 
-👉 Check out the data by visiting
-<http://localhost:4004/odata/v4/catalog/Books>, which should show something
-like this (you may want to use a JSON formatter extension in your browser to
-see the representation formatted nicely):
+👉 Check out the data by following the <http://localhost:4004> link in the log
+output, and selecting the `/odata/v4/catalog/Books` path, which should show
+something like this (you may want to use a JSON formatter extension in your
+browser to see the representation formatted nicely):
 
 ```json
 {
@@ -247,7 +245,8 @@ by the MCP adapter:
 }
 ```
 
-This is referred to in CAP parlance as "autowiring".
+This is referred to in CAP parlance as "autowiring". This config will be
+automatically removed when the CAP server is stopped.
 
 ### Take a peek at the MCP protocol
 
@@ -255,8 +254,12 @@ The Model Context Protocol is based on JSON-RPC, a remote-procedure call
 style request/response design that is transport-independent; here, HTTP
 is used (as a transport protocol rather than an application protocol).
 
-👉 Request the MCP resource at <http://localhost:4004/mcp/catalog>, whereupon
-you'll see something like this:
+The MCP server endpoint is "just another endpoint" served for that service:
+
+![catalog endpoints - OData and MCP](catalog-endpoints-odata-and-mcp.png)
+
+👉 Request the MCP resource via the `/mcp/catalog` link as shown in the
+screenshot of the the welcome page, whereupon you'll see something like this:
 
 ```json
 {
@@ -280,7 +283,18 @@ Protocol](/tutorials/cap-examine-mcp-startup).
 ### Start OpenCode and examine what is displayed
 
 👉 While the CAP server is still running in one shell window, open another
-shell window and launch OpenCode:
+shell window to launch OpenCode.
+
+> If you are working through this tutorial in a GitHub Codespace, you must
+> first unset the environment variable `GITHUB_TOKEN` before launching OpenCode,
+> so that OpenCode doesn't try to connect to Copilot AI resources. Do that
+> like this:
+>
+> ```shell
+> unset GITHUB_TOKEN
+> ```
+
+👉 Launch OpenCode:
 
 ```shell
 opencode
@@ -381,7 +395,7 @@ You've just wired up your first combination of CAP service, MCP adapter
 - The [cds add](https://cap.cloud.sap/docs/tools/cds-cli#cds-add) section of
   Capire has an overview of the facets available
 - Learn about how the CDS plugin mechanism works in the three part series [CAP
-  Nodejs
+  Node.js
   plugins](https://qmacro.org/blog/posts/2024/12/30/cap-node-js-plugins/)
 - More on [JSON-RPC](https://en.wikipedia.org/wiki/JSON-RPC)
 - There's a section on [Autowired MCP
