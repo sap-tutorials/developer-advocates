@@ -12,18 +12,21 @@ time: 10
 
 <!-- description --> Use the power of containers and build a portable and abstracted development environment without committing to installing and maintaining tools directly on your own machine.
 
+🚨 **At the Developer Garage at SAP TechEd 2026? Choose the _GitHub Codespaces_ option!**
+
 ## You will learn
 
-- How to use a development container in VS Code
-- What GitHub Codespaces are and how they can be useful
+- What the dev container concept is and how to use it
+- How to set up a repeatable, reliable and temporary environments for development
 
 ## Prerequisites
 
-- Either: [VS Code](https://code.visualstudio.com/) installed, with the [Dev
-  Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-  extension, and also a container manager installed, such as [Docker
-  Desktop](https://docs.docker.com/desktop/) or [Podman](https://podman.io/)
-- Or: a free [GitHub](https://github.com) account (to use Codespaces)
+- Either: VS Code installed, with the Dev Containers extension, and also a
+  container manager installed, such as [Docker
+  Desktop](https://docs.docker.com/desktop/) or
+  [Podman](https://docs.docker.com/desktop/)
+- Or: a free [GitHub](https://github.com) account (to use Codespaces), and a
+  modern Web browser 
 
 ## Intro
 
@@ -71,7 +74,7 @@ files:
   which points to the container image definition, and also specifies which
   extensions to add to VS Code (this includes the [SAP CDS Language
   Support](https://marketplace.visualstudio.com/items?itemName=SAPSE.vscode-cds)
-  extension) plus which ports to publish from the container to the host 
+  extension) plus which ports to publish from the container to the host
 
 ### Option 1 - with VS Code and a container manager
 
@@ -79,8 +82,7 @@ Clone the repository to your machine or download the ZIP file and unpack it.
 Open the cloned or unpacked directory in VS Code, whereupon you should be
 presented with an option to "Reopen in container" (which you should select):
 
-![VS Code with the dialog box prompting "Reopen in
-container"](vs-code-reopen-in-container.png)
+![VS Code with the dialog box prompting "Reopen in container"](vs-code-reopen-in-container.png)
 
 ### Option 2 - with GitHub Codespaces
 
@@ -90,8 +92,7 @@ Head over to the repository directly on GitHub:
 Use the "Code" button and within the "Codespaces" tab, choose to "Create
 codespace on main", as shown here:
 
-![repo on GitHub with "Create codespace on main"
-option](repo-on-github-with-codespace-option.png)
+![repo on GitHub with "Create codespace on main" option](repo-on-github-with-codespace-option.png)
 
 This should open a new tab, and after the container image is built and a
 container instance created, you should see something like this:
@@ -135,6 +136,14 @@ project, you can remove the other files that are in there:
 rm -rf assets/ LICENSE* README.md REUSE.toml
 ```
 
+Originating as a repository on GitHub, there's also a `.git/` directory that
+you might also want to remove, so as not to accumulate changes as you work through
+tutorials based on this setup:
+
+```shell
+rm -rf .git/
+```
+
 At this point, you're all set to develop with CAP Node.js!
 
 ### Wrap-up and further info
@@ -146,4 +155,3 @@ For further info, refer to these resources:
 - Capire, the official [CAP documentation](https://cap.cloud.sap/docs/)
 
 You may want to refer to Capire if you need help answering the question.
-
