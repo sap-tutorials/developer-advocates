@@ -338,12 +338,14 @@ To finish off, stop the CAP server with `Ctrl-C`.
 
 ### Wrap-up and further info
 
-In the next tutorial [Connect a CAP-level agent to an
-LLM](https://developers.sap.com/tutorials/cap-connect-agent-to-llm), we'll
-connect this agent to a real LLM and put it through its paces.
+For more information:
 
 - CAP-level agents are covered in Capire's [Native
   AI](https://cap.cloud.sap/docs/guides/ai/cap-agents) guide
+
+In the next tutorial [Connect a CAP-level agent to an
+LLM](https://developers.sap.com/tutorials/cap-connect-agent-to-llm) we connect
+this agent to a real LLM and put it through its paces.
 
 As described in the [CAP-level agents configuration in
 Capire](https://cap.cloud.sap/docs/guides/ai/cap-agents#configuration), we see

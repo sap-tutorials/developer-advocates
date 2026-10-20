@@ -402,6 +402,10 @@ You've just wired up your first combination of CAP service, MCP adapter
   Clients](https://cap.cloud.sap/docs/guides/protocols/mcp#autowired-mcp-clients)
   in Capire
 
+The next tutorial [Examine the details of the Model Context Protocol on
+startup](https://developers.sap.com/tutorials/cap-examine-mcp-startup) takes
+you further on this journey, digging a little deeper.
+
 To answer the question, you may wish to refer to [how Basic Authentication
 details are
 encoded](https://en.wikipedia.org/wiki/Basic_access_authentication), and to
