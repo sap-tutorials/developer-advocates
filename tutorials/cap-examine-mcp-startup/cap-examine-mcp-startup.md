@@ -10,7 +10,7 @@ time: 20
 
 # Examine the details of the Model Context Protocol on startup
 
-<!-- description --> By looking at what happens when we connect to an MCP adapter running in front of a CAP service, we learn more about the protocol and how we can improve our service annotations.
+<!-- description --> By looking at what happens when we connect to an MCP adapter running in front of a CAP service, we learn more about the protocol.
 
 ## You will learn
 
