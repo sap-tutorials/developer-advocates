@@ -62,8 +62,11 @@ environment](https://cap.cloud.sap/docs/node.js/cds-env#sources-for-cdsenv)
 beyond the process-specific environment variable used last time. This time
 we'll use a `.env` file in the project directory here.
 
-In the `cap-create-agent/` directory (see the Prerequisites section above), add
-the following to a new file `.env`:
+👉 First, stop any CAP server that might still be running from a previous
+tutorial.
+
+👉 Next, in the `cap-create-agent/` directory (see the Prerequisites section above),
+add the following to a new file `.env`:
 
 ```text
 cds.requires.llm.kind=aicore
@@ -89,8 +92,8 @@ cds.requires.llm.resourceGroup=codejam-genai
 
 ### Step 2 Try out the agent to LLM connectivity
 
-Restart the CAP server with `cds watch`, and observe the log output, which should
-now include a section that looks like this:
+👉 Restart the CAP server with `cds watch`, and observe the log output, which
+should now include a section that looks like this:
 
 ```log
 [agents] - cds.connect.to 'llm' with: {
@@ -103,9 +106,10 @@ now include a section that looks like this:
 }
 ```
 
-Now access the agent preview at <http://localhost:4004/a2a/catalog/preview/> again
-and send a message. A response will be forthcoming, but it shows we're not quite
-there yet:
+👉 Now access the agent preview by following the `http://localhost:4004` URL
+from the CAP server log output & selecting the "Preview" link again, and send a
+message. A response will be forthcoming, but it shows we're not quite there
+yet:
 
 ![Agent error: Could not find service credentials for AI Core. Please check the
 service binding.](missing-service-credentials-error.png)
@@ -143,13 +147,13 @@ password-protected ZIP files, which are suffixed with a timestamp
 
 #### Retrieve a temporary service key
 
-Head over to the
+👉 Head over to the
 [keys/](https://github.com/SAP-samples/teched2026-sk-gen/tree/main/keys)
 directory in this repo, and **download the latest (most recent) one** - they
-will be listed by default with the most recent one at the bottom, as shown
-in the screenshot example.
+will be listed by default with the most recent one at the bottom, as shown in
+the screenshot example.
 
-Then use `unzip` to unpack the file, which should contain a single file with
+👉 Then use `unzip` to unpack the file, which should contain a single file with
 the same name, but with a `.json` extension. Here's an example of how to do
 that, with the latest file in the list shown in the screenshot:
 
@@ -165,8 +169,8 @@ Archive:  sk-20261015110903.zip
 
 #### Examine the service key contents
 
-Just to check, have a look at the contents of the JSON file you just unpacked;
-you should see something like this:
+👉 Just to check, have a look at the contents of the JSON file you just
+unpacked; you should see something like this:
 
 ```json
 {
@@ -212,7 +216,8 @@ a420d8-58c6-4820-ab11-decafbad","serviceurls":{"AI_API_URL":"https://api.ai.prod
 enai-codejam-zuyq1wkg.authentication.eu10.hana.ondemand.com"}
 ```
 
-Using this technique, store the service key in `AICORE_SERVICE_KEY` like this:
+👉 Using this technique, store the service key in `AICORE_SERVICE_KEY` like
+this:
 
 ```shell
 export AICORE_SERVICE_KEY="$(jq -c . sk.json)"
@@ -243,12 +248,11 @@ d=$(mktemp -d -p /tmp/) \
 With the configuration and the service key credentials in place, we're ready to
 give it another go.
 
-Restart the CAP server with `cds watch`, and wait for the startup, where you
+👉 Restart the CAP server with `cds watch`, and wait for the startup, where you
 should see a `cds.connect.to` section in the log output, as before.
 
-Revisit the agent preview at <http://localhost:4004/a2a/catalog/preview/> and
-send another message. This time, an agent-appropriate response should be
-returned.
+👉 Revisit the agent preview and send another message. This time, an
+agent-appropriate response should be returned.
 
 Great! This is the CAP-level agent, built from the `CatalogService` in the
 CDS model, with that single `@agent` annotation, using the AI Core instance to

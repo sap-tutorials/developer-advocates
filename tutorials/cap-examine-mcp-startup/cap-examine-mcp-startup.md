@@ -143,7 +143,8 @@ itself.
 
 ### Examine the network requests
 
-👉 Jump to the "Network" tab, where you should see something similar to this.
+👉 Jump to the "Network" tab (with `n`), where you should see something similar
+to this:
 
 ```text
  Network (4)          │ POST http://localhost:4004/mcp/catalog
@@ -215,8 +216,8 @@ especially from the detail of the first request which is shown:
 
 ### Examine the protocol details
 
-👉 Jump to the "Protocol" tab, where you should see a list (with details for
-each item) like this:
+👉 Jump to the "Protocol" tab (with `p`), where you should see a list (with
+details for each item) like this:
 
 - initialize (request)
 - notifications/initialized (notification)
