@@ -189,7 +189,6 @@ this:
   > init from node_modules/@cap-js/attachments/db/data/sap.attachments-ScanStates_texts.csv
   > init from node_modules/@cap-js/attachments/db/data/sap.attachments-ScanStates.csv
 /> successfully deployed to in-memory database.
-
 ...
 [cds] - serving CatalogService {
   at: [ '/odata/v4/catalog', '/a2a/catalog' ],
@@ -199,6 +198,8 @@ this:
 [agents] - Failed loading OpenCode settings from ~/.config/opencode/opencode.json
 [agents] - Failed loading Codex settings from ~/.codex/config.toml
 [agents] - Failed loading OpenCode settings from ~/.config/opencode/opencode.json
+...
+[cds] - server listening on { url: 'http://localhost:4004' }
 ...
 ```
 
@@ -226,9 +227,10 @@ Additionally:
 
 ### Check the CAP server welcome page
 
-👉 Head over to the CAP server welcome page at <http://localhost:4004> where
-there should be two service endpoints for the catalog service - one where it's
-served via the OData protocol, and one where it's served via the A2A protocol.
+👉 Head over to the CAP server welcome page at `http://localhost:4004` via the
+URL in the log output, where there should be two service endpoints for the
+catalog service - one where it's served via the OData protocol, and one where
+it's served via the A2A protocol.
 
 An agent!
 
@@ -239,11 +241,11 @@ endpoints](welcome-page-service-endpoints.png)
 
 👉 Explore the first two resources listed for the agent service endpoint:
 
-- [/a2a/catalog](http://localhost:4004/a2a/catalog) is the root resource for
-  the A2A endpoint for this agent. A2A uses JSON-RPC which, while readable (the
-  representations are JSON), is somewhat unfriendly to humans as the protocol
-  uses HTTP `POST` predominantly. This is why an error is returned when you
-  `GET` the resource by visiting it in the browser:
+- `/a2a/catalog` is the root resource for the A2A endpoint for this agent. A2A
+  uses JSON-RPC which, while readable (the representations are JSON), is
+  somewhat unfriendly to humans as the protocol uses HTTP `POST` predominantly.
+  This is why an error is returned when you `GET` the resource by visiting it
+  in the browser:
 
     ```json
     {
@@ -256,10 +258,9 @@ endpoints](welcome-page-service-endpoints.png)
     }
     ```
 
-- [Agent Card](http://localhost:4004/a2a/catalog/.well-known/agent-card.json)
-  is a "well-known" resource in the A2A protocol and [describes an agent's
-  capabilities](https://agent2agent.info/docs/concepts/agentcard/). Notably,
-  this includes a `skills` property which looks like this, for the
+- `Agent Card` is a "well-known" resource in the A2A protocol and [describes an
+  agent's capabilities](https://agent2agent.info/docs/concepts/agentcard/).
+  Notably, this includes a `skills` property which looks like this, for the
   `CatalogService`:
 
     ```json
@@ -310,7 +311,7 @@ cds_requires_llm_kind=mock cds watch
 > Using snake case names that represent nodes in the [effective
 > environment](https://cap.cloud.sap/docs/node.js/cds-env#cli) is one of many
 > ways we can provide values like this; alternatives would be to use a file
-> like `.cdsrc.json`, `.env`, or put the configuration directly into
+> like `.cdsrc.json` or `.env`, or put the configuration directly into
 > `package.json`.
 
 Amidst the normal CAP server log output, we should see something like this:
@@ -332,6 +333,8 @@ What's happened is that we get a full chat roundtrip, without having to have a
 connection to a real LLM.
 
 Nice!
+
+To finish off, stop the CAP server with `Ctrl-C`.
 
 ### Wrap-up and further info
 
