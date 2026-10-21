@@ -9,9 +9,9 @@ primary_tag: topic>artificial-intelligence
 parser: v2
 ---
 
-# Setup Generative AI Hub Basic Trial
+# Setup SAP AI Core Basic Trial
 
-<!-- description -->You will learn how to access your Generative AI Hub Basic Trial environment.
+<!-- description -->You will learn how to access your SAP AI Core Basic Trial environment.
 
 ## Prerequisites
 
@@ -19,17 +19,16 @@ parser: v2
 
 ## You will learn
 
-- How to access the Generative AI Hub Basic Trial
-- How to navigate to SAP AI Launchpad and use Generative AI Hub
+- How to access the SAP AI Core Basic Trial
 - Where to find your trial environment
 
 ## Description
 
-This tutorial will guide you through the steps to access your Generative AI Hub Basic Trial environment. The trial provides a hands-on experience with Generative AI Hub and SAP AI Launchpad.
+This tutorial will guide you through the steps to access your SAP AI Core Basic Trial environment. The trial provides a hands-on experience with SAP AI Core.
 
-### Register for a Generative AI Hub instance
+### Register for a SAP AI Core instance
 
-Register for the Generative AI Hub Trial at: https://www.sap.com/products/artificial-intelligence/generative-ai-hub-trial.html
+Register for the SAP AI Core Trial at: https://www.sap.com/products/artificial-intelligence/core-ai-trial.html
 
 ![Trial landing page](images/landing-page.png)
 
