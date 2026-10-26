@@ -102,43 +102,11 @@ below to be emitted:
 > The path on which `CatalogService` is served - `/odata/v4/catalog` - indicates
 > that this is OData v4.
 
-👉 Check out the data by following the <http://localhost:4004> link in the log
-output, and selecting the `/odata/v4/catalog/Books` path, which should show
-something like this (you may want to use a JSON formatter extension in your
-browser to see the representation formatted nicely):
+👉 Check out the data by following the `http://localhost:4004` link in the log
+output, and selecting "Books" within the "Catalog Service", which should show
+something like this:
 
-```json
-{
-  "@odata.context": "$metadata#Books",
-  "value": [
-    {
-      "ID": 1,
-      "title": "Wuthering Heights",
-      "author": "Emily Brontë"
-    },
-    {
-      "ID": 2,
-      "title": "Jane Eyre",
-      "author": "Charlotte Brontë"
-    },
-    {
-      "ID": 3,
-      "title": "The Raven",
-      "author": "Edgar Allan Poe"
-    },
-    {
-      "ID": 4,
-      "title": "Eleonora",
-      "author": "Edgar Allan Poe"
-    },
-    {
-      "ID": 5,
-      "title": "Catweazle",
-      "author": "Richard Carpenter"
-    }
-  ]
-}
-```
+![Books entities](welcome-page-catalog-service-books-entity.png)
 
 ### Examine and extend the CDS model
 
@@ -256,10 +224,8 @@ is used (as a transport protocol rather than an application protocol).
 
 The MCP server endpoint is "just another endpoint" served for that service:
 
-![catalog endpoints - OData and MCP](catalog-endpoints-odata-and-mcp.png)
-
-👉 Request the MCP resource via the `/mcp/catalog` link as shown in the
-screenshot of the the welcome page, whereupon you'll see something like this:
+👉 Request the MCP resource by appending `/mcp/catalog` to the
+`http://localhost:4004` base URL, whereupon you'll see something like this:
 
 ```json
 {
