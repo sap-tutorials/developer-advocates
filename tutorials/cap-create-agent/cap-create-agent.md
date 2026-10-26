@@ -228,70 +228,51 @@ Additionally:
 ### Check the CAP server welcome page
 
 👉 Head over to the CAP server welcome page at `http://localhost:4004` via the
-URL in the log output, where there should be two service endpoints for the
-catalog service - one where it's served via the OData protocol, and one where
-it's served via the A2A protocol.
+URL in the log output, where there should an agent listed for the `CatalogService`!
 
-An agent!
+![the CAP server welcome page](welcome-page-service-endpoints.png)
 
-![the CAP server welcome page showing the two service
-endpoints](welcome-page-service-endpoints.png)
+There are two resources shown as available for the agent:
 
-### Explore the two standard A2A endpoints
+- `CatalogService`: a "Preview" chat facility
+- `Agent Card`: a set of standard info about the agent
 
-👉 Explore the first two resources listed for the agent service endpoint:
+### Explore the agent card
 
-- `/a2a/catalog` is the root resource for the A2A endpoint for this agent. A2A
-  uses JSON-RPC which, while readable (the representations are JSON), is
-  somewhat unfriendly to humans as the protocol uses HTTP `POST` predominantly.
-  This is why an error is returned when you `GET` the resource by visiting it
-  in the browser:
+The `Agent Card` is a "well-known" resource in the A2A protocol and [describes
+an agent's capabilities](https://agent2agent.info/docs/concepts/agentcard/).
+Notably, this includes a `skills` property which looks like this, for the
+`CatalogService`:
 
-    ```json
+```json
+{
+  "name": "CatalogService",
+  "description": "Agent for CatalogService",
+  "url": "http://localhost:4004/a2a/catalog",
+  "...": "...",
+  "skills": [
     {
-      "jsonrpc": "2.0",
-      "error": {
-        "code": -32000,
-        "message": "Method not allowed."
-      },
-      "id": null
-    }
-    ```
-
-- `Agent Card` is a "well-known" resource in the A2A protocol and [describes an
-  agent's capabilities](https://agent2agent.info/docs/concepts/agentcard/).
-  Notably, this includes a `skills` property which looks like this, for the
-  `CatalogService`:
-
-    ```json
-    {
-      "name": "CatalogService",
-      "description": "Agent for CatalogService",
-      "url": "http://localhost:4004/a2a/catalog",
-      "...": "...",
-      "skills": [
-        {
-          "id": "query",
-          "name": "Data Query",
-          "description": "Query data from the service. Available entities: \n Books",
-          "examples": [
-            "Show me all Books"
-          ],
-          "tags": [
-            "query",
-            "data",
-            "read",
-            "books"
-          ]
-        }
+      "id": "query",
+      "name": "Data Query",
+      "description": "Query data from the service. Available entities: \n Books",
+      "examples": [
+        "Show me all Books"
+      ],
+      "tags": [
+        "query",
+        "data",
+        "read",
+        "books"
       ]
     }
-    ```
+  ]
+}
+```
 
 ### Explore the Preview facility in mock LLM mode
 
 To finish off our first foray into the agentic world with CAP-level agents, 
-we'll explore the third resource listed for the agent service endpoint, namely
+we'll explore the other resource available for the agent service, namely
 the "Preview", a [simple and experimental chat preview for local development
 use](https://cap.cloud.sap/docs/guides/ai/cap-agents#using-chat-preview).
 
@@ -324,7 +305,10 @@ Amidst the normal CAP server log output, we should see something like this:
 }
 ```
 
-The Preview facility is now ready for us with a mocked LLM, which responds the
+👉 From the welcome page, select the agent's Preview facility (the
+`CatalogService` link).
+
+The Preview facility is ready for us with a mocked LLM, which responds the
 same way each time, to whatever we send in chat. Here's an example:
 
 ![mock LLM response](mock-llm-response.png)
