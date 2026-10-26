@@ -101,7 +101,7 @@ are provided in the form of a plugin.
 now:
 
 ```shell
-npm add @cap-js/agents
+npm add @cap-js/agents@0.9.8
 ```
 
 This will cause the installation of quite a few packages. Beneath the calm
