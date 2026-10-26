@@ -103,10 +103,13 @@ below to be emitted:
 > that this is OData v4.
 
 👉 Check out the data by following the `http://localhost:4004` link in the log
-output, and selecting "Books" within the "Catalog Service", which should show
-something like this:
+output, and selecting "Books" within the "Catalog Service": 
 
 ![Books entities](welcome-page-catalog-service-books-entity.png)
+
+which should show something like this:
+
+![Books list](books-list.png)
 
 ### Examine and extend the CDS model
 
