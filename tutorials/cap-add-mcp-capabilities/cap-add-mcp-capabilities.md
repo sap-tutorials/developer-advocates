@@ -133,7 +133,7 @@ The separation of layers here, with the service definition being only loosely
 coupled to the protocol, means that it can be served with different protocols
 too.
 
-Add an `@mcp` annotation like this:
+👉 Add an `@mcp` annotation like this:
 
 ```cds
 @mcp
