@@ -320,6 +320,11 @@ results like this:
 }
 ```
 
+Feel free to explore more.
+
+👉 When you're done, exit the inspector and also stop the CAP server (with
+`Ctrl-C`).
+
 ### Wrap-up and further info
 
 Well done!
