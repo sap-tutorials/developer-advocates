@@ -241,8 +241,11 @@ There are two resources shown as available for the agent:
 
 The `Agent Card` is a "well-known" resource in the A2A protocol and [describes
 an agent's capabilities](https://agent2agent.info/docs/concepts/agentcard/).
-Notably, this includes a `skills` property which looks like this, for the
-`CatalogService`:
+
+👉 Select the card link from the welcome page.
+
+Note that this card's content includes a `skills` property which looks like
+this, for the `CatalogService`:
 
 ```json
 {
@@ -306,7 +309,7 @@ Amidst the normal CAP server log output, we should see something like this:
 ```
 
 👉 From the welcome page, select the agent's Preview facility (the
-`CatalogService` link).
+"Catalog Service" link).
 
 The Preview facility is ready for us with a mocked LLM, which responds the
 same way each time, to whatever we send in chat. Here's an example:

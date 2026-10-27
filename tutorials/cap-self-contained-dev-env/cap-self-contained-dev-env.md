@@ -96,7 +96,7 @@ codespace on main", as shown here:
 ![repo on GitHub with "Create codespace on main"
 option](repo-on-github-with-codespace-option.png)
 
-> In case you don not see the "Codespaces" tab, make sure you are signed in to GitHub.
+> If you don't see the "Codespaces" tab, make sure you are signed in to GitHub.
 
 This should open a new tab, and after the container image is built and a
 container instance created, you should see something like this:
