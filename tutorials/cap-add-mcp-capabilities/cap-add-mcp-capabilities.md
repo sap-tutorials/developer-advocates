@@ -32,7 +32,7 @@ appropriate adjustments where necessary.
 
 You will also need a coding agent with MCP capabilities. OpenCode is what we
 will use for this tutorial. Install it in your self-contained development
-environment with `npm install --global opencode-ai`.
+environment with `npm install --global opencode-ai`
 
 ## Intro
 

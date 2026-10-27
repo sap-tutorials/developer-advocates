@@ -65,8 +65,8 @@ we'll use a `.env` file in the project directory here.
 👉 First, stop any CAP server that might still be running from a previous
 tutorial.
 
-👉 Next, in the `cap-create-agent/` directory (see the Prerequisites section above),
-add the following to a new file `.env`:
+👉 Next, in the project (`cap-create-agent/`) directory (see the Prerequisites
+section above), add the following to a new file `.env`:
 
 ```text
 cds.requires.llm.kind=aicore
@@ -106,10 +106,10 @@ should now include a section that looks like this:
 }
 ```
 
-👉 Now access the agent preview by following the `http://localhost:4004` URL
-from the CAP server log output & selecting the "Preview" link again, and send a
-message. A response will be forthcoming, but it shows we're not quite there
-yet:
+👉 Now access the agent's Preview by following the `http://localhost:4004` URL
+from the CAP server log output & selecting the "Catalog Service" link again,
+and send a message. A response will be forthcoming, but it shows we're not
+quite there yet:
 
 ![Agent error: Could not find service credentials for AI Core. Please check the
 service binding.](missing-service-credentials-error.png)
@@ -117,10 +117,15 @@ service binding.](missing-service-credentials-error.png)
 That makes sense, as we haven't specified any credentials for the AI Core
 connection.
 
+👉 For now, stop the CAP server with `Ctrl-C`.
+
 ### Step 3 Add credential information
 
 > Just a reminder that this tutorial is currently only designed for use
 > at the Developer Garage at SAP TechEd 2026 in Berlin.
+
+> 🔐 You will need a password - please ask one of the Developer Advocates
+> staffing the Developer Garage, and they will tell you.
 
 Credentials for such a connection can be provided in various ways. One of the
 more straightforward approaches, which is especially helpful in starter
@@ -147,6 +152,10 @@ password-protected ZIP files, which are suffixed with a timestamp
 
 #### Retrieve a temporary service key
 
+> If you want a quick way of performing the rest of the activities in this step, jump to
+> the bottom (of this step) to the sub-section marked "(Optional)" and use the
+> Bash incantation.
+
 👉 Head over to the
 [keys/](https://github.com/SAP-samples/teched2026-sk-gen/tree/main/keys)
 directory in this repo, and **download the latest (most recent) one** - they
@@ -163,9 +172,6 @@ Archive:  sk-20261015110903.zip
 [sk-20261015110903.zip] sk.json password:
   inflating: sk.json
 ```
-
-> 🔐 You will need a password - please ask one of the Developer Advocates
-> staffing the Developer Garage, and they will tell you.
 
 #### Examine the service key contents
 
