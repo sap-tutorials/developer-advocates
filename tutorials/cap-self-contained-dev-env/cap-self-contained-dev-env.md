@@ -16,6 +16,7 @@ time: 10
 
 ## You will learn
 
+- 🚨 **At the Developer Garage at SAP TechEd 2026? Choose the _GitHub Codespaces_ option!** 🚨
 - What the dev container concept is and how to use it
 - How to set up a repeatable, reliable and temporary environments for
   development
@@ -26,7 +27,7 @@ time: 10
   Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
   extension, and also a container manager installed, such as [Docker
   Desktop](https://docs.docker.com/desktop/) or [Podman](https://podman.io/)
-- Or: a free [GitHub](https://github.com) account (to use Codespaces)
+- Or: a free [GitHub](https://github.com) account (to use Codespaces) 👈 USE THIS AT THE DEVELOPER GARAGE
 
 ## Intro
 
