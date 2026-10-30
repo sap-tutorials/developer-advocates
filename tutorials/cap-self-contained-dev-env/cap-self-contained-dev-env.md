@@ -12,12 +12,8 @@ time: 10
 
 <!-- description --> Use the power of containers and build a portable and abstracted development environment without committing to installing and maintaining tools directly on your own machine.
 
-🚨 **At the Developer Garage at SAP TechEd 2026? Choose the _GitHub Codespaces_ option!** 🚨
-
 ## You will learn
 
-- 🚨 **At the Developer Garage at SAP TechEd 2026? Choose the _GitHub Codespaces_ option!** 🚨
-- What the dev container concept is and how to use it
 - How to set up a repeatable, reliable and temporary environments for
   development
 
@@ -27,7 +23,7 @@ time: 10
   Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
   extension, and also a container manager installed, such as [Docker
   Desktop](https://docs.docker.com/desktop/) or [Podman](https://podman.io/)
-- Or: a free [GitHub](https://github.com) account (to use Codespaces) 👈 USE THIS AT THE DEVELOPER GARAGE
+- Or: a free [GitHub](https://github.com) account (to use Codespaces)
 
 ## Intro
 
@@ -56,6 +52,9 @@ Bash shell.
 Of course, if you prefer to continue to [manage your own developer tools
 installation](https://cap.cloud.sap/docs/get-started/) on your own machine at
 the native OS level, that's also perfectly fine. Let's call that Option 0 :-).
+Note that shell commands given in subsequent tutorials that rely on this one
+will be for the shell that is default in the environment set up with either
+option 1 or option 2 - Bash.
 
 Regardless of which option you choose, we recommend you still read through all
 the steps in this tutorial, to answer to question at the end.
